@@ -36,6 +36,11 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			LayoutBuilder.CompressLayoutAsHeadless(layout, apply);
 			ImageBuilder.LoadImage(layout, apply, suppressImage);
 			TextBuilder.LoadLoremText(layout, apply, suppressLoremText);
+
+			if (!LayoutBuilder.IsPreserveApplied)
+            {
+				LayoutBuilder.IsPreserveApplied = true;
+            }
 		}
 
 		public static void LoadLayoutComponent(Layout layout, bool apply = true)

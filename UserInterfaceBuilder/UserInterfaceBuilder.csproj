@@ -15,6 +15,7 @@
     <None Remove="UserInterfaceBuilderTests\obj\UserInterfaceBuilderTests.csproj.nuget.cache" />
     <None Remove="UserInterfaceBuilderTests\obj\Debug\netstandard2.0\UserInterfaceBuilderTests.AssemblyInfoInputs.cache" />
     <None Remove="UserInterfaceBuilderTests\obj\project.assets.json" />
+    <None Remove="SerializedXamarinFormsVisualAttributes.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="UserInterfaceBuilderTests\Class1.cs" />
@@ -32,5 +33,10 @@
     <PackageReference Include="Bogus.Locations" Version="22.0.8.2" />
     <PackageReference Include="Bogus.Text" Version="22.0.8.2" />
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.433950-nightly" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SerializedXamarinFormsVisualAttributes.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
