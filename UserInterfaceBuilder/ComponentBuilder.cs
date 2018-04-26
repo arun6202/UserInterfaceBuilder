@@ -6,8 +6,10 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 	public static class ComponentBuilder
 	{
 		       
-		public static void LoadAllComponents(Layout layout, bool apply = true, bool suppressBackGroundColor = false)
+		public static void LoadAllComponents(View content, bool apply = true, bool suppressBackGroundColor = false)
 		{
+
+			var layout = (Layout)content;
 
 			LayoutBuilder.ColorizeLayout(layout, apply,suppressBackGroundColor);
 			LayoutBuilder.CompressLayoutAsHeadless(layout, apply);
