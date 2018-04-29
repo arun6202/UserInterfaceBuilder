@@ -10,6 +10,10 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Preserver
 	{
 		public Preserve()
 		{
+            Layout = new List<Color>();
+            Text = new List<Text>();
+            Image = new List<Image>();
+
 		}
 		[DataMember]
 		public List<Color> Layout

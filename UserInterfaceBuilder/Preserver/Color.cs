@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Runtime.Serialization;
+
 namespace XamarinFormsStarterKit.UserInterfaceBuilder.Preserver
 {
+    [Serializable]
+    [DataContract]
 	public class Color
 	{
 		public Color(Xamarin.Forms.Color color)
@@ -18,6 +22,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Preserver
 		{
 
 		}
+        [DataMember]
 		public double R
 		{
 			get;
