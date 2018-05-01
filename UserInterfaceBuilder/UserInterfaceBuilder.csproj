@@ -66,6 +66,7 @@
     <Folder Include="UIElements\" />
     <Folder Include="SVGImages\" />
     <Folder Include="SVGImages\Shapes\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Preserver\Preserve.xml" />

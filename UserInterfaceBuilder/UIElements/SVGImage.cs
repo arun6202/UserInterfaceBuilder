@@ -11,6 +11,15 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
     
     public class SVGImage : Frame
     {
+        public SVGImage()
+        {
+            Padding = new Thickness(0);
+            BackgroundColor = Color.Transparent;
+            HasShadow = false;
+            Content = _canvasView;
+            _canvasView.PaintSurface += CanvasViewOnPaintSurface;
+        }
+       
         #region Private Members
 
         private readonly SKCanvasView _canvasView = new SKCanvasView();
@@ -36,14 +45,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 
         #region Constructor
 
-        public SVGImage()
-        {
-            Padding = new Thickness(0);
-            BackgroundColor = Color.Transparent;
-            HasShadow = false;
-            Content = _canvasView;
-            _canvasView.PaintSurface += CanvasViewOnPaintSurface;
-        }
+
 
         #endregion
 
