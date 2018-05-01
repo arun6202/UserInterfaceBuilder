@@ -14,6 +14,7 @@ namespace UserInterfaceBuilderPreserver
         {
 
 
+
             var preserveUIAttributes = new Preserve
             {
                 Image = new List<Image> { new Image { Height = 5.6 } }

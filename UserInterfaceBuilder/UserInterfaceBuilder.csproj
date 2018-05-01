@@ -17,6 +17,33 @@
     <None Remove="UserInterfaceBuilderTests\obj\project.assets.json" />
     <None Remove="Preserver\Preserve.xml" />
     <None Remove="Preserver\Text.xml" />
+    <None Remove="SVGImages\HorizontalStripes.svg" />
+    <None Remove="SVGImages\GreenStripes.svg" />
+    <None Remove="SVGImages\Honeycomb.svg" />
+    <None Remove="SVGImages\Honeycomb copy.svg" />
+    <None Remove="SVGImages\Chevrons.svg" />
+    <None Remove="SVGImages\CarbonFiber.svg" />
+    <None Remove="SVGImages\MicrobialMat.svg" />
+    <None Remove="SVGImages\Dance.svg" />
+    <None Remove="SVGImages\Checkerboard.svg" />
+    <None Remove="SVGImages\Waves.svg" />
+    <None Remove="SVGImages\VerticalStripes.svg" />
+    <None Remove="SVGImages\Shippo.svg" />
+    <None Remove="SVGImages\HalfRombes.svg" />
+    <None Remove="SVGImages\Transparent.svg" />
+    <None Remove="SVGImages\SimpleHorizontal.svg" />
+    <None Remove="SVGImages\WhiteCarbon.svg" />
+    <None Remove="SVGImages\CrossStripes.svg" />
+    <None Remove="SVGImages\SubtleDots.svg" />
+    <None Remove="SVGImages\ThinStripes.svg" />
+    <None Remove="SVGImages\SpeckledNoise.svg" />
+    <None Remove="SVGImages\BlueprintGrid.svg" />
+    <None Remove="SVGImages\Argyle.svg" />
+    <None Remove="SVGImages\Shapes\Circle.svg" />
+    <None Remove="SVGImages\Shapes\EmptyStar.svg" />
+    <None Remove="SVGImages\Shapes\Rectangle.svg" />
+    <None Remove="SVGImages\Shapes\RoundedRectangle.svg" />
+    <None Remove="SVGImages\Shapes\Star.svg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="UserInterfaceBuilderTests\Class1.cs" />
@@ -37,8 +64,37 @@
     <Folder Include="Preserver\" />
     <Folder Include="Builder\" />
     <Folder Include="UIElements\" />
+    <Folder Include="SVGImages\" />
+    <Folder Include="SVGImages\Shapes\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Preserver\Preserve.xml" />
+    <EmbeddedResource Include="SVGImages\HorizontalStripes.svg" />
+    <EmbeddedResource Include="SVGImages\GreenStripes.svg" />
+    <EmbeddedResource Include="SVGImages\Honeycomb.svg" />
+    <EmbeddedResource Include="SVGImages\Honeycomb copy.svg" />
+    <EmbeddedResource Include="SVGImages\Chevrons.svg" />
+    <EmbeddedResource Include="SVGImages\CarbonFiber.svg" />
+    <EmbeddedResource Include="SVGImages\MicrobialMat.svg" />
+    <EmbeddedResource Include="SVGImages\Dance.svg" />
+    <EmbeddedResource Include="SVGImages\Checkerboard.svg" />
+    <EmbeddedResource Include="SVGImages\Waves.svg" />
+    <EmbeddedResource Include="SVGImages\VerticalStripes.svg" />
+    <EmbeddedResource Include="SVGImages\Shippo.svg" />
+    <EmbeddedResource Include="SVGImages\HalfRombes.svg" />
+    <EmbeddedResource Include="SVGImages\Transparent.svg" />
+    <EmbeddedResource Include="SVGImages\SimpleHorizontal.svg" />
+    <EmbeddedResource Include="SVGImages\WhiteCarbon.svg" />
+    <EmbeddedResource Include="SVGImages\CrossStripes.svg" />
+    <EmbeddedResource Include="SVGImages\SubtleDots.svg" />
+    <EmbeddedResource Include="SVGImages\ThinStripes.svg" />
+    <EmbeddedResource Include="SVGImages\SpeckledNoise.svg" />
+    <EmbeddedResource Include="SVGImages\BlueprintGrid.svg" />
+    <EmbeddedResource Include="SVGImages\Argyle.svg" />
+    <EmbeddedResource Include="SVGImages\Shapes\Circle.svg" />
+    <EmbeddedResource Include="SVGImages\Shapes\EmptyStar.svg" />
+    <EmbeddedResource Include="SVGImages\Shapes\Rectangle.svg" />
+    <EmbeddedResource Include="SVGImages\Shapes\RoundedRectangle.svg" />
+    <EmbeddedResource Include="SVGImages\Shapes\Star.svg" />
   </ItemGroup>
 </Project>
