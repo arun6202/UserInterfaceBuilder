@@ -3,6 +3,7 @@ using System.IO;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using Xamarin.Forms;
+using XamarinFormsStarterKit.UserInterfaceBuilder.Helpers;
 using SKSvg = SkiaSharp.Extended.Svg.SKSvg;
 
 
@@ -45,8 +46,6 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 
         #region Constructor
 
-
-
         #endregion
 
         #region Private Methods
@@ -65,7 +64,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
             if (string.IsNullOrEmpty(Source))
                 return;
 
-            using (Stream stream = GetType().Assembly.GetManifestResourceStream(Source))
+            using (Stream stream = ResourceLoader.GetEmbeddedResourceStream((Source)))
             {
                 SKSvg svg = new SKSvg();
                 svg.Load(stream);
