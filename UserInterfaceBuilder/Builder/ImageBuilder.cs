@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using FFImageLoading.Svg.Forms;
 using Xamarin.Forms;
+using XamarinFormsStarterKit.UserInterfaceBuilder.UIElements;
 
 namespace XamarinFormsStarterKit.UserInterfaceBuilder
 {
@@ -41,7 +41,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 					imageAttributtes.BackGroundColor = new Preserver.Color(Color.Default);
 				}
 
-				if (child is SvgCachedImage img)
+                if (child is SVGImage img)
 				{
 					double height, width;
 					FinalizeDimensions(img, out height, out width);
@@ -80,13 +80,12 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 					currentControl.BackgroundColor = Color.Transparent;
 				}
 
-				if (child is SvgCachedImage img)
+                if (child is SVGImage img)
 				{
 
 					FinalizeDimensions(img, out double height, out double width);
 					img.Source = RandomImage();
-					img.Aspect = Aspect.AspectFill;
-					img.HeightRequest = height;
+ 					img.HeightRequest = height;
 					img.WidthRequest = width;
 
 				}
@@ -97,7 +96,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		}
 
 
-		private static void FinalizeDimensions(SvgCachedImage img, out double height, out double width)
+        private static void FinalizeDimensions(SVGImage img, out double height, out double width)
 		{
 			var source = img.Source.ToString();
 			source = source.Replace("File:", "").ToLower().Trim();
