@@ -20,7 +20,6 @@
     <None Remove="SVGImages\HorizontalStripes.svg" />
     <None Remove="SVGImages\GreenStripes.svg" />
     <None Remove="SVGImages\Honeycomb.svg" />
-    <None Remove="SVGImages\Honeycomb copy.svg" />
     <None Remove="SVGImages\Chevrons.svg" />
     <None Remove="SVGImages\CarbonFiber.svg" />
     <None Remove="SVGImages\MicrobialMat.svg" />
@@ -44,6 +43,7 @@
     <None Remove="SVGImages\Shapes\Rectangle.svg" />
     <None Remove="SVGImages\Shapes\RoundedRectangle.svg" />
     <None Remove="SVGImages\Shapes\Star.svg" />
+    <None Remove="SVGImages\Cat.svg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="UserInterfaceBuilderTests\Class1.cs" />
@@ -73,7 +73,6 @@
     <EmbeddedResource Include="SVGImages\HorizontalStripes.svg" />
     <EmbeddedResource Include="SVGImages\GreenStripes.svg" />
     <EmbeddedResource Include="SVGImages\Honeycomb.svg" />
-    <EmbeddedResource Include="SVGImages\Honeycomb copy.svg" />
     <EmbeddedResource Include="SVGImages\Chevrons.svg" />
     <EmbeddedResource Include="SVGImages\CarbonFiber.svg" />
     <EmbeddedResource Include="SVGImages\MicrobialMat.svg" />
@@ -97,5 +96,6 @@
     <EmbeddedResource Include="SVGImages\Shapes\Rectangle.svg" />
     <EmbeddedResource Include="SVGImages\Shapes\RoundedRectangle.svg" />
     <EmbeddedResource Include="SVGImages\Shapes\Star.svg" />
+    <EmbeddedResource Include="SVGImages\Cat.svg" />
   </ItemGroup>
 </Project>

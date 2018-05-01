@@ -64,7 +64,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
             if (string.IsNullOrEmpty(Source))
                 return;
 
-            using (Stream stream = ResourceLoader.GetEmbeddedResourceStream((Source)))
+            using (Stream stream = ResourceLoader.GetEmbeddedResourceStream(("Cat.svg")))
             {
                 SKSvg svg = new SKSvg();
                 svg.Load(stream);
