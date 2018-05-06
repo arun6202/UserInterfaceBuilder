@@ -103,7 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Preserver\" />
-    <Folder Include="Builder\" />
+    <Folder Include="Builders\" />
     <Folder Include="UIElements\" />
     <Folder Include="Images\" />
     <Folder Include="Helpers\" />
@@ -138,7 +138,6 @@
     <EmbeddedResource Include="Images\PNG\Patterns\marrakesh.png" />
     <EmbeddedResource Include="Images\PNG\Patterns\tartan.png" />
     <EmbeddedResource Include="Images\PNG\Patterns\arrows.png" />
-    <EmbeddedResource Include="Images\PNG\Patterns\hearts.png" />
     <EmbeddedResource Include="Images\PNG\Patterns\seigaiha.png" />
     <EmbeddedResource Include="Images\PNG\Patterns\japanese-cube.png" />
     <EmbeddedResource Include="Images\PNG\Patterns\microbial-mat.png" />
@@ -153,7 +152,6 @@
     <EmbeddedResource Include="Images\PNG\Patterns\diagonal-checkerboard.png" />
     <EmbeddedResource Include="Images\PNG\Patterns\diagonal-stripes.png" />
     <EmbeddedResource Include="Images\PNG\Patterns\horizontal-stripes.png" />
-    <EmbeddedResource Include="Images\PNG\Patterns\steps.png" />
     <EmbeddedResource Include="Images\PNG\Patterns\vertical-stripes.png" />
     <EmbeddedResource Include="Images\PNG\Patterns\zig-zag.png" />
   </ItemGroup>
