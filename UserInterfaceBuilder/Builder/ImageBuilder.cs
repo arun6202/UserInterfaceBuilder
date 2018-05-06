@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Reflection;
 using Xamarin.Forms;
-using XamarinFormsStarterKit.UserInterfaceBuilder.Helpers;
-using XamarinFormsStarterKit.UserInterfaceBuilder.UIElements;
 using System.Linq;
 
 
@@ -17,19 +15,24 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 		static ImageBuilder()
 		{
+			LoadPNGImages();
 
+		}
+        
+		private static void LoadPNGImages()
+		{
+			var resourcePaths = LoadPNGImageList();
+			PNGImageList.AddRange(resourcePaths);
+		}
+
+		private static string[] LoadPNGImageList()
+		{
 			var resourceNames = Assembly.GetCallingAssembly().GetManifestResourceNames();
 
 			var resourcePaths = resourceNames
-				.Where(x => x.Contains("SVG"))
+				.Where(x => x.Contains(".PNG."))
 				.ToArray();
-
-			foreach (var resource in resourcePaths)
-			{
-				PNGImageList.Add(resource);
-
-			}
-
+			return resourcePaths;
 		}
 
 		public static void GenerateImage(Layout layout, bool suppressBackGroundColor = true)
@@ -51,8 +54,8 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 					imageAttributtes.BackGroundColor = new Preserver.Color(Color.Default);
 				}
-
-				if (child is SVGImage img)
+                
+				if (child is Image img)
 				{
 					double height, width;
 					FinalizeDimensions(img, out height, out width);
@@ -91,7 +94,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 					currentControl.BackgroundColor = Color.Transparent;
 				}
 
-				if (child is SVGImage img)
+				if (child is Image img)
 				{
 
 					FinalizeDimensions(img, out double height, out double width);
@@ -107,7 +110,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		}
 
 
-		private static void FinalizeDimensions(SVGImage img, out double height, out double width)
+		private static void FinalizeDimensions(Image img, out double height, out double width)
 		{
 			var source = img.Source.ToString();
 			source = source.Replace("File:", "").ToLower().Trim();
@@ -176,8 +179,8 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 					}
 					else
 					{
-						height = 40;
-						width = 40;
+						height = 30;
+						width = 30;
 
 					}
 
@@ -189,7 +192,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		{
 			if (PNGImageList.Count == 0)
 			{
-				return ResourceLoader.GetEmbeddedResourceString("GreenStripes.svg");
+				LoadPNGImages();
 			}
 			var randomIndex = new Random().Next(PNGImageList.Count);
 			var img = PNGImageList[randomIndex];
