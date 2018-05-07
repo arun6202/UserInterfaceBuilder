@@ -74,7 +74,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 					if (suppressBackGroundColor)
 					{
 						var currentControl = (VisualElement)child;
-						currentControl.BackgroundColor = Color.Transparent;
+						currentControl.BackgroundColor = Color.Default;
 					}
 
 

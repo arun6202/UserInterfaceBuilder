@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Xamarin.Forms;
 using System.Linq;
-
+using SkiaSharp.Views.Forms;
 
 namespace XamarinFormsStarterKit.UserInterfaceBuilder
 {
@@ -11,27 +11,30 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 	{
 
 		static readonly List<string> PNGImageList = new List<string>();
+		static readonly List<string> SVGImageList = new List<string>();
 
-		//implement svg also please refer https://github.com/mono/SkiaSharp.Extended
-
+        
 		static ImageBuilder()
 		{
-			LoadPNGImages();
+			LoadImages();
 
 		}
         
-		private static void LoadPNGImages()
+		private static void LoadImages()
 		{
-			var resourcePaths = LoadPNGImageList();
+			var resourcePaths = LoadImageList(".PNG.Patterns.");
 			PNGImageList.AddRange(resourcePaths);
-		}
 
-		private static string[] LoadPNGImageList()
+			resourcePaths = LoadImageList(".SVG.Patterns.");
+			SVGImageList.AddRange(resourcePaths);
+		}
+        
+		private static string[] LoadImageList(string filter)
 		{
 			var resourceNames = Assembly.GetCallingAssembly().GetManifestResourceNames();
 
 			var resourcePaths = resourceNames
-				.Where(x => x.Contains(".PNG."))
+				.Where(x => x.Contains(filter))
 				.ToArray();
 			return resourcePaths;
 		}
@@ -55,23 +58,41 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 					imageAttributtes.BackGroundColor = new Preserver.Color(Color.Default);
 				}
-                
-				if (child is Image img)
-				{
-					double height, width;
-					FinalizeDimensions(img, out height, out width);
-					imageAttributtes.Source = RandomImage();
-					imageAttributtes.Height = height;
-					imageAttributtes.Width = width;
-					ComponentBuilder.PreserveUIAttributes.Image.Add(imageAttributtes);
 
-				}
+				ExtractUIAttributes(child, imageAttributtes);
 
 			}
 
 
 		}
 
+		private static void ExtractUIAttributes(Element child, Preserver.Image imageAttributtes)
+		{
+			if (child is Image img)
+			{
+				double height, width;
+				FinalizeDimensions(img, out height, out width);
+				imageAttributtes.Source = RandomImage();
+				imageAttributtes.Height = height;
+				imageAttributtes.Width = width;
+				ComponentBuilder.PreserveUIAttributes.Image.Add(imageAttributtes);
+
+			}
+
+			if (child is SKCanvasView svgimg)
+            {
+                double height, width;
+				FinalizeDimensions(svgimg, out height, out width);
+                imageAttributtes.Source = RandomImage();
+                imageAttributtes.Height = height;
+                imageAttributtes.Width = width;
+                ComponentBuilder.PreserveUIAttributes.Image.Add(imageAttributtes);
+                
+            }
+
+            // to do refactor common lines
+
+		}
 
 		public static void LoadImage(Layout layout, bool apply = true, bool suppressBackGroundColor = true, bool preserveSession = false)
 		{
@@ -95,26 +116,41 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 					currentControl.BackgroundColor = Color.Transparent;
 				}
 
-				if (child is Image img)
-				{
-
-					FinalizeDimensions(img, out double height, out double width);
-					var source = ImageSource.FromResource(RandomImage());
-                	img.Source = source;
-					img.HeightRequest = height;
-					img.WidthRequest = width;
-
-				}
+				SetUIImages(child);
 
 			}
 
 
 		}
 
-
-		private static void FinalizeDimensions(Image img, out double height, out double width)
+		private static void SetUIImages(Element child)
 		{
-			var source = img.Source.ToString();
+			if (child is Image img)
+			{
+
+				FinalizeDimensions(img, out double height, out double width);
+				var source = ImageSource.FromResource(RandomImage());
+				img.Source = source;
+				img.HeightRequest = height;
+				img.WidthRequest = width;
+
+			}
+		}
+
+		private static void FinalizeDimensions(object image, out double height, out double width)
+		{
+			var source = "";
+
+			if (image is Image img)
+			{
+				source = img.Source.ToString();
+			}
+			if (image is SKCanvasView svgimg)
+            {
+                
+            }
+   
+
 			source = source.Replace("File:", "").ToLower().Trim();
 			height = 40;
 			width = 40;
@@ -194,7 +230,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		{
 			if (PNGImageList.Count == 0)
 			{
-				LoadPNGImages();
+				LoadImages();
 			}
 			var randomIndex = new Random().Next(PNGImageList.Count);
 			var img = PNGImageList[randomIndex];
