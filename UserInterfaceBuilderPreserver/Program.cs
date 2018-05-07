@@ -35,7 +35,6 @@ namespace UserInterfaceBuilderPreserver
 			txtWriter.Close();
 
             Console.WriteLine("XML File Generated!");
-			Console.Read();
-		}
+ 		}
 	}
 }
