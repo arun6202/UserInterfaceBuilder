@@ -18,6 +18,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		{
 			LoadPNGImages();
 
+
 		}
         
 		private static void LoadPNGImages()

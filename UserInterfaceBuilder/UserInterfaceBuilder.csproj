@@ -129,6 +129,9 @@
     <Folder Include="Images\PNG\" />
     <Folder Include="Images\PNG\Patterns\" />
     <Folder Include="Images\SVG\Patterns\" />
+    <Folder Include="Builders\Image\" />
+    <Folder Include="Builders\Layout\" />
+    <Folder Include="Builders\Text\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Preserver\Preserve.xml" />
