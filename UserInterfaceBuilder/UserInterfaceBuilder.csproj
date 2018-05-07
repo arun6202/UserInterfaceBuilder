@@ -85,6 +85,23 @@
     <None Remove="Images\PNG\Patterns\steps.png" />
     <None Remove="Images\PNG\Patterns\vertical-stripes.png" />
     <None Remove="Images\PNG\Patterns\zig-zag.png" />
+    <None Remove="Images\SVG\Patterns\chevrons.svg" />
+    <None Remove="Images\SVG\Patterns\concentric_circles.svg" />
+    <None Remove="Images\SVG\Patterns\diamonds.svg" />
+    <None Remove="Images\SVG\Patterns\diamonds_with_base_color.svg" />
+    <None Remove="Images\SVG\Patterns\diamonds_with_color.svg" />
+    <None Remove="Images\SVG\Patterns\hexagons.svg" />
+    <None Remove="Images\SVG\Patterns\mosaic_squares.svg" />
+    <None Remove="Images\SVG\Patterns\nested_squares.svg" />
+    <None Remove="Images\SVG\Patterns\octagons.svg" />
+    <None Remove="Images\SVG\Patterns\overlapping_circles.svg" />
+    <None Remove="Images\SVG\Patterns\overlapping_rings.svg" />
+    <None Remove="Images\SVG\Patterns\plaid.svg" />
+    <None Remove="Images\SVG\Patterns\plus_signs.svg" />
+    <None Remove="Images\SVG\Patterns\sine_waves.svg" />
+    <None Remove="Images\SVG\Patterns\squares.svg" />
+    <None Remove="Images\SVG\Patterns\tessellation.svg" />
+    <None Remove="Images\SVG\Patterns\triangles.svg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="UserInterfaceBuilderTests\Class1.cs" />
@@ -154,5 +171,22 @@
     <EmbeddedResource Include="Images\PNG\Patterns\horizontal-stripes.png" />
     <EmbeddedResource Include="Images\PNG\Patterns\vertical-stripes.png" />
     <EmbeddedResource Include="Images\PNG\Patterns\zig-zag.png" />
+    <EmbeddedResource Include="Images\SVG\Patterns\chevrons.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\concentric_circles.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\diamonds.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\diamonds_with_base_color.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\diamonds_with_color.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\hexagons.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\mosaic_squares.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\nested_squares.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\octagons.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\overlapping_circles.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\overlapping_rings.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\plaid.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\plus_signs.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\sine_waves.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\squares.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\tessellation.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns\triangles.svg" />
   </ItemGroup>
 </Project>

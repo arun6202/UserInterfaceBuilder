@@ -12,6 +12,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 		static readonly List<string> PNGImageList = new List<string>();
 
+		//implement svg also please refer https://github.com/mono/SkiaSharp.Extended
 
 		static ImageBuilder()
 		{
