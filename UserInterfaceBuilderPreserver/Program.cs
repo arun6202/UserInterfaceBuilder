@@ -4,37 +4,38 @@ using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 using XamarinFormsStarterKit.UserInterfaceBuilder;
+using XamarinFormsStarterKit.UserInterfaceBuilder.Helpers;
 using XamarinFormsStarterKit.UserInterfaceBuilder.Preserver;
- 
+using XamarinFormsStarterKit.UserInterfaceBuilder.XamlPlayground;
+
 namespace UserInterfaceBuilderPreserver
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			MockForms.Init();
+
+			var playground = new Playground();
+			var preserveUIAttributes = ComponentBuilder.PreserveUIAttributes;
+
+			var appLocation = @"../../../../../../";
+          
+	     	var projectRoot = Path.GetFullPath(Path.Combine(typeof(Program).Assembly.Location, appLocation));
+
+			var xmlFilePath = Path.Combine(projectRoot, "UserInterfaceBuilder/UserInterfaceBuilder/Preserver/Preserve.xml");
 
 
+			XmlSerializer xs = new XmlSerializer(typeof(Preserve));
 
-            var preserveUIAttributes = new Preserve
-            {
-                Image = new List<Image> { new Image { Height = 5.6 } }
-            };
+			TextWriter txtWriter = new StreamWriter(xmlFilePath);
 
+			xs.Serialize(txtWriter, preserveUIAttributes);
 
-            XmlSerializer xsSubmit = new XmlSerializer(typeof(Preserve));
-            var xml = "";
+			txtWriter.Close();
 
-            using (var sww = new System.IO.StringWriter())
-            {
-                using (XmlWriter writer = XmlWriter.Create(sww))
-                {
-                    xsSubmit.Serialize(writer, preserveUIAttributes);
-                    xml = sww.ToString(); // Your XML
-                }
-            }
-
-
-            System.Console.Read();
+            Console.WriteLine("XML File Generated!");
+			Console.Read();
 		}
-    }
+	}
 }

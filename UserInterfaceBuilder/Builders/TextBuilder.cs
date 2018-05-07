@@ -45,7 +45,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 					PropertyInfo prop = type.GetProperty("Text");
                     
-					ComponentBuilder.PreserveUIAttributes.Text.Add(new Preserver.Text { TextValue = GenerateLoremText(prop.GetValue(child).ToString()),TextColor = new Preserver.Color(Color.Default) });
+					ComponentBuilder.PreserveUIAttributes.Text.Add(new Preserver.Text { TextValue = GenerateLoremText(prop.GetValue(child).ToString()),TextColor = new Preserver.Color(RandomColor()) });
                                   
 				}
 
