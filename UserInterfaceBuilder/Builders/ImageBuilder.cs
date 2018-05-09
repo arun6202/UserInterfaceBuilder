@@ -125,6 +125,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 								FinalizeDimensions(child, out double height, out double width);
 
 								img.Source = ImageSource.FromResource(RandomPNGImage());
+								img.Aspect = Aspect.Fill;
 								img.HeightRequest = height;
 								img.WidthRequest = width;
 
