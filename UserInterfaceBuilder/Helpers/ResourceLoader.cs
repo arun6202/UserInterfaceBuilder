@@ -47,7 +47,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
             var resourceNames = assembly.GetManifestResourceNames();
 
             var resourcePaths = resourceNames
-                .Where(x => x.EndsWith(resourceFileName, StringComparison.CurrentCultureIgnoreCase))
+                .Where(x => x.Contains(resourceFileName))
                 .ToArray();
 
             if (!resourcePaths.Any())

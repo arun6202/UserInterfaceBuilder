@@ -10,26 +10,9 @@ using SKSvg = SkiaSharp.Extended.Svg.SKSvg;
 namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 {
     
-    public class SVGImage : Frame
+	public class SVGImage : ContentView
     {
-        public SVGImage()
-        {
-            Padding = new Thickness(0);
-            BackgroundColor = Color.Transparent;
-            HasShadow = false;
-            Content = _canvasView;
-            _canvasView.PaintSurface += CanvasViewOnPaintSurface;
-        }
-       
-        #region Private Members
-
-        private readonly SKCanvasView _canvasView = new SKCanvasView();
-
-        #endregion
-
-        #region Bindable Properties
-
-        #region Source
+        private readonly SKCanvasView canvasView = new SKCanvasView();
 
         public static readonly BindableProperty SourceProperty = BindableProperty.Create(
             nameof(Source), typeof(string), typeof(SVGImage), default(string), propertyChanged: RedrawCanvas);
@@ -40,52 +23,41 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
             set => SetValue(SourceProperty, value);
         }
 
-        #endregion
+        public SVGImage()
+        {
 
-        #endregion
-
-        #region Constructor
-
-        #endregion
-
-        #region Private Methods
+            Content = canvasView;
+            canvasView.PaintSurface += CanvasViewOnPaintSurface;
+        }
 
         private static void RedrawCanvas(BindableObject bindable, object oldvalue, object newvalue)
         {
-            SVGImage svgIcon = bindable as SVGImage;
-            svgIcon?._canvasView.InvalidateSurface();
+            var svgImage = bindable as SVGImage;
+            svgImage?.canvasView.InvalidateSurface();
         }
 
         private void CanvasViewOnPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
-            SKCanvas canvas = args.Surface.Canvas;
-            canvas.Clear();
-
             if (string.IsNullOrEmpty(Source))
                 return;
 
-            using (Stream stream = ResourceLoader.GetEmbeddedResourceStream(("Cat.svg")))
+			using (Stream stream = ResourceLoader.GetEmbeddedResourceStream(Source))
             {
-                SKSvg svg = new SKSvg();
+                var svg = new SKSvg();
                 svg.Load(stream);
 
-                SKImageInfo info = args.Info;
-                canvas.Translate(info.Width / 2f, info.Height / 2f);
+                var surface = args.Surface;
+                var canvas = surface.Canvas;
+                canvas.Clear(SKColors.White);
 
-                SKRect bounds = svg.ViewBox;
-                float xRatio = info.Width / bounds.Width;
-                float yRatio = info.Height / bounds.Height;
+                var canvasMin = Math.Min(WidthRequest, HeightRequest);
+                var svgMax = Math.Max(svg.Picture.CullRect.Width, svg.Picture.CullRect.Height);
+                var scale = canvasMin / svgMax;
+                var matrix = SKMatrix.MakeScale((float)scale, (float)scale);
 
-                float ratio = Math.Min(xRatio, yRatio);
-
-                canvas.Scale(ratio);
-                canvas.Translate(-bounds.MidX, -bounds.MidY);
-
-                canvas.DrawPicture(svg.Picture);
+                canvas.DrawPicture(svg.Picture, ref matrix);
             }
         }
 
-        #endregion
     }
-
 }
