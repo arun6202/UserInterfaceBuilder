@@ -3,37 +3,37 @@ using System.Collections.Generic;
 using System.Reflection;
 using Xamarin.Forms;
 using System.Linq;
-
+using XamarinFormsStarterKit.UserInterfaceBuilder.UIElements;
+using SkiaSharp.Views.Forms;
 
 namespace XamarinFormsStarterKit.UserInterfaceBuilder
 {
 	public static class ImageBuilder
 	{
+		private const string PNGImageType = ".PNG.Patterns.";
+		private const string SVGImageType = ".SVG.Patterns.";
 
 		static readonly List<string> PNGImageList = new List<string>();
+		static readonly List<string> SVGImageList = new List<string>();
 
-		//implement svg also please refer https://github.com/mono/SkiaSharp.Extended
 
 		static ImageBuilder()
 		{
-			LoadPNGImages();
+			PNGImageList.AddRange(LoadImagesResourcesList(PNGImageType));
+			SVGImageList.AddRange(LoadImagesResourcesList(SVGImageType));
 
 		}
-        
-		private static void LoadPNGImages()
-		{
-			var resourcePaths = LoadPNGImageList();
-			PNGImageList.AddRange(resourcePaths);
-		}
 
-		private static string[] LoadPNGImageList()
+		private static string[] LoadImagesResourcesList(string type)
 		{
 			var resourceNames = Assembly.GetCallingAssembly().GetManifestResourceNames();
 
-			var resourcePaths = resourceNames
-				.Where(x => x.Contains(".PNG."))
+			var resources = resourceNames
+				.Where(x => x.Contains(type))
 				.ToArray();
-			return resourcePaths;
+
+			return resources;
+
 		}
 
 		public static void GenerateImage(Layout layout, bool suppressBackGroundColor = true)
@@ -48,25 +48,45 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 				var currentControl = (VisualElement)child;
 
-				var imageAttributtes = new Preserver.Image();
 
-				if (suppressBackGroundColor)
+
+				double height = 40, width = 40;
+
+				switch (child)
 				{
+					case Image _:
+					case SKCanvasView _:
+						{
+							var imageAttributtes = new Preserver.Image();
 
-					imageAttributtes.BackGroundColor = new Preserver.Color(Color.Default);
+							if (suppressBackGroundColor)
+							{
+
+								imageAttributtes.BackGroundColor = new Preserver.Color(Color.Default);
+							}
+
+
+							FinalizeDimensions(child, out height, out width);
+
+							if (child is Image img)
+							{
+								imageAttributtes.Source = RandomPNGImage();
+
+							}
+
+							if (child is SKCanvasView svgImg)
+							{
+								imageAttributtes.Source = RandomSVGImage();
+
+							}
+
+							imageAttributtes.Height = height;
+							imageAttributtes.Width = width;
+
+							ComponentBuilder.PreserveUIAttributes.Image.Add(imageAttributtes);
+							break;
+						}
 				}
-                
-				if (child is Image img)
-				{
-					double height, width;
-					FinalizeDimensions(img, out height, out width);
-					imageAttributtes.Source = RandomImage();
-					imageAttributtes.Height = height;
-					imageAttributtes.Width = width;
-					ComponentBuilder.PreserveUIAttributes.Image.Add(imageAttributtes);
-
-				}
-
 			}
 
 
@@ -89,33 +109,68 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 				var currentControl = (VisualElement)child;
 
-				if (suppressBackGroundColor)
+
+				switch (child)
 				{
+					case Image _:
+					case SKCanvasView _:
+						{
+							if (suppressBackGroundColor)
+							{
+								currentControl.BackgroundColor = Color.Default;
+							}
 
-					currentControl.BackgroundColor = Color.Transparent;
+							if (child is Image img)
+							{
+								FinalizeDimensions(child, out double height, out double width);
+
+								img.Source = ImageSource.FromResource(RandomPNGImage());
+								img.HeightRequest = height;
+								img.WidthRequest = width;
+
+							}
+
+							if (child is SKCanvasView sKCanvas)
+							{
+
+								if (sKCanvas.Parent is SVGImage svgImg)
+								{
+									FinalizeDimensions(sKCanvas, out double height, out double width);
+
+									svgImg.Source = RandomSVGImage();
+									svgImg.HeightRequest = height;
+									svgImg.WidthRequest = width;
+								}
+
+							}
+							break;
+						}
 				}
-
-				if (child is Image img)
-				{
-
-					FinalizeDimensions(img, out double height, out double width);
-					var source = ImageSource.FromResource(RandomImage());
-                	img.Source = source;
-					img.HeightRequest = height;
-					img.WidthRequest = width;
-
-				}
-
 			}
 
 
 		}
 
 
-		private static void FinalizeDimensions(Image img, out double height, out double width)
+		private static void FinalizeDimensions(Element element, out double height, out double width)
 		{
-			var source = img.Source.ToString();
-			source = source.Replace("File:", "").ToLower().Trim();
+
+			var source = "";
+
+			if (element is Image img)
+			{
+				source = img.Source.ToString();
+				source = source.Replace("File:", "").ToLower().Trim();
+
+			}
+			if (element is SKCanvasView sKCanvas)
+			{
+				if (sKCanvas.Parent is SVGImage svgImg)
+				{
+					source = svgImg.Source;
+				}
+			}
+
 			height = 40;
 			width = 40;
 			switch (source)
@@ -190,11 +245,11 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			}
 		}
 
-		static string RandomImage()
+		static string RandomPNGImage()
 		{
 			if (PNGImageList.Count == 0)
 			{
-				LoadPNGImages();
+				LoadImagesResourcesList(PNGImageType);
 			}
 			var randomIndex = new Random().Next(PNGImageList.Count);
 			var img = PNGImageList[randomIndex];
@@ -202,6 +257,17 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			return img;
 		}
 
+		static string RandomSVGImage()
+		{
+			if (SVGImageList.Count == 0)
+			{
+				LoadImagesResourcesList(SVGImageType);
+			}
+			var randomIndex = new Random().Next(SVGImageList.Count);
+			var img = SVGImageList[randomIndex];
+			SVGImageList.RemoveAt(randomIndex);
+			return img;
+		}
 
 	}
 }

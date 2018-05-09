@@ -2,76 +2,36 @@
 <Preserve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Layout>
     <Color>
-      <R>1</R>
-      <G>0.62745100259780884</G>
-      <B>0.47843137383461</B>
-      <Hue>0.047619063407182693</Hue>
-      <Saturation>1</Saturation>
-      <Luminosity>0.7392156720161438</Luminosity>
-    </Color>
-    <Color>
-      <R>0.60000002384185791</R>
-      <G>0.19607843458652496</G>
-      <B>0.800000011920929</B>
-      <Hue>0.77813857793807983</Hue>
-      <Saturation>0.60629922151565552</Saturation>
-      <Luminosity>0.49803921580314636</Luminosity>
-    </Color>
-    <Color>
-      <R>0.529411792755127</R>
-      <G>0.80784314870834351</G>
-      <B>0.92156863212585449</B>
-      <Hue>0.54833334684371948</Hue>
-      <Saturation>0.71428573131561279</Saturation>
-      <Luminosity>0.72549021244049072</Luminosity>
-    </Color>
-    <Color>
-      <R>0.74117648601531982</R>
-      <G>0.71764707565307617</G>
-      <B>0.41960784792900085</B>
-      <Hue>0.15447154641151428</Hue>
-      <Saturation>0.38317760825157166</Saturation>
-      <Luminosity>0.58039218187332153</Luminosity>
-    </Color>
-    <Color>
-      <R>0.80392158031463623</R>
-      <G>0.5215686559677124</G>
-      <B>0.24705882370471954</B>
-      <Hue>0.082159638404846191</Hue>
-      <Saturation>0.58677691221237183</Saturation>
-      <Luminosity>0.52549022436141968</Luminosity>
-    </Color>
-    <Color>
-      <R>0.501960813999176</R>
-      <G>0</G>
-      <B>0</B>
-      <Hue>1</Hue>
-      <Saturation>1</Saturation>
-      <Luminosity>0.250980406999588</Luminosity>
-    </Color>
-    <Color>
-      <R>0.97254902124404907</R>
-      <G>0.97254902124404907</G>
+      <R>0</R>
+      <G>0.74901962280273438</G>
       <B>1</B>
-      <Hue>0.66666668653488159</Hue>
+      <Hue>0.54183006286621094</Hue>
       <Saturation>1</Saturation>
-      <Luminosity>0.98627448081970215</Luminosity>
+      <Luminosity>0.5</Luminosity>
     </Color>
     <Color>
-      <R>0.54117649793624878</R>
-      <G>0.16862745583057404</G>
-      <B>0.886274516582489</B>
-      <Hue>0.75318765640258789</Hue>
-      <Saturation>0.75933617353439331</Saturation>
-      <Luminosity>0.52745097875595093</Luminosity>
+      <R>0.87843137979507446</R>
+      <G>1</G>
+      <B>1</B>
+      <Hue>0.5</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.93921566009521484</Luminosity>
     </Color>
     <Color>
       <R>0</R>
-      <G>0.501960813999176</G>
-      <B>0.501960813999176</B>
-      <Hue>0.5</Hue>
+      <G>0</G>
+      <B>0.545098066329956</B>
+      <Hue>0.66666668653488159</Hue>
       <Saturation>1</Saturation>
-      <Luminosity>0.250980406999588</Luminosity>
+      <Luminosity>0.272549033164978</Luminosity>
+    </Color>
+    <Color>
+      <R>0.80392158031463623</R>
+      <G>0.36078432202339172</G>
+      <B>0.36078432202339172</B>
+      <Hue>1</Hue>
+      <Saturation>0.53051644563674927</Saturation>
+      <Luminosity>0.58235293626785278</Luminosity>
     </Color>
     <Color>
       <R>0.56470590829849243</R>
@@ -82,111 +42,40 @@
       <Luminosity>0.74901962280273438</Luminosity>
     </Color>
     <Color>
+      <R>0.545098066329956</R>
+      <G>0</G>
+      <B>0.545098066329956</B>
+      <Hue>0.83333331346511841</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.272549033164978</Luminosity>
+    </Color>
+    <Color>
+      <R>0</R>
+      <G>0</G>
+      <B>0.501960813999176</B>
+      <Hue>0.66666668653488159</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.250980406999588</Luminosity>
+    </Color>
+    <Color>
       <R>1</R>
-      <G>0.0784313753247261</G>
-      <B>0.57647061347961426</B>
-      <Hue>0.90992903709411621</Hue>
+      <G>0.98039215803146362</G>
+      <B>0.80392158031463623</B>
+      <Hue>0.14999999105930328</Hue>
       <Saturation>1</Saturation>
-      <Luminosity>0.53921568393707275</Luminosity>
-    </Color>
-    <Color>
-      <R>0.39215686917304993</R>
-      <G>0.58431375026702881</G>
-      <B>0.929411768913269</B>
-      <Hue>0.60705596208572388</Hue>
-      <Saturation>0.791907548904419</Saturation>
-      <Luminosity>0.66078430414199829</Luminosity>
-    </Color>
-    <Color>
-      <R>1</R>
-      <G>0.54901963472366333</G>
-      <B>0</B>
-      <Hue>0.091503269970417023</Hue>
-      <Saturation>1</Saturation>
-      <Luminosity>0.5</Luminosity>
-    </Color>
-    <Color>
-      <R>0.49803921580314636</R>
-      <G>1</G>
-      <B>0.83137255907058716</B>
-      <Hue>0.4440104067325592</Hue>
-      <Saturation>1</Saturation>
-      <Luminosity>0.74901962280273438</Luminosity>
-    </Color>
-    <Color>
-      <R>0.85490196943283081</R>
-      <G>0.43921568989753723</G>
-      <B>0.83921569585800171</B>
-      <Hue>0.83962267637252808</Hue>
-      <Saturation>0.588888943195343</Saturation>
-      <Luminosity>0.64705884456634521</Luminosity>
+      <Luminosity>0.90196079015731812</Luminosity>
     </Color>
   </Layout>
   <Text>
     <Text>
-      <TextValue>ariatur aut ea et</TextValue>
+      <TextValue>quas voluptatem ipsam pariatur</TextValue>
       <TextColor>
-        <R>0.41960784792900085</R>
-        <G>0.55686277151107788</G>
-        <B>0.13725490868091583</B>
-        <Hue>0.22118382155895233</Hue>
-        <Saturation>0.604519784450531</Saturation>
-        <Luminosity>0.34705883264541626</Luminosity>
-      </TextColor>
-    </Text>
-    <Text>
-      <TextValue>asperiores eum ullam asperiores</TextValue>
-      <TextColor>
-        <R>0.545098066329956</R>
-        <G>0</G>
-        <B>0</B>
-        <Hue>1</Hue>
+        <R>0</R>
+        <G>0.98039215803146362</G>
+        <B>0.60392159223556519</B>
+        <Hue>0.43599998950958252</Hue>
         <Saturation>1</Saturation>
-        <Luminosity>0.272549033164978</Luminosity>
-      </TextColor>
-    </Text>
-    <Text>
-      <TextValue>ducimus quo est voluptas</TextValue>
-      <TextColor>
-        <R>0.91372549533843994</R>
-        <G>0.58823531866073608</G>
-        <B>0.47843137383461</B>
-        <Hue>0.042042046785354614</Hue>
-        <Saturation>0.71612900495529175</Saturation>
-        <Luminosity>0.69607841968536377</Luminosity>
-      </TextColor>
-    </Text>
-    <Text>
-      <TextValue>neque modi assumenda quibusdam</TextValue>
-      <TextColor>
-        <R>0.48235294222831726</R>
-        <G>0.40784314274787903</G>
-        <B>0.93333333730697632</B>
-        <Hue>0.69029849767684937</Hue>
-        <Saturation>0.7976190447807312</Saturation>
-        <Luminosity>0.67058825492858887</Luminosity>
-      </TextColor>
-    </Text>
-    <Text>
-      <TextValue>emporibus aspernaur eos fugia</TextValue>
-      <TextColor>
-        <R>0.529411792755127</R>
-        <G>0.80784314870834351</G>
-        <B>0.98039215803146362</B>
-        <Hue>0.56376808881759644</Hue>
-        <Saturation>0.92000013589859009</Saturation>
-        <Luminosity>0.75490200519561768</Luminosity>
-      </TextColor>
-    </Text>
-    <Text>
-      <TextValue>dignissimos doloribus sit praesentium</TextValue>
-      <TextColor>
-        <R>0.82745099067687988</R>
-        <G>0.82745099067687988</G>
-        <B>0.82745099067687988</B>
-        <Hue>0</Hue>
-        <Saturation>0</Saturation>
-        <Luminosity>0.82745099067687988</Luminosity>
+        <Luminosity>0.49019607901573181</Luminosity>
       </TextColor>
     </Text>
   </Text>
@@ -194,32 +83,7 @@
     <Image>
       <Height>30</Height>
       <Width>30</Width>
-      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.microbial-mat.png</Source>
-    </Image>
-    <Image>
-      <Height>120</Height>
-      <Width>120</Width>
-      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.shippo.png</Source>
-    </Image>
-    <Image>
-      <Height>450</Height>
-      <Width>350</Width>
-      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.half-rombes.png</Source>
-    </Image>
-    <Image>
-      <Height>30</Height>
-      <Width>30</Width>
-      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.bricks.png</Source>
-    </Image>
-    <Image>
-      <Height>10</Height>
-      <Width>10</Width>
-      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.upholstery.png</Source>
-    </Image>
-    <Image>
-      <Height>60</Height>
-      <Width>60</Width>
-      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.weave.png</Source>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.cicada-stripes.png</Source>
     </Image>
   </Image>
 </Preserve>

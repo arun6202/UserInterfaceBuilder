@@ -8,7 +8,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		public ComponentBuilderOptions()
 		{
 			Apply = true;
-			PreserveSession = true;
+			PreserveSession = false;
 
 		}
 
