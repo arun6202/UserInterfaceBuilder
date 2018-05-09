@@ -2,12 +2,60 @@
 <Preserve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Layout>
     <Color>
-      <R>0</R>
-      <G>0.74901962280273438</G>
-      <B>1</B>
-      <Hue>0.54183006286621094</Hue>
+      <R>0.96078431606292725</R>
+      <G>0.87058824300765991</G>
+      <B>0.70196080207824707</B>
+      <Hue>0.10858585685491562</Hue>
+      <Saturation>0.76744186878204346</Saturation>
+      <Luminosity>0.83137255907058716</Luminosity>
+    </Color>
+    <Color>
+      <R>0.13333334028720856</R>
+      <G>0.545098066329956</G>
+      <B>0.13333334028720856</B>
+      <Hue>0.3333333432674408</Hue>
+      <Saturation>0.60693645477294922</Saturation>
+      <Luminosity>0.33921569585800171</Luminosity>
+    </Color>
+    <Color>
+      <R>0.57647061347961426</R>
+      <G>0.43921568989753723</G>
+      <B>0.85882353782653809</B>
+      <Hue>0.72118377685546875</Hue>
+      <Saturation>0.597765326499939</Saturation>
+      <Luminosity>0.64901959896087646</Luminosity>
+    </Color>
+    <Color>
+      <R>1</R>
+      <G>0.27058824896812439</G>
+      <B>0</B>
+      <Hue>0.045098047703504562</Hue>
       <Saturation>1</Saturation>
       <Luminosity>0.5</Luminosity>
+    </Color>
+    <Color>
+      <R>0.87058824300765991</R>
+      <G>0.72156864404678345</G>
+      <B>0.529411792755127</B>
+      <Hue>0.093869723379611969</Hue>
+      <Saturation>0.56862753629684448</Saturation>
+      <Luminosity>0.70000004768371582</Luminosity>
+    </Color>
+    <Color>
+      <R>0.098039217293262482</R>
+      <G>0.098039217293262482</G>
+      <B>0.43921568989753723</B>
+      <Hue>0.66666668653488159</Hue>
+      <Saturation>0.63503646850585938</Saturation>
+      <Luminosity>0.26862746477127075</Luminosity>
+    </Color>
+    <Color>
+      <R>0</R>
+      <G>0</G>
+      <B>0.80392158031463623</B>
+      <Hue>0.66666668653488159</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.40196079015731812</Luminosity>
     </Color>
     <Color>
       <R>0.87843137979507446</R>
@@ -19,6 +67,342 @@
     </Color>
     <Color>
       <R>0</R>
+      <G>1</G>
+      <B>0</B>
+      <Hue>0.3333333432674408</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.5</Luminosity>
+    </Color>
+    <Color>
+      <R>1</R>
+      <G>1</G>
+      <B>1</B>
+      <Hue>0</Hue>
+      <Saturation>0</Saturation>
+      <Luminosity>1</Luminosity>
+    </Color>
+    <Color>
+      <R>0.62745100259780884</R>
+      <G>0.32156863808631897</G>
+      <B>0.17647059261798859</B>
+      <Hue>0.05362318828701973</Hue>
+      <Saturation>0.56097567081451416</Saturation>
+      <Luminosity>0.40196079015731812</Luminosity>
+    </Color>
+    <Color>
+      <R>0</R>
+      <G>1</G>
+      <B>1</B>
+      <Hue>0.5</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.5</Luminosity>
+    </Color>
+    <Color>
+      <R>0</R>
+      <G>0</G>
+      <B>0</B>
+      <Hue>0</Hue>
+      <Saturation>0</Saturation>
+      <Luminosity>0</Luminosity>
+    </Color>
+    <Color>
+      <R>0.686274528503418</R>
+      <G>0.93333333730697632</G>
+      <B>0.93333333730697632</B>
+      <Hue>0.5</Hue>
+      <Saturation>0.64948463439941406</Saturation>
+      <Luminosity>0.80980396270751953</Luminosity>
+    </Color>
+    <Color>
+      <R>0.250980406999588</R>
+      <G>0.87843137979507446</G>
+      <B>0.81568628549575806</B>
+      <Hue>0.48333334922790527</Hue>
+      <Saturation>0.720720648765564</Saturation>
+      <Luminosity>0.56470590829849243</Luminosity>
+    </Color>
+    <Color>
+      <R>0.39215686917304993</R>
+      <G>0.58431375026702881</G>
+      <B>0.929411768913269</B>
+      <Hue>0.60705596208572388</Hue>
+      <Saturation>0.791907548904419</Saturation>
+      <Luminosity>0.66078430414199829</Luminosity>
+    </Color>
+    <Color>
+      <R>0.48627451062202454</R>
+      <G>0.98823529481887817</G>
+      <B>0</B>
+      <Hue>0.25132274627685547</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.49411764740943909</Luminosity>
+    </Color>
+    <Color>
+      <R>0.90196079015731812</R>
+      <G>0.90196079015731812</G>
+      <B>0.98039215803146362</B>
+      <Hue>0.66666668653488159</Hue>
+      <Saturation>0.66666698455810547</Saturation>
+      <Luminosity>0.94117647409439087</Luminosity>
+    </Color>
+    <Color>
+      <R>0.529411792755127</R>
+      <G>0.80784314870834351</G>
+      <B>0.98039215803146362</B>
+      <Hue>0.56376808881759644</Hue>
+      <Saturation>0.92000013589859009</Saturation>
+      <Luminosity>0.75490200519561768</Luminosity>
+    </Color>
+    <Color>
+      <R>0.48235294222831726</R>
+      <G>0.40784314274787903</G>
+      <B>0.93333333730697632</B>
+      <Hue>0.69029849767684937</Hue>
+      <Saturation>0.7976190447807312</Saturation>
+      <Luminosity>0.67058825492858887</Luminosity>
+    </Color>
+    <Color>
+      <R>1</R>
+      <G>0.85490196943283081</G>
+      <B>0.72549021244049072</B>
+      <Hue>0.078571431338787079</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.86274510622024536</Luminosity>
+    </Color>
+    <Color>
+      <R>0</R>
+      <G>0.545098066329956</G>
+      <B>0.545098066329956</B>
+      <Hue>0.5</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.272549033164978</Luminosity>
+    </Color>
+    <Color>
+      <R>0.67843139171600342</R>
+      <G>1</G>
+      <B>0.18431372940540314</B>
+      <Hue>0.23237179219722748</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.59215688705444336</Luminosity>
+    </Color>
+    <Color>
+      <R>0.94117647409439087</R>
+      <G>0.97254902124404907</G>
+      <B>1</B>
+      <Hue>0.57777780294418335</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.970588207244873</Luminosity>
+    </Color>
+    <Color>
+      <R>0.96078431606292725</R>
+      <G>1</G>
+      <B>0.98039215803146362</B>
+      <Hue>0.4166666567325592</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.98039215803146362</Luminosity>
+    </Color>
+    <Color>
+      <R>0.98039215803146362</R>
+      <G>0.92156863212585449</G>
+      <B>0.843137264251709</B>
+      <Hue>0.0952380895614624</Hue>
+      <Saturation>0.7777780294418335</Saturation>
+      <Luminosity>0.91176474094390869</Luminosity>
+    </Color>
+    <Color>
+      <R>0.96078431606292725</R>
+      <G>0.96078431606292725</G>
+      <B>0.86274510622024536</B>
+      <Hue>0.1666666716337204</Hue>
+      <Saturation>0.55555558204650879</Saturation>
+      <Luminosity>0.91176474094390869</Luminosity>
+    </Color>
+    <Color>
+      <R>0.43921568989753723</R>
+      <G>0.501960813999176</G>
+      <B>0.56470590829849243</B>
+      <Hue>0.58333331346511841</Hue>
+      <Saturation>0.12598426640033722</Saturation>
+      <Luminosity>0.501960813999176</Luminosity>
+    </Color>
+    <Color>
+      <R>0.37254902720451355</R>
+      <G>0.61960786581039429</G>
+      <B>0.62745100259780884</B>
+      <Hue>0.50512820482254028</Hue>
+      <Saturation>0.25490197539329529</Saturation>
+      <Luminosity>0.5</Luminosity>
+    </Color>
+    <Color>
+      <R>0.40000000596046448</R>
+      <G>0.80392158031463623</G>
+      <B>0.66666668653488159</B>
+      <Hue>0.44336569309234619</Hue>
+      <Saturation>0.50738918781280518</Saturation>
+      <Luminosity>0.60196077823638916</Luminosity>
+    </Color>
+    <Color>
+      <R>0.19607843458652496</R>
+      <G>0.80392158031463623</G>
+      <B>0.19607843458652496</B>
+      <Hue>0.3333333432674408</Hue>
+      <Saturation>0.60784316062927246</Saturation>
+      <Luminosity>0.5</Luminosity>
+    </Color>
+    <Color>
+      <R>0.27450981736183167</R>
+      <G>0.50980395078659058</G>
+      <B>0.70588237047195435</B>
+      <Hue>0.57575756311416626</Hue>
+      <Saturation>0.43999996781349182</Saturation>
+      <Luminosity>0.4901961088180542</Luminosity>
+    </Color>
+    <Color>
+      <R>0.58039218187332153</R>
+      <G>0</G>
+      <B>0.82745099067687988</B>
+      <Hue>0.78357028961181641</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.41372549533843994</Luminosity>
+    </Color>
+    <Color>
+      <R>0.80392158031463623</R>
+      <G>0.5215686559677124</G>
+      <B>0.24705882370471954</B>
+      <Hue>0.082159638404846191</Hue>
+      <Saturation>0.58677691221237183</Saturation>
+      <Luminosity>0.52549022436141968</Luminosity>
+    </Color>
+    <Color>
+      <R>0</R>
+      <G>0.80784314870834351</G>
+      <B>0.81960785388946533</B>
+      <Hue>0.50239235162734985</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.40980392694473267</Luminosity>
+    </Color>
+    <Color>
+      <R>1</R>
+      <G>0.75294119119644165</G>
+      <B>0.79607844352722168</B>
+      <Hue>0.97089952230453491</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.87647056579589844</Luminosity>
+    </Color>
+    <Color>
+      <R>1</R>
+      <G>0</G>
+      <B>0</B>
+      <Hue>1</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.5</Luminosity>
+    </Color>
+    <Color>
+      <R>0.545098066329956</R>
+      <G>0.27058824896812439</G>
+      <B>0.074509806931018829</B>
+      <Hue>0.0694444477558136</Hue>
+      <Saturation>0.75949370861053467</Saturation>
+      <Luminosity>0.30980393290519714</Luminosity>
+    </Color>
+    <Color>
+      <R>0.72156864404678345</R>
+      <G>0.52549022436141968</G>
+      <B>0.043137256056070328</B>
+      <Hue>0.11849711090326309</Hue>
+      <Saturation>0.88717949390411377</Saturation>
+      <Luminosity>0.38235294818878174</Luminosity>
+    </Color>
+    <Color>
+      <R>0.69803923368453979</R>
+      <G>0.13333334028720856</G>
+      <B>0.13333334028720856</B>
+      <Hue>1</Hue>
+      <Saturation>0.67924529314041138</Saturation>
+      <Luminosity>0.41568627953529358</Luminosity>
+    </Color>
+    <Color>
+      <R>1</R>
+      <G>0.38823530077934265</G>
+      <B>0.27843138575553894</B>
+      <Hue>0.025362322106957436</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.63921570777893066</Luminosity>
+    </Color>
+    <Color>
+      <R>0.29411765933036804</R>
+      <G>0</G>
+      <B>0.50980395078659058</B>
+      <Hue>0.76282048225402832</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.25490197539329529</Luminosity>
+    </Color>
+    <Color>
+      <R>1</R>
+      <G>1</G>
+      <B>0</B>
+      <Hue>0.1666666716337204</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.5</Luminosity>
+    </Color>
+    <Color>
+      <R>0.98039215803146362</R>
+      <G>0.501960813999176</G>
+      <B>0.44705882668495178</B>
+      <Hue>0.017156859859824181</Hue>
+      <Saturation>0.931506872177124</Saturation>
+      <Luminosity>0.7137255072593689</Luminosity>
+    </Color>
+    <Color>
+      <R>0.64705884456634521</R>
+      <G>0.16470588743686676</G>
+      <B>0.16470588743686676</B>
+      <Hue>1</Hue>
+      <Saturation>0.59420293569564819</Saturation>
+      <Luminosity>0.40588235855102539</Luminosity>
+    </Color>
+    <Color>
+      <R>0.82745099067687988</R>
+      <G>0.82745099067687988</G>
+      <B>0.82745099067687988</B>
+      <Hue>0</Hue>
+      <Saturation>0</Saturation>
+      <Luminosity>0.82745099067687988</Luminosity>
+    </Color>
+    <Color>
+      <R>1</R>
+      <G>0.62745100259780884</G>
+      <B>0.47843137383461</B>
+      <Hue>0.047619063407182693</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.7392156720161438</Luminosity>
+    </Color>
+    <Color>
+      <R>0.125490203499794</R>
+      <G>0.69803923368453979</G>
+      <B>0.66666668653488159</B>
+      <Hue>0.49086758494377136</Hue>
+      <Saturation>0.69523811340332031</Saturation>
+      <Luminosity>0.4117647111415863</Luminosity>
+    </Color>
+    <Color>
+      <R>0.93333333730697632</R>
+      <G>0.50980395078659058</G>
+      <B>0.93333333730697632</B>
+      <Hue>0.83333331346511841</Hue>
+      <Saturation>0.7605634331703186</Saturation>
+      <Luminosity>0.72156864404678345</Luminosity>
+    </Color>
+    <Color>
+      <R>0.85882353782653809</R>
+      <G>0.43921568989753723</G>
+      <B>0.57647061347961426</B>
+      <Hue>0.94548290967941284</Hue>
+      <Saturation>0.597765326499939</Saturation>
+      <Luminosity>0.64901959896087646</Luminosity>
+    </Color>
+    <Color>
+      <R>0</R>
       <G>0</G>
       <B>0.545098066329956</B>
       <Hue>0.66666668653488159</Hue>
@@ -26,28 +410,100 @@
       <Luminosity>0.272549033164978</Luminosity>
     </Color>
     <Color>
-      <R>0.80392158031463623</R>
-      <G>0.36078432202339172</G>
-      <B>0.36078432202339172</B>
+      <R>0.96078431606292725</R>
+      <G>0.96078431606292725</G>
+      <B>0.96078431606292725</B>
+      <Hue>0</Hue>
+      <Saturation>0</Saturation>
+      <Luminosity>0.96078431606292725</Luminosity>
+    </Color>
+    <Color>
+      <R>1</R>
+      <G>0.0784313753247261</G>
+      <B>0.57647061347961426</B>
+      <Hue>0.90992903709411621</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.53921568393707275</Luminosity>
+    </Color>
+    <Color>
+      <R>0.94117647409439087</R>
+      <G>0.501960813999176</G>
+      <B>0.501960813999176</B>
       <Hue>1</Hue>
-      <Saturation>0.53051644563674927</Saturation>
-      <Luminosity>0.58235293626785278</Luminosity>
+      <Saturation>0.78873229026794434</Saturation>
+      <Luminosity>0.72156864404678345</Luminosity>
     </Color>
     <Color>
-      <R>0.56470590829849243</R>
-      <G>0.93333333730697632</G>
-      <B>0.56470590829849243</B>
-      <Hue>0.3333333432674408</Hue>
-      <Saturation>0.73437505960464478</Saturation>
-      <Luminosity>0.74901962280273438</Luminosity>
+      <R>0.75294119119644165</R>
+      <G>0.75294119119644165</G>
+      <B>0.75294119119644165</B>
+      <Hue>0</Hue>
+      <Saturation>0</Saturation>
+      <Luminosity>0.75294119119644165</Luminosity>
     </Color>
     <Color>
-      <R>0.545098066329956</R>
+      <R>0.46666666865348816</R>
+      <G>0.53333336114883423</G>
+      <B>0.60000002384185791</B>
+      <Hue>0.58333331346511841</Hue>
+      <Saturation>0.14285717904567719</Saturation>
+      <Luminosity>0.53333336114883423</Luminosity>
+    </Color>
+    <Color>
+      <R>0.28235295414924622</R>
+      <G>0.81960785388946533</G>
+      <B>0.800000011920929</B>
+      <Hue>0.49391725659370422</Hue>
+      <Saturation>0.59825330972671509</Saturation>
+      <Luminosity>0.55098038911819458</Luminosity>
+    </Color>
+    <Color>
+      <R>1</R>
+      <G>0.98039215803146362</G>
+      <B>0.94117647409439087</B>
+      <Hue>0.1111111044883728</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.970588207244873</Luminosity>
+    </Color>
+    <Color>
+      <R>0.86666667461395264</R>
+      <G>0.62745100259780884</G>
+      <B>0.86666667461395264</B>
+      <Hue>0.83333331346511841</Hue>
+      <Saturation>0.47286820411682129</Saturation>
+      <Luminosity>0.74705886840820313</Luminosity>
+    </Color>
+    <Color>
+      <R>0.69019609689712524</R>
+      <G>0.87843137979507446</G>
+      <B>0.90196079015731812</B>
+      <Hue>0.51851850748062134</Hue>
+      <Saturation>0.519230842590332</Saturation>
+      <Luminosity>0.79607844352722168</Luminosity>
+    </Color>
+    <Color>
+      <R>1</R>
       <G>0</G>
-      <B>0.545098066329956</B>
+      <B>1</B>
       <Hue>0.83333331346511841</Hue>
       <Saturation>1</Saturation>
-      <Luminosity>0.272549033164978</Luminosity>
+      <Luminosity>0.5</Luminosity>
+    </Color>
+    <Color>
+      <R>0.94117647409439087</R>
+      <G>1</G>
+      <B>0.94117647409439087</B>
+      <Hue>0.3333333432674408</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.970588207244873</Luminosity>
+    </Color>
+    <Color>
+      <R>1</R>
+      <G>0.97254902124404907</G>
+      <B>0.86274510622024536</B>
+      <Hue>0.13333334028720856</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.93137252330780029</Luminosity>
     </Color>
     <Color>
       <R>0</R>
@@ -58,32 +514,439 @@
       <Luminosity>0.250980406999588</Luminosity>
     </Color>
     <Color>
+      <R>0.82352942228317261</R>
+      <G>0.4117647111415863</G>
+      <B>0.11764705926179886</B>
+      <Hue>0.0694444477558136</Hue>
+      <Saturation>0.75</Saturation>
+      <Luminosity>0.47058823704719543</Luminosity>
+    </Color>
+    <Color>
       <R>1</R>
-      <G>0.98039215803146362</G>
+      <G>0.89411765336990356</G>
+      <B>0.70980393886566162</B>
+      <Hue>0.10585585981607437</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.85490196943283081</Luminosity>
+    </Color>
+    <Color>
+      <R>0.501960813999176</R>
+      <G>0</G>
+      <B>0</B>
+      <Hue>1</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.250980406999588</Luminosity>
+    </Color>
+    <Color>
+      <R>0.94117647409439087</R>
+      <G>1</G>
+      <B>1</B>
+      <Hue>0.5</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.970588207244873</Luminosity>
+    </Color>
+    <Color>
+      <R>0.60000002384185791</R>
+      <G>0.19607843458652496</G>
+      <B>0.800000011920929</B>
+      <Hue>0.77813857793807983</Hue>
+      <Saturation>0.60629922151565552</Saturation>
+      <Luminosity>0.49803921580314636</Luminosity>
+    </Color>
+    <Color>
+      <R>0</R>
+      <G>1</G>
+      <B>0.49803921580314636</B>
+      <Hue>0.41633987426757813</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.5</Luminosity>
+    </Color>
+    <Color>
+      <R>1</R>
+      <G>0.92156863212585449</G>
       <B>0.80392158031463623</B>
-      <Hue>0.14999999105930328</Hue>
+      <Hue>0.10000000149011612</Hue>
       <Saturation>1</Saturation>
       <Luminosity>0.90196079015731812</Luminosity>
+    </Color>
+    <Color>
+      <R>1</R>
+      <G>0.843137264251709</G>
+      <B>0</B>
+      <Hue>0.14052288234233856</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.5</Luminosity>
+    </Color>
+    <Color>
+      <R>0.49803921580314636</R>
+      <G>1</G>
+      <B>0.83137255907058716</B>
+      <Hue>0.4440104067325592</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.74901962280273438</Luminosity>
+    </Color>
+    <Color>
+      <R>0.84705883264541626</R>
+      <G>0.74901962280273438</G>
+      <B>0.84705883264541626</B>
+      <Hue>0.83333331346511841</Hue>
+      <Saturation>0.2427184134721756</Saturation>
+      <Luminosity>0.79803919792175293</Luminosity>
+    </Color>
+    <Color>
+      <R>0</R>
+      <G>0.501960813999176</G>
+      <B>0</B>
+      <Hue>0.3333333432674408</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.250980406999588</Luminosity>
+    </Color>
+    <Color>
+      <R>0.49803921580314636</R>
+      <G>1</G>
+      <B>0</B>
+      <Hue>0.25032678246498108</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.5</Luminosity>
+    </Color>
+    <Color>
+      <R>0.529411792755127</R>
+      <G>0.80784314870834351</G>
+      <B>0.92156863212585449</B>
+      <Hue>0.54833334684371948</Hue>
+      <Saturation>0.71428573131561279</Saturation>
+      <Luminosity>0.72549021244049072</Luminosity>
+    </Color>
+    <Color>
+      <R>0</R>
+      <G>0.74901962280273438</G>
+      <B>1</B>
+      <Hue>0.54183006286621094</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.5</Luminosity>
     </Color>
   </Layout>
   <Text>
     <Text>
-      <TextValue>quas voluptatem ipsam pariatur</TextValue>
+      <TextValue>Incidunt earum hic eligendi dolores exercitationem rerum dolores.
+Ad veritatis omnis ea debitis.
+Qui quod eius ipsum officiis veritatis.
+Possimus eius quod dolorem molestias.
+Quidem sequi numquam non.
+Ex vitae non ullam.
+Tempora eum qui doloribus.
+Totam expedita excepturi consequatur dolor sit quo ea modi.
+Qui officia voluptates amet.</TextValue>
+      <TextColor>
+        <R>0.75294119119644165</R>
+        <G>0.75294119119644165</G>
+        <B>0.75294119119644165</B>
+        <Hue>0</Hue>
+        <Saturation>0</Saturation>
+        <Luminosity>0.75294119119644165</Luminosity>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>Tenetur sit temporibus dignissimos vero odit inventore provident.
+Ab quibusdam quos veniam quos doloribus.
+Illo quasi molestias quis natus incidunt ex qui sit.
+Quibusdam doloribus quis corporis assumenda ipsum maxime similique exercitationem.
+Deserunt vel magni impedit velit consequuntur dicta omnis voluptatibus eligendi.
+Accusamus incidunt blanditiis assumenda sint in eveniet.
+Quisquam aut veritatis nihil.
+Enim et dolore.
+Minima fuga maxime.</TextValue>
+      <TextColor>
+        <R>0.545098066329956</R>
+        <G>0</G>
+        <B>0.545098066329956</B>
+        <Hue>0.83333331346511841</Hue>
+        <Saturation>1</Saturation>
+        <Luminosity>0.272549033164978</Luminosity>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>Adipisci explicabo adipisci tempore itaque et debitis iusto.
+Mollitia maxime quia dolore.
+Omnis eum provident aliquam est nulla qui sunt et provident.
+Architecto in nisi debitis sapiente deleniti ex rerum voluptas tempore.
+Voluptatem aspernatur in animi.
+Id in autem.
+Aut consequatur vel nemo esse.
+Accusantium at eveniet voluptatem dolorum ipsum distinctio.
+Et in sed iste sit fugit iure vel.</TextValue>
+      <TextColor>
+        <R>0.91372549533843994</R>
+        <G>0.58823531866073608</G>
+        <B>0.47843137383461</B>
+        <Hue>0.042042046785354614</Hue>
+        <Saturation>0.71612900495529175</Saturation>
+        <Luminosity>0.69607841968536377</Luminosity>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>Aliquam fuga similique iusto soluta ipsum.
+Expedita repellat unde numquam at ut sit aperiam laudantium.
+Blanditiis quas quae occaecati illo.
+Animi vel quo velit corrupti sit qui voluptatem non est.
+Consequuntur nobis pariatur sequi nisi soluta.
+Distinctio fuga fuga.
+Et animi eum et explicabo vel.
+Aut sit rerum velit expedita ut inventore ut.
+Laboriosam voluptatum id veniam veniam magni et necessitatibus ut laborum.</TextValue>
+      <TextColor>
+        <R>0.96078431606292725</R>
+        <G>1</G>
+        <B>0.98039215803146362</B>
+        <Hue>0.4166666567325592</Hue>
+        <Saturation>1</Saturation>
+        <Luminosity>0.98039215803146362</Luminosity>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>Aut qui aut eos.
+Laboriosam voluptatem excepturi aut illum maiores.
+Culpa id quae.
+Excepturi molestiae doloremque debitis aspernatur autem.
+Id sit voluptatem nisi neque id id quos.
+Deleniti animi perspiciatis veritatis.
+Accusantium est voluptatem illum perspiciatis.
+Sequi aliquid iure voluptatem soluta labore id aliquid sapiente.
+Id fugit id aut ut.</TextValue>
       <TextColor>
         <R>0</R>
-        <G>0.98039215803146362</G>
-        <B>0.60392159223556519</B>
-        <Hue>0.43599998950958252</Hue>
+        <G>1</G>
+        <B>1</B>
+        <Hue>0.5</Hue>
         <Saturation>1</Saturation>
-        <Luminosity>0.49019607901573181</Luminosity>
+        <Luminosity>0.5</Luminosity>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>Voluptate repellat maiores omnis autem quia eum est.
+Inventore maiores aperiam corrupti sequi impedit veritatis iste occaecati iste.
+Quibusdam repellat distinctio molestiae repellat eum.
+Quo maxime atque consequatur hic quia aliquid.
+Voluptatem eum voluptas deleniti fugiat.
+Dolor ipsa dolorum magnam nihil et consequatur.
+Tempore natus numquam iste pariatur debitis voluptate.
+Veritatis omnis asperiores autem asperiores.
+Dolores dolore aperiam voluptates dolores autem reprehenderit incidunt temporibus.</TextValue>
+      <TextColor>
+        <R>0</R>
+        <G>0.39215686917304993</G>
+        <B>0</B>
+        <Hue>0.3333333432674408</Hue>
+        <Saturation>1</Saturation>
+        <Luminosity>0.19607843458652496</Luminosity>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>Est eos sit.
+Ipsa tempore exercitationem occaecati quisquam tempora quasi molestiae mollitia qui.
+Rem tenetur maiores assumenda maiores.
+Eaque non sint perspiciatis quis eius.
+Qui perferendis eius dignissimos assumenda quia fugiat doloribus eos.
+Nostrum iure atque rem quasi voluptas.
+Sunt et quidem rerum distinctio quo ea laudantium et.
+Nobis sit aspernatur velit tempore blanditiis quas.
+Impedit aut et sequi nihil error veniam est quas.</TextValue>
+      <TextColor>
+        <R>1</R>
+        <G>0</G>
+        <B>1</B>
+        <Hue>0.83333331346511841</Hue>
+        <Saturation>1</Saturation>
+        <Luminosity>0.5</Luminosity>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>Eum quas perferendis ut omnis quia aut porro.
+Sequi et dolor vel reiciendis ut dolorum.
+Expedita voluptas ipsa dolorum.
+Voluptatibus soluta commodi possimus neque quam incidunt architecto ex illo.
+Quo vitae ullam ut porro.
+Aut iusto tenetur debitis aliquid est non.
+Est sit et quam.
+Nulla laudantium quasi qui cupiditate suscipit id alias.
+Omnis corrupti quas quibusdam perferendis nulla aspernatur eveniet tempore vitae.</TextValue>
+      <TextColor>
+        <R>0.94117647409439087</R>
+        <G>1</G>
+        <B>0.94117647409439087</B>
+        <Hue>0.3333333432674408</Hue>
+        <Saturation>1</Saturation>
+        <Luminosity>0.970588207244873</Luminosity>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>Dicta temporibus id libero illo harum.
+Fugiat natus sint ut molestiae expedita minus quia accusamus facilis.
+Est sed aut similique sit aut totam quis.
+Impedit nobis explicabo facere excepturi quisquam doloribus.
+Inventore vero ea qui saepe vel est.
+Dignissimos voluptatem inventore pariatur veritatis consequatur.
+Blanditiis ut eveniet debitis voluptatem sint est quisquam velit nobis.
+Dolore voluptatem laudantium.
+Quisquam nihil libero consectetur ratione perferendis labore ut aut.</TextValue>
+      <TextColor>
+        <R>1</R>
+        <G>0.7137255072593689</G>
+        <B>0.75686275959014893</B>
+        <Hue>0.974885880947113</Hue>
+        <Saturation>1</Saturation>
+        <Luminosity>0.85686278343200684</Luminosity>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>Laboriosam consequuntur sunt error voluptate occaecati quos ut impedit.
+Atque et voluptas tempore accusantium quis eos sed.
+Illum dolores dolorum aut soluta mollitia aliquid sit.
+Distinctio sapiente eius aperiam sit illo reiciendis iure velit.
+Autem neque officia nisi.
+Dolorem veniam odit et asperiores dolorem.
+Officiis eaque occaecati et est porro voluptatem saepe delectus.
+Suscipit et labore.
+Nihil ducimus animi repellendus optio quidem sunt voluptatibus.</TextValue>
+      <TextColor>
+        <R>0.729411780834198</R>
+        <G>0.3333333432674408</G>
+        <B>0.82745099067687988</B>
+        <Hue>0.80026453733444214</Hue>
+        <Saturation>0.58878511190414429</Saturation>
+        <Luminosity>0.58039218187332153</Luminosity>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>Unde incidunt temporibus sit voluptatem in.
+Corrupti amet impedit et sunt dolor.
+Hic consequatur quaerat labore corporis consectetur id.
+Ut aut eligendi ea fugiat molestias beatae ullam non.
+Saepe et aut quo eveniet sed alias dolores rem.
+Voluptatem voluptates odio distinctio et itaque est.
+Iusto in repellendus temporibus tempore quisquam.
+Nobis quos maxime error maiores.
+Rerum dolor doloremque adipisci omnis ut.</TextValue>
+      <TextColor>
+        <R>0.67843139171600342</R>
+        <G>0.84705883264541626</G>
+        <B>0.90196079015731812</B>
+        <Hue>0.5409356951713562</Hue>
+        <Saturation>0.53271037340164185</Saturation>
+        <Luminosity>0.79019606113433838</Luminosity>
       </TextColor>
     </Text>
   </Text>
   <Image>
     <Image>
-      <Height>30</Height>
-      <Width>30</Width>
+      <Height>120</Height>
+      <Width>120</Width>
       <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.cicada-stripes.png</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.SVG.Patterns.diamonds_with_base_color.svg</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.bricks.png</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.SVG.Patterns.chevrons.svg</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.pyramid.png</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.SVG.Patterns.hexagons.svg</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.argyle.png</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.SVG.Patterns.concentric_circles.svg</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.yin-yang.png</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.SVG.Patterns.diamonds_with_color.svg</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.japanese-cube.png</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.SVG.Patterns.nested_squares.svg</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.carbon-fibre.png</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.SVG.Patterns.squares.svg</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.marrakesh.png</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.SVG.Patterns.overlapping_rings.svg</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.blueprint-grid.png</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.SVG.Patterns.diamonds.svg</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.diagonal-stripes.png</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.SVG.Patterns.plus_signs.svg</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.stars.png</Source>
+    </Image>
+    <Image>
+      <Height>120</Height>
+      <Width>120</Width>
+      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.SVG.Patterns.mosaic_squares.svg</Source>
     </Image>
   </Image>
 </Preserve>

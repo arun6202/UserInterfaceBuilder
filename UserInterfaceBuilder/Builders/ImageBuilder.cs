@@ -249,7 +249,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		{
 			if (PNGImageList.Count == 0)
 			{
-				LoadImagesResourcesList(PNGImageType);
+				PNGImageList.AddRange(LoadImagesResourcesList(PNGImageType));
 			}
 			var randomIndex = new Random().Next(PNGImageList.Count);
 			var img = PNGImageList[randomIndex];
@@ -261,7 +261,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		{
 			if (SVGImageList.Count == 0)
 			{
-				LoadImagesResourcesList(SVGImageType);
+				SVGImageList.AddRange(LoadImagesResourcesList(SVGImageType));
 			}
 			var randomIndex = new Random().Next(SVGImageList.Count);
 			var img = SVGImageList[randomIndex];
