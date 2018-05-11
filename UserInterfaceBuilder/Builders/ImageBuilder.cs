@@ -50,7 +50,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 
 
-				double height = 40, width = 40;
+				double height = 44, width = 48;
 
 				switch (child)
 				{
