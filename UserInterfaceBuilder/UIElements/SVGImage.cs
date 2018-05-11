@@ -10,48 +10,52 @@ using SKSvg = SkiaSharp.Extended.Svg.SKSvg;
 namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 {
 	public enum Shape
-    {
-        Square,
-        Rectangle,
-        Circle
-    }
+	{
+		Square,
+		Rectangle,
+		Circle
+	}
 
 	public class SVGImage : ContentView
 	{
 
-		private const Shape DefaultShape = Shape.Square;
-
 		private readonly SKCanvasView canvasView = new SKCanvasView();
-  
+
 		public static readonly BindableProperty SourceProperty = BindableProperty.Create(
-			nameof(Source), typeof(string), typeof(SVGImage), default(string), propertyChanged: RedrawCanvas);
+			nameof(Source), typeof(string), typeof(SVGImage), "m", propertyChanged: RedrawCanvas);
 
 		public string Source
 		{
-			get => (string)GetValue(SourceProperty);
-			set => SetValue(SourceProperty, value);
+
+			get { return (string)GetValue(SourceProperty); }
+			set { SetValue(SourceProperty, value); }
+
 		}
 
-		public static readonly BindableProperty SourceGrowPercentageProperty = BindableProperty.Create(
-			nameof(SourceGrowPercentage), typeof(double), typeof(SVGImage), 100d, propertyChanged: RedrawCanvas);
+		public static readonly BindableProperty GrowPercentProperty = BindableProperty.Create(
+			nameof(GrowPercent), typeof(double), typeof(SVGImage), 100d, propertyChanged: RedrawCanvas);
 
-		public double SourceGrowPercentage
+		public double GrowPercent
 		{
-			get => (double)GetValue(SourceGrowPercentageProperty);
-			set => SetValue(SourceGrowPercentageProperty, value);
+
+			get { return (double)GetValue(GrowPercentProperty); }
+			set { SetValue(GrowPercentProperty, value); }
+
 		}
 
 		public static readonly BindableProperty ShapeProperty = BindableProperty.Create(
-			nameof(Shape), typeof(Shape), typeof(SVGImage), DefaultShape, propertyChanged: RedrawCanvas);
+			nameof(Shape), typeof(Shape), typeof(SVGImage), Shape.Square, propertyChanged: RedrawCanvas);
 
 		public Shape Shape
-        {
-			get => (Shape)GetValue(SourceGrowPercentageProperty);
-            set => SetValue(SourceGrowPercentageProperty, value);
-        }
+		{
+
+			get { return (Shape)GetValue(ShapeProperty); }
+			set { SetValue(ShapeProperty, value); }
+
+		}
 
 
- 
+
 		public SVGImage()
 		{
 
