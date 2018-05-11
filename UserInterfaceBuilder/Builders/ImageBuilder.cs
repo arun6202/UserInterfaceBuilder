@@ -12,7 +12,20 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 	{
 		private const string PNGImageType = ".PNG.Patterns.";
 		private const string SVGImageType = ".SVG.Patterns.";
-
+		private const double DefaultWidth = 44;
+		private const double DefaultHeight = 48;
+		private const string Small = "s";
+		private const string Medium = "m";
+		private const string Large = "l";
+		private const string ExtraLarge = "xl";
+		private const string DoubleExtraLarge = "xxl";
+		private const string TripleExtraLarge = "xxxl";
+		private const double SmallSize = 20;
+		private const double MediumSize = 40;
+		private const double LargeSize = 60;
+		private const double ExtraLargeSize = 80;
+		private const double DoubleExtraLargeSize = 100;
+		private const double TripleExtraLargeSize = 120;
 		static readonly List<string> PNGImageList = new List<string>();
 		static readonly List<string> SVGImageList = new List<string>();
 
@@ -50,7 +63,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 
 
-				double height = 44, width = 48;
+				double height = DefaultWidth, width = DefaultHeight;
 
 				switch (child)
 				{
@@ -61,11 +74,8 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 							if (suppressBackGroundColor)
 							{
-
 								imageAttributtes.BackGroundColor = new Preserver.Color(Color.Default);
 							}
-
-
 							FinalizeDimensions(child, out height, out width);
 
 							if (child is Image img)
@@ -73,13 +83,11 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 								imageAttributtes.Source = RandomPNGImage();
 
 							}
-
 							if (child is SKCanvasView svgImg)
 							{
 								imageAttributtes.Source = RandomSVGImage();
 
 							}
-
 							imageAttributtes.Height = height;
 							imageAttributtes.Width = width;
 
@@ -155,7 +163,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 		private static void FinalizeDimensions(Element element, out double height, out double width)
 		{
-
+			SVGImage svgImgLocal = new SVGImage();
 			var source = "";
 
 			if (element is Image img)
@@ -169,79 +177,87 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				if (sKCanvas.Parent is SVGImage svgImg)
 				{
 					source = svgImg.Source;
+					svgImgLocal = svgImg;
+
 				}
 			}
 
-			height = 40;
-			width = 40;
+			height = DefaultHeight;
+			width = DefaultWidth;
 			switch (source)
 			{
-				case "fs":
-					height = 768;
-					width = 1024;
+				case Small:
+					ConfigureDimensions(SmallSize, ref height, ref width, svgImgLocal);
 					break;
 
-				case "xxxs":
-					height = 10;
-					width = 10;
+				case Medium:
+					ConfigureDimensions(MediumSize, ref height, ref width, svgImgLocal);
 					break;
 
-				case "xxs":
-					height = 20;
-					width = 20;
+				case Large:
+					ConfigureDimensions(LargeSize, ref height, ref width, svgImgLocal);
 					break;
-				case "xs":
-					height = 30;
-					width = 30;
+
+				case ExtraLarge:
+					ConfigureDimensions(ExtraLargeSize, ref height, ref width, svgImgLocal);
 					break;
-				case "sm":
-					height = 40;
-					width = 40;
+
+				case DoubleExtraLarge:
+					ConfigureDimensions(DoubleExtraLargeSize, ref height, ref width, svgImgLocal);
 					break;
-				case "md":
-					height = 60;
-					width = 60;
+
+				case TripleExtraLarge:
+					ConfigureDimensions(TripleExtraLargeSize, ref height, ref width, svgImgLocal);
 					break;
-				case "lg":
-					height = 80;
-					width = 80;
-					break;
-				case "xl":
-					height = 100;
-					width = 100;
-					break;
-				case "xxl":
-					height = 120;
-					width = 120;
-					break;
-				case "xxxl":
-					height = 450;
-					width = 350;
-					break;
+
 
 				default:
-					if (source.Trim() != string.Empty)
+					try
 					{
-						var dimensions = source.Split(new string[] { "/" }, StringSplitOptions.None);
-
-						if (Int32.TryParse(dimensions[0], out int localwidth))
+						if (source.Trim() != string.Empty)
 						{
-							width = localwidth;
-						}
+							var dimensions = source.Split(new string[] { "/" }, StringSplitOptions.None);
 
-						if (Int32.TryParse(dimensions[1], out int localheight))
-						{
-							height = localheight;
+							if (Int32.TryParse(dimensions[0], out int localwidth))
+							{
+								width = localwidth;
+							}
+
+							if (Int32.TryParse(dimensions[1], out int localheight))
+							{
+								height = localheight;
+							}
+
 						}
+					}
+					catch
+					{
+						height = DefaultHeight;
+						width = DefaultWidth;
 
 					}
-					else
-					{
-						height = 30;
-						width = 30;
 
-					}
+					break;
+			}
+		}
 
+		private static void ConfigureDimensions(double size, ref double height, ref double width, SVGImage svgImgLocal)
+		{
+			switch (svgImgLocal.Shape)
+			{
+				case Shape.Square:
+					height = width = size;
+					break;
+				case Shape.Rectangle:
+					var proportionalSize = ((int)Math.Round((double)(100 * 10) / size));
+					height = size - proportionalSize;
+					width = size + proportionalSize;
+					break;
+				case Shape.Circle:
+					height = width = size;
+					break;
+				default:
+					height = width = size;
 					break;
 			}
 		}
