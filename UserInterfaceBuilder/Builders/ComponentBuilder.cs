@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using XamarinFormsStarterKit.UserInterfaceBuilder.Builders;
 using XamarinFormsStarterKit.UserInterfaceBuilder.Preserver;
 
 namespace XamarinFormsStarterKit.UserInterfaceBuilder
@@ -12,11 +13,17 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
         public static void Init(ComponentBuilderOptions options)
         {
+			ConfigureRepeater(options);
             GenerateUIAttributes(options);
             LoadAllComponents(options);
         }
 
-        public static void GenerateUIAttributes(ComponentBuilderOptions options)
+		private static void ConfigureRepeater(ComponentBuilderOptions options)
+		{
+			RepeaterBuilder.Repeat((Layout)options.Content,options.Apply);
+ 		}
+
+		public static void GenerateUIAttributes(ComponentBuilderOptions options)
         {
             ConfigureOptions(options, out Layout layout, out bool suppressLayout, out bool suppressImage, out bool suppressLoremText);
 
