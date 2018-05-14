@@ -51,7 +51,6 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 		public static void GenerateImage(Layout layout, bool suppressBackGroundColor = true)
 		{
-
 			foreach (var child in layout.Children)
 			{
 				if (child is Layout currentLayout)
@@ -60,15 +59,12 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				}
 
 				var currentControl = (VisualElement)child;
-
-
-
 				double height = DefaultWidth, width = DefaultHeight;
 
 				switch (child)
 				{
 					case Image _:
-					case SKCanvasView _:
+					case SVGImage _:
 						{
 							var imageAttributtes = new Preserver.Image();
 
@@ -83,7 +79,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 								imageAttributtes.Source = RandomPNGImage();
 
 							}
-							if (child is SKCanvasView svgImg)
+							if (child is SVGImage)
 							{
 								imageAttributtes.Source = RandomSVGImage();
 
@@ -121,16 +117,15 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				switch (child)
 				{
 					case Image _:
-					case SKCanvasView _:
+					case SVGImage _:
 						{
 							if (suppressBackGroundColor)
 							{
 								currentControl.BackgroundColor = Color.Default;
 							}
-
+							FinalizeDimensions(child, out double height, out double width);
 							if (child is Image img)
 							{
-								FinalizeDimensions(child, out double height, out double width);
 
 								img.Source = ImageSource.FromResource(RandomPNGImage());
 								img.Aspect = Aspect.Fill;
@@ -139,17 +134,11 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 							}
 
-							if (child is SKCanvasView sKCanvas)
+							if (child is SVGImage svgImg)
 							{
-
-								if (sKCanvas.Parent is SVGImage svgImg)
-								{
-									FinalizeDimensions(sKCanvas, out double height, out double width);
-
-									svgImg.Source = RandomSVGImage();
-									svgImg.HeightRequest = height;
-									svgImg.WidthRequest = width;
-								}
+								svgImg.Source = RandomSVGImage();
+								svgImg.HeightRequest = height;
+								svgImg.WidthRequest = width;
 
 							}
 							break;
@@ -172,16 +161,12 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				source = source.Replace("File:", "").ToLower().Trim();
 
 			}
-			if (element is SKCanvasView sKCanvas)
+			if (element is SVGImage svgImg)
 			{
-				if (sKCanvas.Parent is SVGImage svgImg)
-				{
-					source = svgImg.Source;
-					svgImgLocal = svgImg;
+				source = svgImg.Source;
+				svgImgLocal = svgImg;
 
-				}
 			}
-
 			height = DefaultHeight;
 			width = DefaultWidth;
 			switch (source)

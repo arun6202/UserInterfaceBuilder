@@ -16,17 +16,13 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 		Circle
 	}
 
-	public class SVGImage : ContentView
+	public class SVGImage : SKCanvasView
 	{
-
-		private readonly SKCanvasView canvasView = new SKCanvasView();
-
 		public static readonly BindableProperty SourceProperty = BindableProperty.Create(
 			nameof(Source), typeof(string), typeof(SVGImage), "m", propertyChanged: RedrawCanvas);
 
 		public string Source
 		{
-
 			get { return (string)GetValue(SourceProperty); }
 			set { SetValue(SourceProperty, value); }
 
@@ -37,7 +33,6 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 
 		public double GrowPercent
 		{
-
 			get { return (double)GetValue(GrowPercentProperty); }
 			set { SetValue(GrowPercentProperty, value); }
 
@@ -48,25 +43,19 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 
 		public Shape Shape
 		{
-
 			get { return (Shape)GetValue(ShapeProperty); }
 			set { SetValue(ShapeProperty, value); }
 
 		}
-
-
-
 		public SVGImage()
 		{
-
-			Content = canvasView;
-			canvasView.PaintSurface += CanvasViewOnPaintSurface;
+			PaintSurface += CanvasViewOnPaintSurface;
 		}
 
 		private static void RedrawCanvas(BindableObject bindable, object oldvalue, object newvalue)
 		{
 			var svgImage = bindable as SVGImage;
-			svgImage?.canvasView.InvalidateSurface();
+			svgImage?.InvalidateSurface();
 		}
 
 		private void CanvasViewOnPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -78,7 +67,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			{
 				var svg = new SKSvg();
 				svg.Load(stream);
-
+                
 				var surface = args.Surface;
 				var canvas = surface.Canvas;
 				canvas.Clear(SKColors.White);
@@ -89,6 +78,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 				var matrix = SKMatrix.MakeScale((float)scale, (float)scale);
 
 				canvas.DrawPicture(svg.Picture, ref matrix);
+				canvas.Dispose();
 			}
 		}
 

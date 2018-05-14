@@ -31,7 +31,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			propertyChanged: ItemsChanged);
 
 		public static readonly BindableProperty RepeatCountProperty = BindableProperty.Create(
-			nameof(ItemsSource),
+			nameof(RepeatCount),
 			typeof(int),
 			typeof(RepeaterView),
 			DefaultValue,
