@@ -9,20 +9,24 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 	{
 		private const int DefaultValue = 1;
 
+		View contentCell;
+
+
 		public RepeaterContentView()
 		{
 			InitializeComponent();
+			contentCell = repeater.FindByName<View>("contentViewCell");
 		}
 
 
 		public static readonly BindableProperty RepeatCountProperty = BindableProperty.Create(
 			nameof(RepeatCount),
 			typeof(int),
-			typeof(RepeaterView),
+			typeof(RepeaterContentView),
 			DefaultValue,
 			BindingMode.OneWay
 			);
-
+        
 
 		public int RepeatCount
 		{
@@ -36,7 +40,30 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 				SetValue(RepeatCountProperty, value);
 				var repeaterVM = new RepeaterViewModel { RepeatCount = value };
 				repeater.ItemsSource = repeaterVM.RepeatItems;
+
 			}
 		}
+		public static readonly BindableProperty RepeaterContentProperty = BindableProperty.Create(
+			nameof(RepeaterContent),
+			typeof(View),
+			typeof(RepeaterContentView),
+			DefaultValue,
+			BindingMode.OneWay
+			);
+
+		public View RepeaterContent
+		{
+			get
+			{
+                 
+				return contentCell;
+			}
+
+			set
+			{
+				contentCell = value;
+			}
+		}
+
 	}
 }

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:repeater="clr-namespace:XamarinFormsStarterKit.UserInterfaceBuilder.UIElements;" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsStarterKit.UserInterfaceBuilder.UIElements.RepeaterContentView">
+<ContentView CompressedLayout.IsHeadless ="true" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:repeater="clr-namespace:XamarinFormsStarterKit.UserInterfaceBuilder.UIElements;" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsStarterKit.UserInterfaceBuilder.UIElements.RepeaterContentView">
     <ContentView.Content>
-        <repeater:RepeaterView x:Name="repeater" >
+        <repeater:RepeaterView x:Name="repeater">
             <repeater:RepeaterView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+                        <ContentView x:Name="contentViewCell" CompressedLayout.IsHeadless ="true">
+                        </ContentView>
                     </ViewCell>
                 </DataTemplate>
             </repeater:RepeaterView.ItemTemplate>

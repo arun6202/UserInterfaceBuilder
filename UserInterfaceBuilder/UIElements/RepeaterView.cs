@@ -11,7 +11,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 
 		public RepeaterView()
 		{
-			Direction = FlexDirection.Column;
+ 			Direction = FlexDirection.Column;
 			AlignContent = FlexAlignContent.Center;
 			JustifyContent = FlexJustify.Center;
 		}
