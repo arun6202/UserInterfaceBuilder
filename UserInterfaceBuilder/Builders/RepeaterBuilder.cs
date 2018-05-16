@@ -24,7 +24,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Builders
 
 				if (child is Layout currentLayout)
 				{
-					Repeat(layout, apply);
+					Repeat(currentLayout, apply);
 				}
 
 			}

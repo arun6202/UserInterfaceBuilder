@@ -1,19 +1,48 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Diagnostics;
+using System.Linq;
 using Xamarin.Forms;
 using XamarinFormsStarterKit.UserInterfaceBuilder.ViewModels;
 
 namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 {
-	public class RepeaterView : FlexLayout
+	[ContentProperty("ItemTemplate")]
+	public class RepeaterView : StackLayout
 	{
 		private const int DefaultValue = 1;
 
-		public RepeaterView()
+		public static readonly BindableProperty RepeatCountProperty = BindableProperty.Create(
+		nameof(RepeatCount),
+		typeof(int),
+		typeof(RepeaterView),
+		DefaultValue,
+		BindingMode.OneWay
+		);
+
+		public static readonly BindableProperty ContentViewProperty = BindableProperty.Create(
+			nameof(ContentView),
+			typeof(ContentView),
+		typeof(RepeaterView),
+		null,
+		BindingMode.OneWay
+		);
+
+		public int RepeatCount
 		{
-			Direction = FlexDirection.Column;
-			AlignContent = FlexAlignContent.Center;
-			JustifyContent = FlexJustify.Center;
+			get
+			{
+				return (int)GetValue(RepeatCountProperty);
+			}
+
+			set
+			{
+				SetValue(RepeatCountProperty, value);
+				var repeaterVM = new RepeaterViewModel { RepeatCount = value };
+				ItemsSource = repeaterVM.RepeatItems;
+			}
 		}
 
 		public static readonly BindableProperty ItemTemplateProperty = BindableProperty.Create(
@@ -30,29 +59,12 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			BindingMode.OneWay,
 			propertyChanged: ItemsChanged);
 
-		public static readonly BindableProperty RepeatCountProperty = BindableProperty.Create(
-			nameof(RepeatCount),
-			typeof(int),
-			typeof(RepeaterView),
-			DefaultValue,
-			BindingMode.OneWay
-			);
-
-
-		public int RepeatCount
+		public RepeaterView()
 		{
-			get
-			{
-				return (int)GetValue(RepeatCountProperty);
-			}
-
-			set
-			{
-				SetValue(RepeatCountProperty, value);
-				var repeater = new RepeaterViewModel { RepeatCount = value };
-				ItemsSource = repeater.RepeatItems;
-			}
+			CompressedLayout.SetIsHeadless(this, true);
+			Spacing = 0;
 		}
+
 		public ICollection ItemsSource
 		{
 			get => (ICollection)GetValue(ItemsSourceProperty);
@@ -83,7 +95,6 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 
 		private static void ItemsChanged(BindableObject bindable, object oldValue, object newValue)
 		{
-
 			if (!(bindable is RepeaterView control)) return;
 
 			control.Children.Clear();
@@ -94,8 +105,9 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 
 			foreach (var item in items)
 			{
-				control.Children.Add(control.ViewFor(new object()));
+				control.Children.Add(control.ViewFor(item));
 			}
 		}
 	}
+
 }
