@@ -76,8 +76,10 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 				var svgMax = Math.Max(svg.Picture.CullRect.Width, svg.Picture.CullRect.Height);
 				var scale = canvasMin / svgMax;
 				var matrix = SKMatrix.MakeScale((float)scale, (float)scale);
-
-				canvas.DrawPicture(svg.Picture, ref matrix);
+                
+				//canvas.DrawPicture(svg.Picture, ref matrix);
+				canvas.DrawPicture(svg.Picture);
+                
 				canvas.Dispose();
 			}
 		}

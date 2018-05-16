@@ -11,7 +11,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 	public static class ImageBuilder
 	{
 		private const string PNGImageType = ".PNG.Patterns.";
-		private const string SVGImageType = ".SVG.Patterns.";
+		private const string SVGImageType = ".SVG.Patterns1.";
 		private const double DefaultWidth = 44;
 		private const double DefaultHeight = 48;
 		private const string Small = "s";
@@ -93,9 +93,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				}
 			}
 
-
 		}
-
 
 		public static void LoadImage(Layout layout, bool apply = true, bool suppressBackGroundColor = true, bool preserveSession = false)
 		{
