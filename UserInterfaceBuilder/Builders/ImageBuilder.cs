@@ -12,20 +12,20 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 	{
 		private const string PNGImageType = ".PNG.Patterns.";
 		private const string SVGImageType = ".SVG.Patterns1.";
-		private const double DefaultWidth = 44;
-		private const double DefaultHeight = 48;
+		private const double DefaultWidth = 80;
+		private const double DefaultHeight = 88;
 		private const string Small = "s";
 		private const string Medium = "m";
 		private const string Large = "l";
 		private const string ExtraLarge = "xl";
 		private const string DoubleExtraLarge = "xxl";
 		private const string TripleExtraLarge = "xxxl";
-		private const double SmallSize = 20;
-		private const double MediumSize = 40;
-		private const double LargeSize = 60;
-		private const double ExtraLargeSize = 80;
-		private const double DoubleExtraLargeSize = 100;
-		private const double TripleExtraLargeSize = 120;
+		private const double SmallSize = 100;
+		private const double MediumSize = 140;
+		private const double LargeSize = 180;
+		private const double ExtraLargeSize = 220;
+		private const double DoubleExtraLargeSize = 260;
+		private const double TripleExtraLargeSize = 300;
 		static readonly List<string> PNGImageList = new List<string>();
 		static readonly List<string> SVGImageList = new List<string>();
 
@@ -243,6 +243,18 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				case Shape.Rectangle40:
 					ConfigureRectangle(size, out height, out width, 40);
 					break;
+				case Shape.RoundedRectangle10:
+                    ConfigureRectangle(size, out height, out width, 10);
+                    break;
+				case Shape.RoundedRectangle20:
+                    ConfigureRectangle(size, out height, out width, 20);
+                    break;
+				case Shape.RoundedRectangle30:
+                    ConfigureRectangle(size, out height, out width, 30);
+                    break;
+				case Shape.RoundedRectangle40:
+                    ConfigureRectangle(size, out height, out width, 40);
+                    break;
 				case Shape.Circle:
 					height = width = size;
 					break;

@@ -17,7 +17,11 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 		Rectangle20,
 		Rectangle30,
 		Rectangle40,
-         Circle
+		RoundedRectangle10,
+		RoundedRectangle20,
+		RoundedRectangle30,
+		RoundedRectangle40,
+        Circle
 	}
 
 	public class SVGImage : SKCanvasView
@@ -67,51 +71,54 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			if (string.IsNullOrEmpty(Source))
 				return;
 
-			using (Stream stream = ResourceLoader.GetEmbeddedResourceStream(Source))
+			using (var reader = GenerateSVG().CreateReader())
 			{
 				var svg = new SKSvg();
-				svg.Load(GenerateSVG().CreateReader());
+				svg.Load(reader);
 
 				var surface = args.Surface;
 				var canvas = surface.Canvas;
 				canvas.Clear(SKColors.White);
 
-				var canvasMin = Math.Min(WidthRequest, HeightRequest);
-				var svgMax = Math.Max(svg.Picture.CullRect.Width, svg.Picture.CullRect.Height);
-				var scale = canvasMin / svgMax;
-				var matrix = SKMatrix.MakeScale((float)scale, (float)scale);
-
-				//canvas.DrawPicture(svg.Picture, ref matrix);
-				canvas.DrawPicture(svg.Picture);
-
+				//var canvasMin = Math.Min(WidthRequest, HeightRequest);
+				//var svgMax = Math.Max(svg.Picture.CullRect.Width, svg.Picture.CullRect.Height);
+				//var scale = canvasMin / svgMax;
+				//var matrix = SKMatrix.MakeScale((float)scale, (float)scale);
+		    	//canvas.DrawPicture(svg.Picture, ref matrix);
+                           
+                 
+				var matrix = SKMatrix.MakeScale((float)1, (float)1);
+                canvas.DrawPicture(svg.Picture, ref matrix);
 				canvas.Dispose();
 			}
 		}
 		private const string SVGXml = @"<?xml version='1.0' encoding='UTF-8' ?>
-                                        <svg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000'>
+                                        <svg xmlns='http://www.w3.org/2000/svg' width='313' height='287' viewBox='0 0 313 287' >
                                          </svg>";
 		static XDocument GenerateSVG()
 		{
 			var xDocument = XDocument.Parse(SVGXml);
 
 			xDocument.Root.Add(new XElement("rect",
-													  new XAttribute("width", "1000"),
-													  new XAttribute("height", "1000"),
-			                                new XAttribute("fill", LayoutBuilder.RandomColor().ToSKColor().ToString())));
+			                                new XAttribute("width", "313"),
+			                                new XAttribute("height", "287"),
+			                                          new XAttribute("style", "stroke:black;stroke-width:12;opacity:0.5"),
+                                                      new XAttribute("fill", LayoutBuilder.RandomColor().ToSKColor().ToString())));
 
 
-			var gElement = new XElement("g", new XAttribute("fill", LayoutBuilder.RandomColor().ToSKColor().ToString()));
+			var gElement = new XElement("g", new XAttribute("rx", "20"),
+                                            new XAttribute("ry", "20"), new XAttribute("fill", LayoutBuilder.RandomColor().ToSKColor().ToString()));
 
 			var seed = new Random().Next(1, 40);
 			var increment = new Random().Next(1, 40);
 
 			var reset = seed;
 
-			while (seed <= 1000)
+			while (seed <= 313)
 			{
 				gElement.Add(new XElement("rect",
 													 new XAttribute("width", "1"),
-													 new XAttribute("height", "1000"),
+				                          new XAttribute("height", "287"),
 										  new XAttribute("x", seed.ToString())));
 				seed = seed + increment;
 			}
@@ -127,11 +134,11 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 				increment = new Random().Next(1, 40);
 			}
 
-			while (seed <= 1000)
+			while (seed <= 313)
 			{
 
 				gElement.Add(new XElement("rect",
-												  new XAttribute("width", "1000"),
+				                          new XAttribute("width", "313"),
 												  new XAttribute("height", "1"),
 									  new XAttribute("y", seed.ToString())));
 
@@ -140,14 +147,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			}
 
 			xDocument.Root.Add(gElement);
-
-			//xDocument.Root.Add(new XElement("rect",
-													//  new XAttribute("width", "1000"),
-													//  new XAttribute("height", "1000"),
-													//   new XAttribute("fill", "none"),
-													//new XAttribute("stroke-width", "5"),
-			                                //new XAttribute("stroke", LayoutBuilder.RandomColor().ToSKColor().ToString())));
-
+            
 			return xDocument;
 
 
