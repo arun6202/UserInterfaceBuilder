@@ -103,6 +103,7 @@
     <None Remove="Images\SVG\Patterns\tessellation.svg" />
     <None Remove="Images\SVG\Patterns\triangles.svg" />
     <None Remove="Images\SVG\Patterns1\test.svg" />
+    <None Remove="Images\SVG\Patterns1\BlueprintGrid.svg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="UserInterfaceBuilderTests\Class1.cs" />
@@ -190,6 +191,6 @@
     <EmbeddedResource Include="Images\SVG\Patterns\squares.svg" />
     <EmbeddedResource Include="Images\SVG\Patterns\tessellation.svg" />
     <EmbeddedResource Include="Images\SVG\Patterns\triangles.svg" />
-    <EmbeddedResource Include="Images\SVG\Patterns1\sample.svg" />
+    <EmbeddedResource Include="Images\SVG\Patterns1\BlueprintGrid.svg" />
   </ItemGroup>
 </Project>

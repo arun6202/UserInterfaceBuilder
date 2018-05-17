@@ -122,11 +122,15 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			}
 		}
         
-		static Color RandomColor()
+	public	static Color RandomColor()
 		{
 			if (ColorList.Count == 0)
 			{
-				return Color.Default; // to do all viable colors are emptied , so please try different layout
+				foreach (var item in typeof(Color).GetFields())
+                {
+                    ColorList.Add((Color)item.GetValue(new Color()));
+                    
+                }
 			}
 			var randomIndex = new Random().Next(ColorList.Count);
 			var color = ColorList[randomIndex];

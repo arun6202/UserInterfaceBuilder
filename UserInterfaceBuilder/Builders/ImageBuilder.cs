@@ -231,10 +231,17 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				case Shape.Square:
 					height = width = size;
 					break;
-				case Shape.Rectangle:
-					var proportionalSize = ((int)Math.Round((double)(100 * 10) / size));
-					height = size - proportionalSize;
-					width = size + proportionalSize;
+				case Shape.Rectangle10:
+					ConfigureRectangle(size, out height, out width, 10);
+					break;
+				case Shape.Rectangle20:
+					ConfigureRectangle(size, out height, out width, 20);
+					break;
+				case Shape.Rectangle30:
+					ConfigureRectangle(size, out height, out width, 30);
+					break;
+				case Shape.Rectangle40:
+					ConfigureRectangle(size, out height, out width, 40);
 					break;
 				case Shape.Circle:
 					height = width = size;
@@ -243,6 +250,13 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 					height = width = size;
 					break;
 			}
+		}
+
+		private static void ConfigureRectangle(double size, out double height, out double width, int factor)
+		{
+			var proportionalSize = ((int)Math.Round(100 * factor / size));
+			height	 = size - proportionalSize;
+			width = size + proportionalSize;
 		}
 
 		static string RandomPNGImage()

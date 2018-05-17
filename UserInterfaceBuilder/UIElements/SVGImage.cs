@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Xml.Linq;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using Xamarin.Forms;
@@ -12,8 +13,11 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 	public enum Shape
 	{
 		Square,
-		Rectangle,
-		Circle
+		Rectangle10,
+		Rectangle20,
+		Rectangle30,
+		Rectangle40,
+         Circle
 	}
 
 	public class SVGImage : SKCanvasView
@@ -66,8 +70,8 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			using (Stream stream = ResourceLoader.GetEmbeddedResourceStream(Source))
 			{
 				var svg = new SKSvg();
-				svg.Load(stream);
-                
+				svg.Load(GenerateSVG().CreateReader());
+
 				var surface = args.Surface;
 				var canvas = surface.Canvas;
 				canvas.Clear(SKColors.White);
@@ -76,12 +80,77 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 				var svgMax = Math.Max(svg.Picture.CullRect.Width, svg.Picture.CullRect.Height);
 				var scale = canvasMin / svgMax;
 				var matrix = SKMatrix.MakeScale((float)scale, (float)scale);
-                
+
 				//canvas.DrawPicture(svg.Picture, ref matrix);
 				canvas.DrawPicture(svg.Picture);
-                
+
 				canvas.Dispose();
 			}
+		}
+		private const string SVGXml = @"<?xml version='1.0' encoding='UTF-8' ?>
+                                        <svg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000'>
+                                         </svg>";
+		static XDocument GenerateSVG()
+		{
+			var xDocument = XDocument.Parse(SVGXml);
+
+			xDocument.Root.Add(new XElement("rect",
+													  new XAttribute("width", "1000"),
+													  new XAttribute("height", "1000"),
+			                                new XAttribute("fill", LayoutBuilder.RandomColor().ToSKColor().ToString())));
+
+
+			var gElement = new XElement("g", new XAttribute("fill", LayoutBuilder.RandomColor().ToSKColor().ToString()));
+
+			var seed = new Random().Next(1, 40);
+			var increment = new Random().Next(1, 40);
+
+			var reset = seed;
+
+			while (seed <= 1000)
+			{
+				gElement.Add(new XElement("rect",
+													 new XAttribute("width", "1"),
+													 new XAttribute("height", "1000"),
+										  new XAttribute("x", seed.ToString())));
+				seed = seed + increment;
+			}
+
+			if (new Random().NextDouble() >= 0.5)
+			{
+				seed = reset;
+
+			}
+			else
+			{
+				seed = new Random().Next(1, 40);
+				increment = new Random().Next(1, 40);
+			}
+
+			while (seed <= 1000)
+			{
+
+				gElement.Add(new XElement("rect",
+												  new XAttribute("width", "1000"),
+												  new XAttribute("height", "1"),
+									  new XAttribute("y", seed.ToString())));
+
+				seed = seed + increment;
+
+			}
+
+			xDocument.Root.Add(gElement);
+
+			//xDocument.Root.Add(new XElement("rect",
+													//  new XAttribute("width", "1000"),
+													//  new XAttribute("height", "1000"),
+													//   new XAttribute("fill", "none"),
+													//new XAttribute("stroke-width", "5"),
+			                                //new XAttribute("stroke", LayoutBuilder.RandomColor().ToSKColor().ToString())));
+
+			return xDocument;
+
+
 		}
 
 	}
