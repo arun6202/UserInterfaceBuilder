@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Bogus.DataSets;
 using Xamarin.Forms;
+using XamarinFormsStarterKit.UserInterfaceBuilder.Helpers;
 using Preserver = XamarinFormsStarterKit.UserInterfaceBuilder.Preserver;
 
 namespace XamarinFormsStarterKit.UserInterfaceBuilder
@@ -40,13 +42,13 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 						ComponentBuilder.PreserveUIAttributes.Text.Add(new Preserver.Text { TextColor = new Preserver.Color(Color.Default) });
 
 					}
-                                  
+
 					Type type = child.GetType();
 
 					PropertyInfo prop = type.GetProperty("Text");
-                    
-					ComponentBuilder.PreserveUIAttributes.Text.Add(new Preserver.Text { TextValue = GenerateLoremText(prop.GetValue(child).ToString()),TextColor = new Preserver.Color(RandomColor()) });
-                                  
+
+					ComponentBuilder.PreserveUIAttributes.Text.Add(new Preserver.Text { TextValue = GenerateLoremText(prop.GetValue(child).ToString()), TextColor = new Preserver.Color(RandomColor()) });
+
 				}
 
 
@@ -95,8 +97,37 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			}
 		}
 
+		private static string GenerateLoremText(string text, bool isRandom)
+		{
+			if (isRandom)
+			{
+				return GenerateLoremText(text);
+
+			}
+			else
+			{
+				try
+				{
+					if (ComponentBuilder.RestoredUIAttributes.Text.Any())
+					{
+						var textValue = ComponentBuilder.RestoredUIAttributes.Text[0];
+						ComponentBuilder.RestoredUIAttributes.Text.RemoveAt(0);
+						return textValue.TextValue;
+					}
+				}
+				finally
+				{
+
+				}
+			}
+
+			return GenerateLoremText(text, true);
+		}
+
 		private static string GenerateLoremText(string text)
 		{
+
+
 			text = text.ToLower();
 			if (text.StartsWith("w", StringComparison.CurrentCulture))
 			{
@@ -176,17 +207,42 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			return text;
 		}
 
-		static Color RandomColor()
-		{
-			if (ColorList.Count == 0)
-			{
-				return Color.White; // to do all viable colors are emptied , so please try different layout
-			}
-			var randomIndex = new Random().Next(ColorList.Count);
-			var color = ColorList[randomIndex];
-			ColorList.RemoveAt(randomIndex);
-			return color;
-		}
+	public static Color GetColor(bool isRandom = true)
+        {
+            if (isRandom)
+            {
+                if (ColorList.Count == 0)
+                {
+                    foreach (var item in typeof(Color).GetFields())
+                    {
+                        ColorList.Add((Color)item.GetValue(new Color()));
+
+                    }
+                }
+                var randomIndex = new Random().Next(ColorList.Count);
+                var color = ColorList[randomIndex];
+                ColorList.RemoveAt(randomIndex);
+                return color;
+            }
+            else
+            {
+                try
+                {
+                    if (ComponentBuilder.RestoredUIAttributes.Text.Any())
+                    {
+                        var text = ComponentBuilder.RestoredUIAttributes.Text[0];
+						ComponentBuilder.RestoredUIAttributes.Text.RemoveAt(0);
+                        return text.TextColor.ToXamarinColor();
+                    }
+                }
+                finally
+                {
+
+                }
+            }
+
+            return GetColor(true);
+        }
 
 	}
 }
