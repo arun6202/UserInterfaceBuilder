@@ -228,7 +228,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 
 		private static string RandomColor()
 		{
-			var color = LayoutBuilder.RandomColor().ToSKColor().ToString();
+			var color = LayoutBuilder.GetColor().ToSKColor().ToString();
 
 			while ((color == Color.White.ToSKColor().ToString() ||
 					color == Color.WhiteSmoke.ToSKColor().ToString() ||

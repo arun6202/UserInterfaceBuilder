@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Xamarin.Forms;
+using XamarinFormsStarterKit.UserInterfaceBuilder.Helpers;
 
 namespace XamarinFormsStarterKit.UserInterfaceBuilder
 {
@@ -24,7 +26,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		public static void GenerateLayoutColors(Layout layout, bool suppressBackGroundColor = true)
 		{
 
-			var color = RandomColor();
+			var color = GetColor();
 
 			if (suppressBackGroundColor)
 			{
@@ -47,13 +49,13 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				if (child is Layout)
 				{
 
- 
-					ComponentBuilder.PreserveUIAttributes.Layout.Add(new Preserver.Color(RandomColor()));
+
+					ComponentBuilder.PreserveUIAttributes.Layout.Add(new Preserver.Color(GetColor()));
 
 				}
 				else
 				{
-					ComponentBuilder.PreserveUIAttributes.Layout.Add(new Preserver.Color(RandomColor()));
+					ComponentBuilder.PreserveUIAttributes.Layout.Add(new Preserver.Color(GetColor()));
 
 				}
 			}
@@ -74,7 +76,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			}
 			else
 			{
-				layout.BackgroundColor = RandomColor();
+				layout.BackgroundColor = GetColor(preserveSession);
 
 
 			}
@@ -88,12 +90,12 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				var currentControl = (VisualElement)child;
 				if (child is Layout)
 				{
-					currentControl.BackgroundColor = RandomColor();
+					currentControl.BackgroundColor = GetColor(preserveSession);
 
 				}
 				else
 				{
-					currentControl.BackgroundColor = RandomColor();
+					currentControl.BackgroundColor = GetColor(preserveSession);
 
 				}
 			}
@@ -121,21 +123,42 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 			}
 		}
-        
-	public	static Color RandomColor()
+
+		public static Color GetColor(bool isRandom = false)
 		{
-			if (ColorList.Count == 0)
+			if (isRandom)
 			{
-				foreach (var item in typeof(Color).GetFields())
+				if (ColorList.Count == 0)
+				{
+					foreach (var item in typeof(Color).GetFields())
+					{
+						ColorList.Add((Color)item.GetValue(new Color()));
+
+					}
+				}
+				var randomIndex = new Random().Next(ColorList.Count);
+				var color = ColorList[randomIndex];
+				ColorList.RemoveAt(randomIndex);
+				return color;
+			}
+            else
+			{
+				try
                 {
-                    ColorList.Add((Color)item.GetValue(new Color()));
-                    
+                    if (ComponentBuilder.RestoredUIAttributes.Layout.Any())
+                    {
+                        var color = ComponentBuilder.RestoredUIAttributes.Layout[0];
+                        ComponentBuilder.RestoredUIAttributes.Layout.RemoveAt(0);
+                        return color.ToXamarinColor();
+                    }
+                }
+                finally
+                {
+
                 }
 			}
-			var randomIndex = new Random().Next(ColorList.Count);
-			var color = ColorList[randomIndex];
-			ColorList.RemoveAt(randomIndex);
-			return color;
+
+			return GetColor(true);
 		}
 	}
 }
