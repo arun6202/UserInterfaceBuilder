@@ -63,7 +63,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 		public static void ColorizeLayout(Layout layout, bool apply = true, bool suppressBackGroundColor = true, bool preserveSession = false)
 		{
-
+			preserveSession = !preserveSession;
 			if (!apply)
 			{
 				return;
@@ -124,7 +124,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			}
 		}
 
-		public static Color GetColor(bool isRandom = false)
+		public static Color GetColor(bool isRandom = true)
 		{
 			if (isRandom)
 			{
