@@ -79,38 +79,32 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 				var surface = args.Surface;
 				var canvas = surface.Canvas;
 				canvas.Clear(SKColors.White);
-                
+
 				canvas.DrawPicture(svg.Picture);
-                canvas.Dispose();
+				canvas.Dispose();
 
 			}
 		}
 
 		private XDocument GenerateSVG(int width, int height)
 		{
-			var svgXml = @"<?xml version='1.0' encoding='UTF-8' ?>
-                                        <svg xmlns='http://www.w3.org/2000/svg' 
-                                        width ='100%' height ='100%' 
-                                        viewBox='0 0 " + width.ToString() + " " + height.ToString() + "' preserveAspectRatio='none'></svg>";
+			XDocument xDocument = CreateSVGRoot(width, height);
 
+			CreateOuterElement(width, height, xDocument, this.Shape);
 
+			return xDocument;
+			return CreateFillElement(width, height, xDocument);
+		}
 
-			var xDocument = XDocument.Parse(svgXml);
-
-			xDocument.Root.Add(new XElement("rect",
-											new XAttribute("width", width),
-											new XAttribute("height", height),
-													  new XAttribute("style", "stroke:black;stroke-width:1;opacity:0.5"),
-													  new XAttribute("fill", LayoutBuilder.RandomColor().ToSKColor().ToString())));
-
-
-			var gElement = new XElement("g", new XAttribute("fill", LayoutBuilder.RandomColor().ToSKColor().ToString()));
+		private static XDocument CreateFillElement(int width, int height, XDocument xDocument)
+		{
+			var gElement = new XElement("g", new XAttribute("fill", RandomColor()));
 
 			var seed = new Random().Next(5, 50);
 			var increment = new Random().Next(5, 50);
 
 			var reset = seed;
-            
+
 			while (seed <= width)
 			{
 				gElement.Add(new XElement("rect",
@@ -148,6 +142,110 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			return xDocument;
 		}
 
+		private static void CreateOuterElement(int width, int height, XDocument xDocument, Shape shape)
+		{
 
+			switch (shape)
+			{
+				case Shape.Square:
+				case Shape.Rectangle10:
+				case Shape.Rectangle20:
+				case Shape.Rectangle30:
+				case Shape.Rectangle40:
+					{
+						CreaterRect(width, height, xDocument);
+						break;
+					}
+				case Shape.RoundedRectangle10:
+					{
+						CreaterRoundRect(width, height, "10", "10", xDocument);
+						break;
+					}
+				case Shape.RoundedRectangle20:
+					{
+						CreaterRoundRect(width, height, "20", "20", xDocument);
+						break;
+					}
+				case Shape.RoundedRectangle30:
+					{
+						CreaterRoundRect(width, height, "30", "30", xDocument);
+						break;
+					}
+				case Shape.RoundedRectangle40:
+					{
+						CreaterRoundRect(width, height, "40", "40", xDocument);
+						break;
+					}
+				case Shape.Circle:
+					{
+						CreateCircle(width, height, xDocument);
+						break;
+					}
+				default:
+					{
+						CreaterRect(width, height, xDocument);
+						break;
+					}
+			}
+
+		}
+
+
+		private static void CreaterRoundRect(int width, int height, string rx, string ry, XDocument xDocument)
+		{
+			xDocument.Root.Add(new XElement("rect",
+								new XAttribute("width", width),
+								new XAttribute("height", height),
+								new XAttribute("rx", rx),
+								new XAttribute("ry", ry),
+								new XAttribute("style", "stroke:black;stroke-width:1;opacity:0.5"),
+								new XAttribute("fill", RandomColor())));
+		}
+
+		private static void CreateCircle(int width, int height, XDocument xDocument)
+		{
+			xDocument.Root.Add(new XElement("circle",
+								new XAttribute("r", width),
+								new XAttribute("cx", width + 20 ),
+								new XAttribute("cy", width + 20 ),
+								new XAttribute("style", "stroke:black;stroke-width:1;opacity:0.5"),
+								new XAttribute("fill", RandomColor())));
+		}
+
+		private static void CreaterRect(int width, int height, XDocument xDocument)
+		{
+			xDocument.Root.Add(new XElement("rect",
+								new XAttribute("width", width),
+								new XAttribute("height", height),
+								new XAttribute("style", "stroke:black;stroke-width:1;opacity:0.5"),
+								new XAttribute("fill", RandomColor())));
+		}
+
+		private static string RandomColor()
+		{
+			var color = LayoutBuilder.RandomColor().ToSKColor().ToString();
+
+			while ((color == Color.White.ToSKColor().ToString() ||
+					color == Color.WhiteSmoke.ToSKColor().ToString() ||
+					color == Color.FloralWhite.ToSKColor().ToString() ||
+					color == Color.NavajoWhite.ToSKColor().ToString() ||
+					color == Color.GhostWhite.ToSKColor().ToString()
+				   ))
+			{
+				RandomColor();
+			}
+
+			return color;
+		}
+
+		private static XDocument CreateSVGRoot(int width, int height)
+		{
+			var svgXml = @"<?xml version='1.0' encoding='UTF-8' ?>
+                                        <svg xmlns='http://www.w3.org/2000/svg' 
+                                        width ='100%' height ='100%' 
+                                        viewBox='0 0 " + width.ToString() + " " + height.ToString() + "' preserveAspectRatio='none'></svg>";
+			var xDocument = XDocument.Parse(svgXml);
+			return xDocument;
+		}
 	}
 }
