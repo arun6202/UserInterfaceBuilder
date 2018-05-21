@@ -2,119 +2,170 @@
 <Preserve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Layout>
     <Color>
-      <R>-1</R>
-      <G>-1</G>
-      <B>-1</B>
-      <Hue>-1</Hue>
-      <Saturation>-1</Saturation>
-      <Luminosity>-1</Luminosity>
+      <R>0.85882353782653809</R>
+      <G>0.43921568989753723</G>
+      <B>0.57647061347961426</B>
+      <Hue>0.94548290967941284</Hue>
+      <Saturation>0.597765326499939</Saturation>
+      <Luminosity>0.64901959896087646</Luminosity>
     </Color>
     <Color>
-      <R>-1</R>
-      <G>-1</G>
-      <B>-1</B>
-      <Hue>-1</Hue>
-      <Saturation>-1</Saturation>
-      <Luminosity>-1</Luminosity>
+      <R>0.97254902124404907</R>
+      <G>0.97254902124404907</G>
+      <B>1</B>
+      <Hue>0.66666668653488159</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.98627448081970215</Luminosity>
     </Color>
     <Color>
-      <R>0.501960813999176</R>
+      <R>0.62745100259780884</R>
+      <G>0.32156863808631897</G>
+      <B>0.17647059261798859</B>
+      <Hue>0.05362318828701973</Hue>
+      <Saturation>0.56097567081451416</Saturation>
+      <Luminosity>0.40196079015731812</Luminosity>
+    </Color>
+    <Color>
+      <R>0.94117647409439087</R>
+      <G>1</G>
+      <B>0.94117647409439087</B>
+      <Hue>0.3333333432674408</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.970588207244873</Luminosity>
+    </Color>
+    <Color>
+      <R>0.48235294222831726</R>
+      <G>0.40784314274787903</G>
+      <B>0.93333333730697632</B>
+      <Hue>0.69029849767684937</Hue>
+      <Saturation>0.7976190447807312</Saturation>
+      <Luminosity>0.67058825492858887</Luminosity>
+    </Color>
+    <Color>
+      <R>0.80392158031463623</R>
+      <G>0.5215686559677124</G>
+      <B>0.24705882370471954</B>
+      <Hue>0.082159638404846191</Hue>
+      <Saturation>0.58677691221237183</Saturation>
+      <Luminosity>0.52549022436141968</Luminosity>
+    </Color>
+    <Color>
+      <R>0.98039215803146362</R>
       <G>0.501960813999176</G>
-      <B>0.501960813999176</B>
-      <Hue>0</Hue>
-      <Saturation>0</Saturation>
-      <Luminosity>0.501960813999176</Luminosity>
+      <B>0.44705882668495178</B>
+      <Hue>0.017156859859824181</Hue>
+      <Saturation>0.931506872177124</Saturation>
+      <Luminosity>0.7137255072593689</Luminosity>
     </Color>
     <Color>
       <R>1</R>
-      <G>0</G>
-      <B>1</B>
-      <Hue>0.83333331346511841</Hue>
+      <G>0.87058824300765991</G>
+      <B>0.67843139171600342</B>
+      <Hue>0.099593497812747955</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.83921569585800171</Luminosity>
+    </Color>
+    <Color>
+      <R>1</R>
+      <G>1</G>
+      <B>0</B>
+      <Hue>0.1666666716337204</Hue>
       <Saturation>1</Saturation>
       <Luminosity>0.5</Luminosity>
     </Color>
-    <Color>
-      <R>-1</R>
-      <G>-1</G>
-      <B>-1</B>
-      <Hue>-1</Hue>
-      <Saturation>-1</Saturation>
-      <Luminosity>-1</Luminosity>
-    </Color>
-    <Color>
-      <R>0.66274511814117432</R>
-      <G>0.66274511814117432</G>
-      <B>0.66274511814117432</B>
-      <Hue>0</Hue>
-      <Saturation>0</Saturation>
-      <Luminosity>0.66274511814117432</Luminosity>
-    </Color>
-    <Color>
-      <R>0.96078431606292725</R>
-      <G>0.96078431606292725</G>
-      <B>0.96078431606292725</B>
-      <Hue>0</Hue>
-      <Saturation>0</Saturation>
-      <Luminosity>0.96078431606292725</Luminosity>
-    </Color>
-    <Color>
-      <R>0.545098066329956</R>
-      <G>0</G>
-      <B>0</B>
-      <Hue>1</Hue>
-      <Saturation>1</Saturation>
-      <Luminosity>0.272549033164978</Luminosity>
-    </Color>
   </Layout>
-  <Text>
-    <Text>
-      <TextColor>
-        <R>-1</R>
-        <G>-1</G>
-        <B>-1</B>
-        <Hue>-1</Hue>
-        <Saturation>-1</Saturation>
-        <Luminosity>-1</Luminosity>
-      </TextColor>
-    </Text>
-    <Text>
-      <TextValue>nesciunt</TextValue>
-      <TextColor>
-        <R>1</R>
-        <G>0.89411765336990356</G>
-        <B>0.76862746477127075</B>
-        <Hue>0.0903954803943634</Hue>
-        <Saturation>1</Saturation>
-        <Luminosity>0.884313702583313</Luminosity>
-      </TextColor>
-    </Text>
-  </Text>
+  <Text />
   <Image>
     <Image>
-      <Height>450</Height>
-      <Width>350</Width>
-      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.PNG.Patterns.horizontal-stripes.png</Source>
-      <BackGroundColor>
-        <R>-1</R>
-        <G>-1</G>
-        <B>-1</B>
-        <Hue>-1</Hue>
-        <Saturation>-1</Saturation>
-        <Luminosity>-1</Luminosity>
-      </BackGroundColor>
+      <Height>180</Height>
+      <Width>180</Width>
+      <Source>&amp;lt;svg xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot;&amp;gt;
+  &amp;lt;circle r=&amp;quot;90&amp;quot; cx=&amp;quot;90&amp;quot; cy=&amp;quot;90&amp;quot; style=&amp;quot;stroke:black;stroke-width:1;opacity:0.5&amp;quot; fill=&amp;quot;#ffc0c0c0&amp;quot; xmlns=&amp;quot;&amp;quot; /&amp;gt;
+  &amp;lt;g fill=&amp;quot;#ffff4500&amp;quot; xmlns=&amp;quot;&amp;quot;&amp;gt;
+    &amp;lt;circle width=&amp;quot;1&amp;quot; height=&amp;quot;180&amp;quot; x=&amp;quot;27&amp;quot; /&amp;gt;
+    &amp;lt;circle width=&amp;quot;1&amp;quot; height=&amp;quot;180&amp;quot; x=&amp;quot;65&amp;quot; /&amp;gt;
+    &amp;lt;circle width=&amp;quot;1&amp;quot; height=&amp;quot;180&amp;quot; x=&amp;quot;103&amp;quot; /&amp;gt;
+    &amp;lt;circle width=&amp;quot;1&amp;quot; height=&amp;quot;180&amp;quot; x=&amp;quot;141&amp;quot; /&amp;gt;
+    &amp;lt;circle width=&amp;quot;1&amp;quot; height=&amp;quot;180&amp;quot; x=&amp;quot;179&amp;quot; /&amp;gt;
+    &amp;lt;circle width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;19&amp;quot; /&amp;gt;
+    &amp;lt;circle width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;39&amp;quot; /&amp;gt;
+    &amp;lt;circle width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;59&amp;quot; /&amp;gt;
+    &amp;lt;circle width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;79&amp;quot; /&amp;gt;
+    &amp;lt;circle width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;99&amp;quot; /&amp;gt;
+    &amp;lt;circle width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;119&amp;quot; /&amp;gt;
+    &amp;lt;circle width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;139&amp;quot; /&amp;gt;
+    &amp;lt;circle width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;159&amp;quot; /&amp;gt;
+    &amp;lt;circle width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;179&amp;quot; /&amp;gt;
+  &amp;lt;/g&amp;gt;
+&amp;lt;/svg&amp;gt;</Source>
     </Image>
     <Image>
-      <Height>450</Height>
-      <Width>350</Width>
-      <Source>XamarinFormsStarterKit.UserInterfaceBuilder.Images.SVG.Patterns.diamonds.svg</Source>
-      <BackGroundColor>
-        <R>-1</R>
-        <G>-1</G>
-        <B>-1</B>
-        <Hue>-1</Hue>
-        <Saturation>-1</Saturation>
-        <Luminosity>-1</Luminosity>
-      </BackGroundColor>
+      <Height>180</Height>
+      <Width>180</Width>
+      <Source>&amp;lt;svg xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot;&amp;gt;
+  &amp;lt;rect width=&amp;quot;180&amp;quot; height=&amp;quot;180&amp;quot; style=&amp;quot;stroke:black;stroke-width:1;opacity:0.5&amp;quot; fill=&amp;quot;#ff228b22&amp;quot; xmlns=&amp;quot;&amp;quot; /&amp;gt;
+  &amp;lt;g fill=&amp;quot;#ffff1493&amp;quot; xmlns=&amp;quot;&amp;quot;&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;180&amp;quot; x=&amp;quot;44&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;180&amp;quot; x=&amp;quot;60&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;180&amp;quot; x=&amp;quot;76&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;180&amp;quot; x=&amp;quot;92&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;180&amp;quot; x=&amp;quot;108&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;180&amp;quot; x=&amp;quot;124&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;180&amp;quot; x=&amp;quot;140&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;180&amp;quot; x=&amp;quot;156&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;180&amp;quot; x=&amp;quot;172&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;44&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;60&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;76&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;92&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;108&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;124&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;140&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;156&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;180&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;172&amp;quot; /&amp;gt;
+  &amp;lt;/g&amp;gt;
+&amp;lt;/svg&amp;gt;</Source>
+    </Image>
+    <Image>
+      <Height>169</Height>
+      <Width>191</Width>
+      <Source>&amp;lt;svg xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot;&amp;gt;
+  &amp;lt;rect width=&amp;quot;169&amp;quot; height=&amp;quot;191&amp;quot; style=&amp;quot;stroke:black;stroke-width:1;opacity:0.5&amp;quot; fill=&amp;quot;#ff556b2f&amp;quot; xmlns=&amp;quot;&amp;quot; /&amp;gt;
+  &amp;lt;g fill=&amp;quot;#ff000000&amp;quot; xmlns=&amp;quot;&amp;quot;&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;191&amp;quot; x=&amp;quot;40&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;191&amp;quot; x=&amp;quot;59&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;191&amp;quot; x=&amp;quot;78&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;191&amp;quot; x=&amp;quot;97&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;191&amp;quot; x=&amp;quot;116&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;191&amp;quot; x=&amp;quot;135&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;191&amp;quot; x=&amp;quot;154&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;169&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;40&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;169&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;59&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;169&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;78&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;169&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;97&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;169&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;116&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;169&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;135&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;169&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;154&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;169&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;173&amp;quot; /&amp;gt;
+  &amp;lt;/g&amp;gt;
+&amp;lt;/svg&amp;gt;</Source>
+    </Image>
+    <Image>
+      <Height>158</Height>
+      <Width>202</Width>
+      <Source>&amp;lt;svg xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot;&amp;gt;
+  &amp;lt;rect width=&amp;quot;158&amp;quot; height=&amp;quot;202&amp;quot; rx=&amp;quot;40&amp;quot; ry=&amp;quot;40&amp;quot; style=&amp;quot;stroke:black;stroke-width:1;opacity:0.5&amp;quot; fill=&amp;quot;#ffdc143c&amp;quot; xmlns=&amp;quot;&amp;quot; /&amp;gt;
+  &amp;lt;g fill=&amp;quot;#ff7cfc00&amp;quot; xmlns=&amp;quot;&amp;quot;&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;202&amp;quot; x=&amp;quot;37&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;202&amp;quot; x=&amp;quot;78&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;202&amp;quot; x=&amp;quot;119&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;158&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;37&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;158&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;78&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;158&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;119&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;158&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;160&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;158&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;201&amp;quot; /&amp;gt;
+  &amp;lt;/g&amp;gt;
+&amp;lt;/svg&amp;gt;</Source>
     </Image>
   </Image>
 </Preserve>

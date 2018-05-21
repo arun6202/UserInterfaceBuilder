@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using System.Linq;
 using XamarinFormsStarterKit.UserInterfaceBuilder.UIElements;
 using SkiaSharp.Views.Forms;
+using System.Security;
 
 namespace XamarinFormsStarterKit.UserInterfaceBuilder
 {
@@ -79,10 +80,13 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 								imageAttributtes.Source = RandomPNGImage();
 
 							}
-							if (child is SVGImage)
+							if (child is SVGImage svgImage)
 							{
 								imageAttributtes.Source = RandomSVGImage();
-
+								var xml= svgImage.GenerateSVG(height, width).ToString();
+								 
+								imageAttributtes.Source = SecurityElement.Escape( xml);
+                                 
 							}
 							imageAttributtes.Height = height;
 							imageAttributtes.Width = width;

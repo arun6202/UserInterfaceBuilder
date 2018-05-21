@@ -88,7 +88,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			}
 		}
 
-		private XDocument GenerateSVG(int width, int height)
+		public XDocument GenerateSVG(double width, double height)
 		{
 			XDocument xDocument = CreateSVGRoot();
    
@@ -97,7 +97,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			return CreateFillElement(width, height, xDocument, this.Shape);
 		}
 
-		private static XDocument CreateFillElement(int width, int height, XDocument xDocument, Shape shape)
+		private static XDocument CreateFillElement(double width, double height, XDocument xDocument, Shape shape)
 		{
 			var gElement = new XElement("g", new XAttribute("fill", RandomColor()));
 
@@ -145,7 +145,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			return xDocument;
 		}
 
-		private static void CreateOuterElement(int width, int height, XDocument xDocument, Shape shape)
+		private static void CreateOuterElement(double width, double height, XDocument xDocument, Shape shape)
 		{
 
 			switch (shape)
@@ -194,7 +194,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 		}
 
 
-		private static void CreaterRoundRect(int width, int height, string rx, string ry, XDocument xDocument)
+		private static void CreaterRoundRect(double width, double height, string rx, string ry, XDocument xDocument)
 		{
 			xDocument.Root.Add(new XElement(Rect,
 								new XAttribute("width", width),
@@ -205,7 +205,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 								new XAttribute("fill", RandomColor())));
 		}
 
-		private static void CreateCircle(int width, int height, XDocument xDocument)
+		private static void CreateCircle(double width, double height, XDocument xDocument)
 		{
 			xDocument.Root.Add(new XElement(Circle,
 								new XAttribute("r", width/2),
@@ -215,7 +215,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 								new XAttribute("fill", RandomColor())));
 		}
 
-		private static void CreaterRect(int width, int height, XDocument xDocument)
+		private static void CreaterRect(double width, double height, XDocument xDocument)
 		{
 			xDocument.Root.Add(new XElement(Rect,
 								new XAttribute("width", width),

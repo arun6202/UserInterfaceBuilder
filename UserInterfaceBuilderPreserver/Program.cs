@@ -29,9 +29,11 @@ namespace UserInterfaceBuilderPreserver
 			XmlSerializer xs = new XmlSerializer(typeof(Preserve));
             TextWriter txtWriter = new StreamWriter(xmlFilePath);
             xs.Serialize(txtWriter, preserveUIAttributes);
+			Console.WriteLine(xs.ToString());
             txtWriter.Close();
 
             Console.WriteLine("XML File Generated!");
+            Console.WriteLine();
  		}
 	}
 }
