@@ -26,6 +26,8 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 
 	public class SVGImage : SKCanvasView
 	{
+		private const string Rect = "rect";
+		private const string Circle = "circle";
 		public static readonly BindableProperty SourceProperty = BindableProperty.Create(
 			nameof(Source), typeof(string), typeof(SVGImage), "m", propertyChanged: RedrawCanvas);
 
@@ -88,27 +90,28 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 
 		private XDocument GenerateSVG(int width, int height)
 		{
-			XDocument xDocument = CreateSVGRoot(width, height);
-
+			XDocument xDocument = CreateSVGRoot();
+   
 			CreateOuterElement(width, height, xDocument, this.Shape);
-
-			return xDocument;
-			return CreateFillElement(width, height, xDocument);
+ 
+			return CreateFillElement(width, height, xDocument, this.Shape);
 		}
 
-		private static XDocument CreateFillElement(int width, int height, XDocument xDocument)
+		private static XDocument CreateFillElement(int width, int height, XDocument xDocument, Shape shape)
 		{
 			var gElement = new XElement("g", new XAttribute("fill", RandomColor()));
 
 			var seed = new Random().Next(5, 50);
 			var increment = new Random().Next(5, 50);
+   
+			var svgShape = shape == Shape.Circle ? Circle : Rect;
 
 			var reset = seed;
 
 			while (seed <= width)
 			{
-				gElement.Add(new XElement("rect",
-													 new XAttribute("width", "1"),
+				gElement.Add(new XElement(svgShape,
+										  new XAttribute("width", "1"),
 										  new XAttribute("height", height),
 										  new XAttribute("x", seed.ToString())));
 				seed = seed + increment;
@@ -128,7 +131,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			while (seed <= height)
 			{
 
-				gElement.Add(new XElement("rect",
+				gElement.Add(new XElement(svgShape,
 										  new XAttribute("width", width),
 												  new XAttribute("height", "1"),
 									  new XAttribute("y", seed.ToString())));
@@ -193,7 +196,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 
 		private static void CreaterRoundRect(int width, int height, string rx, string ry, XDocument xDocument)
 		{
-			xDocument.Root.Add(new XElement("rect",
+			xDocument.Root.Add(new XElement(Rect,
 								new XAttribute("width", width),
 								new XAttribute("height", height),
 								new XAttribute("rx", rx),
@@ -204,22 +207,24 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 
 		private static void CreateCircle(int width, int height, XDocument xDocument)
 		{
-			xDocument.Root.Add(new XElement("circle",
-								new XAttribute("r", width),
-								new XAttribute("cx", width + 20 ),
-								new XAttribute("cy", width + 20 ),
+			xDocument.Root.Add(new XElement(Circle,
+								new XAttribute("r", width/2),
+			                                new XAttribute("cx",  width / 2),
+			                                new XAttribute("cy",   width / 2),
 								new XAttribute("style", "stroke:black;stroke-width:1;opacity:0.5"),
 								new XAttribute("fill", RandomColor())));
 		}
 
 		private static void CreaterRect(int width, int height, XDocument xDocument)
 		{
-			xDocument.Root.Add(new XElement("rect",
+			xDocument.Root.Add(new XElement(Rect,
 								new XAttribute("width", width),
 								new XAttribute("height", height),
 								new XAttribute("style", "stroke:black;stroke-width:1;opacity:0.5"),
 								new XAttribute("fill", RandomColor())));
 		}
+
+
 
 		private static string RandomColor()
 		{
@@ -232,18 +237,22 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 					color == Color.GhostWhite.ToSKColor().ToString()
 				   ))
 			{
-				RandomColor();
+
+				return Color.FromRgb(new Random().Next(255) / 255.0f,
+				                     new Random().Next(255) / 255.0f,
+				                     new Random().Next(255) / 255.0f).ToSKColor().ToString();
+                
 			}
 
 			return color;
 		}
 
-		private static XDocument CreateSVGRoot(int width, int height)
+		private static XDocument CreateSVGRoot()
 		{
 			var svgXml = @"<?xml version='1.0' encoding='UTF-8' ?>
                                         <svg xmlns='http://www.w3.org/2000/svg' 
                                         width ='100%' height ='100%' 
-                                        viewBox='0 0 " + width.ToString() + " " + height.ToString() + "' preserveAspectRatio='none'></svg>";
+                                        ></svg>";
 			var xDocument = XDocument.Parse(svgXml);
 			return xDocument;
 		}
