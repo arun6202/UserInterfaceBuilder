@@ -21,7 +21,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 		RoundedRectangle20,
 		RoundedRectangle30,
 		RoundedRectangle40,
-        Circle
+		Circle
 	}
 
 	public class SVGImage : SKCanvasView
@@ -71,7 +71,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			if (string.IsNullOrEmpty(Source))
 				return;
 
-			using (var reader = GenerateSVG().CreateReader())
+			using (var reader = GenerateSVG(args.Info.Width, args.Info.Height).CreateReader())
 			{
 				var svg = new SKSvg();
 				svg.Load(reader);
@@ -79,57 +79,43 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 				var surface = args.Surface;
 				var canvas = surface.Canvas;
 				canvas.Clear(SKColors.White);
-
-				var canvasMin = Math.Min(WidthRequest, HeightRequest);
-				var svgMax = Math.Max(svg.Picture.CullRect.Width, svg.Picture.CullRect.Height);
-				var scale = canvasMin / svgMax;
-				var matrix = SKMatrix.MakeScale((float)scale, (float)scale);
-				//canvas.DrawPicture(svg.Picture, ref matrix);
-
-
- 				canvas.DrawPicture(svg.Picture, ref matrix);
- 
-
-				double dCanvasHeight = 100.0 * Height / args.Info.Height;    
-			//	HeightRequest = args.Info.Height;
-
-				double dCanvasWidth = 100.0 * Width / args.Info.Width;
-			//	WidthRequest = args.Info.Width;
- 
-				canvas.DrawPicture(svg.Picture);
                 
-				canvas.Dispose();
+				canvas.DrawPicture(svg.Picture);
+                canvas.Dispose();
+
 			}
 		}
-		private const string SVGXml = @"<?xml version='1.0' encoding='UTF-8' ?>
+
+		private XDocument GenerateSVG(int width, int height)
+		{
+			var svgXml = @"<?xml version='1.0' encoding='UTF-8' ?>
                                         <svg xmlns='http://www.w3.org/2000/svg' 
                                         width ='100%' height ='100%' 
-                                        viewBox='0 0 1000 1000' 
-                                        preserveAspectRatio='none'>
-                                        </svg>";
-		static XDocument GenerateSVG()
-		{
-			var xDocument = XDocument.Parse(SVGXml);
+                                        viewBox='0 0 " + width.ToString() + " " + height.ToString() + "' preserveAspectRatio='none'></svg>";
+
+
+
+			var xDocument = XDocument.Parse(svgXml);
 
 			xDocument.Root.Add(new XElement("rect",
-													  new XAttribute("width", "1000"),
-													  new XAttribute("height", "1000"),
-			                                          new XAttribute("style", "stroke:black;stroke-width:10;opacity:0.5"),
-                                                      new XAttribute("fill", LayoutBuilder.RandomColor().ToSKColor().ToString())));
+											new XAttribute("width", width),
+											new XAttribute("height", height),
+													  new XAttribute("style", "stroke:black;stroke-width:1;opacity:0.5"),
+													  new XAttribute("fill", LayoutBuilder.RandomColor().ToSKColor().ToString())));
 
 
 			var gElement = new XElement("g", new XAttribute("fill", LayoutBuilder.RandomColor().ToSKColor().ToString()));
 
-			var seed = new Random().Next(1, 40);
-			var increment = new Random().Next(1, 40);
+			var seed = new Random().Next(5, 50);
+			var increment = new Random().Next(5, 50);
 
 			var reset = seed;
-
-			while (seed <= 1000)
+            
+			while (seed <= width)
 			{
 				gElement.Add(new XElement("rect",
 													 new XAttribute("width", "1"),
-													 new XAttribute("height", "1000"),
+										  new XAttribute("height", height),
 										  new XAttribute("x", seed.ToString())));
 				seed = seed + increment;
 			}
@@ -141,15 +127,15 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			}
 			else
 			{
-				seed = new Random().Next(1, 40);
-				increment = new Random().Next(1, 40);
+				seed = new Random().Next(5, 50);
+				increment = new Random().Next(5, 50);
 			}
 
-			while (seed <= 1000)
+			while (seed <= height)
 			{
 
 				gElement.Add(new XElement("rect",
-												  new XAttribute("width", "1000"),
+										  new XAttribute("width", width),
 												  new XAttribute("height", "1"),
 									  new XAttribute("y", seed.ToString())));
 
@@ -158,11 +144,10 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			}
 
 			xDocument.Root.Add(gElement);
-            
+
 			return xDocument;
-
-
 		}
+
 
 	}
 }
