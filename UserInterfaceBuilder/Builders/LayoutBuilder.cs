@@ -69,7 +69,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 			if (suppressBackGroundColor)
 			{
-				layout.BackgroundColor = Color.Transparent;
+				layout.BackgroundColor = Color.Default;
 
 			}
 			else
