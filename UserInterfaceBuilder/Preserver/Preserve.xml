@@ -2,34 +2,77 @@
 <Preserve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Layout>
     <Color>
-      <R>0.57647061347961426</R>
-      <G>0.43921568989753723</G>
-      <B>0.85882353782653809</B>
-      <Hue>0.72118377685546875</Hue>
-      <Saturation>0.597765326499939</Saturation>
-      <Luminosity>0.64901959896087646</Luminosity>
+      <R>0.60392159223556519</R>
+      <G>0.80392158031463623</G>
+      <B>0.19607843458652496</B>
+      <Hue>0.22150535881519318</Hue>
+      <Saturation>0.60784316062927246</Saturation>
+      <Luminosity>0.5</Luminosity>
     </Color>
     <Color>
-      <R>0.91372549533843994</R>
-      <G>0.58823531866073608</G>
-      <B>0.47843137383461</B>
-      <Hue>0.042042046785354614</Hue>
-      <Saturation>0.71612900495529175</Saturation>
-      <Luminosity>0.69607841968536377</Luminosity>
-    </Color>
-    <Color>
-      <R>0.501960813999176</R>
-      <G>0.501960813999176</G>
-      <B>0</B>
-      <Hue>0.1666666716337204</Hue>
+      <R>0.94117647409439087</R>
+      <G>1</G>
+      <B>0.94117647409439087</B>
+      <Hue>0.3333333432674408</Hue>
       <Saturation>1</Saturation>
-      <Luminosity>0.250980406999588</Luminosity>
+      <Luminosity>0.970588207244873</Luminosity>
+    </Color>
+    <Color>
+      <R>0.3333333432674408</R>
+      <G>0.41960784792900085</G>
+      <B>0.18431372940540314</B>
+      <Hue>0.22777777910232544</Hue>
+      <Saturation>0.38961037993431091</Saturation>
+      <Luminosity>0.30196079611778259</Luminosity>
+    </Color>
+    <Color>
+      <R>0.19607843458652496</R>
+      <G>0.80392158031463623</G>
+      <B>0.19607843458652496</B>
+      <Hue>0.3333333432674408</Hue>
+      <Saturation>0.60784316062927246</Saturation>
+      <Luminosity>0.5</Luminosity>
+    </Color>
+    <Color>
+      <R>0.58039218187332153</R>
+      <G>0</G>
+      <B>0.82745099067687988</B>
+      <Hue>0.78357028961181641</Hue>
+      <Saturation>1</Saturation>
+      <Luminosity>0.41372549533843994</Luminosity>
+    </Color>
+    <Color>
+      <R>0.90196079015731812</R>
+      <G>0.90196079015731812</G>
+      <B>0.98039215803146362</B>
+      <Hue>0.66666668653488159</Hue>
+      <Saturation>0.66666698455810547</Saturation>
+      <Luminosity>0.94117647409439087</Luminosity>
     </Color>
   </Layout>
-  <Text>
-    <Text>
-      <TextValue>veritatis voluptatibus dignissimos</TextValue>
-    </Text>
-  </Text>
-  <Image />
+  <Text />
+  <Image>
+    <Image>
+      <Height>158</Height>
+      <Width>202</Width>
+      <Source>&amp;lt;svg xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot;&amp;gt;
+  &amp;lt;rect width=&amp;quot;158&amp;quot; height=&amp;quot;202&amp;quot; rx=&amp;quot;40&amp;quot; ry=&amp;quot;40&amp;quot; style=&amp;quot;stroke:black;stroke-width:1;opacity:0.5&amp;quot; fill=&amp;quot;#ffe9967a&amp;quot; xmlns=&amp;quot;&amp;quot; /&amp;gt;
+  &amp;lt;g fill=&amp;quot;#ffdeb887&amp;quot; xmlns=&amp;quot;&amp;quot;&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;202&amp;quot; x=&amp;quot;6&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;202&amp;quot; x=&amp;quot;26&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;202&amp;quot; x=&amp;quot;46&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;202&amp;quot; x=&amp;quot;66&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;202&amp;quot; x=&amp;quot;86&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;202&amp;quot; x=&amp;quot;106&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;202&amp;quot; x=&amp;quot;126&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;202&amp;quot; x=&amp;quot;146&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;158&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;8&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;158&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;47&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;158&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;86&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;158&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;125&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;158&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;164&amp;quot; /&amp;gt;
+  &amp;lt;/g&amp;gt;
+&amp;lt;/svg&amp;gt;</Source>
+    </Image>
+  </Image>
 </Preserve>
