@@ -33,19 +33,22 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 				if (child.GetType().GetTypeInfo().GetDeclaredProperty("Text") != null)
 				{
+					Type type = child.GetType();
+
+                    PropertyInfo prop = type.GetProperty("Text");
+
 					if (suppressBackGroundColor)
 					{
 						var currentControl = (VisualElement)child;
-						//	ComponentBuilder.PreserveUIAttributes.Text.Add(new Preserver.Text { TextColor = new Preserver.Color(Color.Default) });
+						ComponentBuilder.PreserveUIAttributes.Text.Add(new Preserver.Text { TextValue = GenerateLoremText(prop.GetValue(child).ToString())  });
 
 					}
+                    else
+					{
+						ComponentBuilder.PreserveUIAttributes.Text.Add(new Preserver.Text { TextValue = GetLoremText(prop.GetValue(child).ToString(), true), TextColor = new Preserver.Color(GetColor()) });
 
-					Type type = child.GetType();
-
-					PropertyInfo prop = type.GetProperty("Text");
-
-					ComponentBuilder.PreserveUIAttributes.Text.Add(new Preserver.Text { TextValue = GenerateLoremText(prop.GetValue(child).ToString(),true), TextColor = new Preserver.Color(GetColor(true)) });
-
+					}
+     
 				}
 
 			}
@@ -70,28 +73,32 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 				if (child.GetType().GetTypeInfo().GetDeclaredProperty("Text") != null)
 				{
-					if (suppressBackGroundColor)
-					{
-						var currentControl = (VisualElement)child;
-						currentControl.BackgroundColor = Color.Default;
-					}
-
-
+     
 					Type type = child.GetType();
 
 					PropertyInfo prop = type.GetProperty("Text");
 
-					prop.SetValue(child, GenerateLoremText(prop.GetValue(child).ToString(),preserveSession), null);
+					prop.SetValue(child, GetLoremText(prop.GetValue(child).ToString(),preserveSession), null);
 
 					prop = type.GetProperty("TextColor");
-
-					prop.SetValue(child, GetColor(preserveSession), null);                    
+					if (suppressBackGroundColor)
+                    {
+						prop.SetValue(child, Color.Default, null);    
+						prop = type.GetProperty("BackgroundColor");
+						prop.SetValue(child, Color.Default, null);    
+      
+                    }
+                    else
+					{
+                    prop.SetValue(child, GetColor(preserveSession), null);    
+					}
+                     
 				}
                 
 			}
 		}
 
-		private static string GenerateLoremText(string text, bool isRandom)
+		private static string GetLoremText(string text, bool isRandom = true)
 		{
 			if (isRandom)
 			{
@@ -114,13 +121,11 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				}
 			}
 
-			return GenerateLoremText(text, true);
+			return GetLoremText(text, true);
 		}
 
 		private static string GenerateLoremText(string text)
-		{
-
-
+		{         
 			text = text.ToLower();
 			if (text.StartsWith("w", StringComparison.CurrentCulture))
 			{
