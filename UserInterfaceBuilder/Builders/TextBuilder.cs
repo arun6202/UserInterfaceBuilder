@@ -36,10 +36,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 					if (suppressBackGroundColor)
 					{
 						var currentControl = (VisualElement)child;
-
-
-
-						ComponentBuilder.PreserveUIAttributes.Text.Add(new Preserver.Text { TextColor = new Preserver.Color(Color.Default) });
+						//	ComponentBuilder.PreserveUIAttributes.Text.Add(new Preserver.Text { TextColor = new Preserver.Color(Color.Default) });
 
 					}
 
@@ -47,10 +44,9 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 					PropertyInfo prop = type.GetProperty("Text");
 
-					ComponentBuilder.PreserveUIAttributes.Text.Add(new Preserver.Text { TextValue = GenerateLoremText(prop.GetValue(child).ToString()), TextColor = new Preserver.Color(RandomColor()) });
+					ComponentBuilder.PreserveUIAttributes.Text.Add(new Preserver.Text { TextValue = GenerateLoremText(prop.GetValue(child).ToString(),true), TextColor = new Preserver.Color(GetColor(true)) });
 
 				}
-
 
 			}
 
@@ -58,6 +54,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 		public static void LoadLoremText(Layout layout, bool apply = true, bool suppressBackGroundColor = true, bool preserveSession = false)
 		{
+			preserveSession = !preserveSession;
 
 			if (!apply)
 			{
@@ -76,7 +73,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 					if (suppressBackGroundColor)
 					{
 						var currentControl = (VisualElement)child;
-						currentControl.BackgroundColor = Color.Transparent;
+						currentControl.BackgroundColor = Color.Default;
 					}
 
 
@@ -84,16 +81,13 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 					PropertyInfo prop = type.GetProperty("Text");
 
-					prop.SetValue(child, GenerateLoremText(prop.GetValue(child).ToString()), null);
+					prop.SetValue(child, GenerateLoremText(prop.GetValue(child).ToString(),preserveSession), null);
 
 					prop = type.GetProperty("TextColor");
 
-					prop.SetValue(child, RandomColor(), null);
-
-
+					prop.SetValue(child, GetColor(preserveSession), null);                    
 				}
-
-
+                
 			}
 		}
 
@@ -111,8 +105,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 					if (ComponentBuilder.RestoredUIAttributes.Text.Any())
 					{
 						var textValue = ComponentBuilder.RestoredUIAttributes.Text[0];
-						ComponentBuilder.RestoredUIAttributes.Text.RemoveAt(0);
-						return textValue.TextValue;
+ 						return textValue.TextValue;
 					}
 				}
 				finally
@@ -207,42 +200,42 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			return text;
 		}
 
-	public static Color GetColor(bool isRandom = true)
-        {
-            if (isRandom)
-            {
-                if (ColorList.Count == 0)
-                {
-                    foreach (var item in typeof(Color).GetFields())
-                    {
-                        ColorList.Add((Color)item.GetValue(new Color()));
+		public static Color GetColor(bool isRandom = true)
+		{
+			if (isRandom)
+			{
+				if (ColorList.Count == 0)
+				{
+					foreach (var item in typeof(Color).GetFields())
+					{
+						ColorList.Add((Color)item.GetValue(new Color()));
 
-                    }
-                }
-                var randomIndex = new Random().Next(ColorList.Count);
-                var color = ColorList[randomIndex];
-                ColorList.RemoveAt(randomIndex);
-                return color;
-            }
-            else
-            {
-                try
-                {
-                    if (ComponentBuilder.RestoredUIAttributes.Text.Any())
-                    {
-                        var text = ComponentBuilder.RestoredUIAttributes.Text[0];
+					}
+				}
+				var randomIndex = new Random().Next(ColorList.Count);
+				var color = ColorList[randomIndex];
+				ColorList.RemoveAt(randomIndex);
+				return color;
+			}
+			else
+			{
+				try
+				{
+					if (ComponentBuilder.RestoredUIAttributes.Text.Any())
+					{
+						var text = ComponentBuilder.RestoredUIAttributes.Text[0];
 						ComponentBuilder.RestoredUIAttributes.Text.RemoveAt(0);
-                        return text.TextColor.ToXamarinColor();
-                    }
-                }
-                finally
-                {
+						return text.TextColor.ToXamarinColor();
+					}
+				}
+				finally
+				{
 
-                }
-            }
+				}
+			}
 
-            return GetColor(true);
-        }
+			return GetColor(true);
+		}
 
 	}
 }

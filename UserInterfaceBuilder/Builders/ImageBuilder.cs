@@ -71,22 +71,22 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 							if (suppressBackGroundColor)
 							{
-								imageAttributtes.BackGroundColor = new Preserver.Color(Color.Default);
+							//	imageAttributtes.BackGroundColor = new Preserver.Color(Color.Default);
 							}
 							FinalizeDimensions(child, out height, out width);
 
 							if (child is Image img)
 							{
-								imageAttributtes.Source = RandomPNGImage();
+								imageAttributtes.Source = GetPNGImage(true).Source;
 
 							}
 							if (child is SVGImage svgImage)
 							{
-								imageAttributtes.Source = RandomSVGImage();
-								var xml= svgImage.GenerateSVG(height, width).ToString();
-								 
-								imageAttributtes.Source = SecurityElement.Escape( xml);
-                                 
+								imageAttributtes.Source = GetSVGImage(true).Source;
+								var xml = svgImage.GenerateSVG(height, width).ToString();
+
+								imageAttributtes.Source = SecurityElement.Escape(xml);
+
 							}
 							imageAttributtes.Height = height;
 							imageAttributtes.Width = width;
@@ -101,6 +101,8 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 		public static void LoadImage(Layout layout, bool apply = true, bool suppressBackGroundColor = true, bool preserveSession = false)
 		{
+			preserveSession = !preserveSession;
+
 			if (!apply)
 			{
 				return;
@@ -115,7 +117,6 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 				var currentControl = (VisualElement)child;
 
-
 				switch (child)
 				{
 					case Image _:
@@ -129,18 +130,21 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 							if (child is Image img)
 							{
 
-								img.Source = ImageSource.FromResource(RandomPNGImage());
+								var pngImageAttributtes = GetPNGImage(preserveSession);
+
+								img.Source = ImageSource.FromResource(pngImageAttributtes.Source);
 								img.Aspect = Aspect.Fill;
-								img.HeightRequest = height;
-								img.WidthRequest = width;
+								img.HeightRequest = pngImageAttributtes.Height;
+								img.WidthRequest = pngImageAttributtes.Width;
 
 							}
 
 							if (child is SVGImage svgImg)
 							{
-								svgImg.Source = RandomSVGImage();
-								svgImg.HeightRequest = height;
-								svgImg.WidthRequest = width;
+								var svgImageAttributtes = GetSVGImage(preserveSession);
+								svgImg.Source = svgImageAttributtes.Source;
+								svgImg.HeightRequest = svgImageAttributtes.Height;
+								svgImg.WidthRequest = svgImageAttributtes.Width;
 
 							}
 							break;
@@ -148,9 +152,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				}
 			}
 
-
 		}
-
 
 		private static void FinalizeDimensions(Element element, out double height, out double width)
 		{
@@ -248,17 +250,17 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 					ConfigureRectangle(size, out height, out width, 40);
 					break;
 				case Shape.RoundedRectangle10:
-                    ConfigureRectangle(size, out height, out width, 10);
-                    break;
+					ConfigureRectangle(size, out height, out width, 10);
+					break;
 				case Shape.RoundedRectangle20:
-                    ConfigureRectangle(size, out height, out width, 20);
-                    break;
+					ConfigureRectangle(size, out height, out width, 20);
+					break;
 				case Shape.RoundedRectangle30:
-                    ConfigureRectangle(size, out height, out width, 30);
-                    break;
+					ConfigureRectangle(size, out height, out width, 30);
+					break;
 				case Shape.RoundedRectangle40:
-                    ConfigureRectangle(size, out height, out width, 40);
-                    break;
+					ConfigureRectangle(size, out height, out width, 40);
+					break;
 				case Shape.Circle:
 					height = width = size;
 					break;
@@ -271,32 +273,75 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		private static void ConfigureRectangle(double size, out double height, out double width, int factor)
 		{
 			var proportionalSize = ((int)Math.Round(100 * factor / size));
-			height	 = size - proportionalSize;
+			height = size - proportionalSize;
 			width = size + proportionalSize;
 		}
+   
 
-		static string RandomPNGImage()
+		public static Preserver.Image GetPNGImage(bool isRandom = true)
 		{
-			if (PNGImageList.Count == 0)
+			if (isRandom)
 			{
-				PNGImageList.AddRange(LoadImagesResourcesList(PNGImageType));
+				if (PNGImageList.Count == 0)
+				{
+					PNGImageList.AddRange(LoadImagesResourcesList(PNGImageType));
+				}
+				var randomIndex = new Random().Next(PNGImageList.Count);
+				var img = PNGImageList[randomIndex];
+				PNGImageList.RemoveAt(randomIndex);
+				return new Preserver.Image { Source = img };
 			}
-			var randomIndex = new Random().Next(PNGImageList.Count);
-			var img = PNGImageList[randomIndex];
-			PNGImageList.RemoveAt(randomIndex);
-			return img;
+			else
+			{
+				try
+				{
+					if (ComponentBuilder.RestoredUIAttributes.Image.Any())
+					{
+						var img = ComponentBuilder.RestoredUIAttributes.Image[0];
+						ComponentBuilder.RestoredUIAttributes.Image.RemoveAt(0);
+						return img;
+					}
+				}
+				finally
+				{
+
+				}
+			}
+
+			return GetPNGImage(true);
 		}
 
-		static string RandomSVGImage()
+		public static Preserver.Image GetSVGImage(bool isRandom = true)
 		{
-			if (SVGImageList.Count == 0)
+			if (isRandom)
 			{
-				SVGImageList.AddRange(LoadImagesResourcesList(SVGImageType));
+				if (SVGImageList.Count == 0)
+				{
+					SVGImageList.AddRange(LoadImagesResourcesList(SVGImageType));
+				}
+				var randomIndex = new Random().Next(SVGImageList.Count);
+				var img = SVGImageList[randomIndex];
+				SVGImageList.RemoveAt(randomIndex);
+				return new Preserver.Image { Source = img };
 			}
-			var randomIndex = new Random().Next(SVGImageList.Count);
-			var img = SVGImageList[randomIndex];
-			SVGImageList.RemoveAt(randomIndex);
-			return img;
+			else
+			{
+				try
+				{
+					if (ComponentBuilder.RestoredUIAttributes.Image.Any())
+					{
+						var img = ComponentBuilder.RestoredUIAttributes.Image[0];
+						ComponentBuilder.RestoredUIAttributes.Image.RemoveAt(0);
+						return img;
+					}
+				}
+				finally
+				{
+
+				}
+			}
+
+			return GetSVGImage(true);
 		}
 
 	}

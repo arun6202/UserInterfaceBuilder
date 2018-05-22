@@ -30,7 +30,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 			if (suppressBackGroundColor)
 			{
-				ComponentBuilder.PreserveUIAttributes.Layout.Add(new Preserver.Color(Color.Default));
+				//ComponentBuilder.PreserveUIAttributes.Layout.Add(new Preserver.Color(Color.Default));
 
 			}
 			else

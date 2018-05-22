@@ -28,23 +28,22 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 		private static void RestorePreserveUIAttributes(ComponentBuilderOptions options)
 		{
-			//if (!options.PreserveSession)
-			//{
-			//	return;
-			//}
-   
+			if (!options.PreserveSession)
+			{
+				return;
+			}
+			XmlSerializer deserializer = new XmlSerializer(typeof(Preserve));
+            TextReader reader = new StreamReader(ResourceLoader.GetEmbeddedResourceStream("Preserve.xml"));
             try
 			{
 			
-				XmlSerializer deserializer = new XmlSerializer(typeof(Preserve));
-				TextReader reader = new StreamReader(ResourceLoader.GetEmbeddedResourceStream("Preserve.xml"));
+
 				RestoredUIAttributes = (Preserve) deserializer.Deserialize(reader);
-                reader.Close();
 			}
 			finally
 			{
-
-			}
+				reader.Close();
+ 			}
 
 
 		}
