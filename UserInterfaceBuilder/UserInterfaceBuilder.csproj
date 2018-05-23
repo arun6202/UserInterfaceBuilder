@@ -132,6 +132,7 @@
     <Folder Include="Images\PNG\Patterns\" />
     <Folder Include="Images\SVG\Patterns\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="Faker\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Preserver\Preserve.xml" />
