@@ -1,0 +1,567 @@
+﻿<ResourceDictionary>
+<local:BogusGenerator x:Key="Parse" x:FactoryMethod="Parse">
+ <x:Arguments>
+<x:System.String></x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="ZipCode" x:FactoryMethod="ZipCode">
+ <x:Arguments>
+<x:System.String></x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="City" x:FactoryMethod="City">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="StreetAddress" x:FactoryMethod="StreetAddress">
+ <x:Arguments>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="CityPrefix" x:FactoryMethod="CityPrefix">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="CitySuffix" x:FactoryMethod="CitySuffix">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="StreetName" x:FactoryMethod="StreetName">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="BuildingNumber" x:FactoryMethod="BuildingNumber">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="StreetSuffix" x:FactoryMethod="StreetSuffix">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="SecondaryAddress" x:FactoryMethod="SecondaryAddress">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="County" x:FactoryMethod="County">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Country" x:FactoryMethod="Country">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="FullAddress" x:FactoryMethod="FullAddress">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="CountryCode" x:FactoryMethod="CountryCode">
+ <x:Arguments>
+<x:Bogus.DataSets.Iso3166Format>Alpha2</x:Bogus.DataSets.Iso3166Format>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="State" x:FactoryMethod="State">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="StateAbbr" x:FactoryMethod="StateAbbr">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Latitude" x:FactoryMethod="Latitude">
+ <x:Arguments>
+<x:System.Double>-90</x:System.Double>
+<x:System.Double>90</x:System.Double>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Longitude" x:FactoryMethod="Longitude">
+ <x:Arguments>
+<x:System.Double>-180</x:System.Double>
+<x:System.Double>180</x:System.Double>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Direction" x:FactoryMethod="Direction">
+ <x:Arguments>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="CardinalDirection" x:FactoryMethod="CardinalDirection">
+ <x:Arguments>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="OrdinalDirection" x:FactoryMethod="OrdinalDirection">
+ <x:Arguments>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Department" x:FactoryMethod="Department">
+ <x:Arguments>
+<x:System.Int32>3</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Price" x:FactoryMethod="Price">
+ <x:Arguments>
+<x:System.Decimal>1</x:System.Decimal>
+<x:System.Decimal>1000</x:System.Decimal>
+<x:System.Int32>2</x:System.Int32>
+<x:System.String></x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Categories" x:FactoryMethod="Categories">
+ <x:Arguments>
+<x:System.Int32></x:System.Int32>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="ProductName" x:FactoryMethod="ProductName">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Color" x:FactoryMethod="Color">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Product" x:FactoryMethod="Product">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="ProductAdjective" x:FactoryMethod="ProductAdjective">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="ProductMaterial" x:FactoryMethod="ProductMaterial">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="CompanySuffix" x:FactoryMethod="CompanySuffix">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="CompanyName" x:FactoryMethod="CompanyName">
+ <x:Arguments>
+<x:Int32></x:Int32>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="CompanyName" x:FactoryMethod="CompanyName">
+ <x:Arguments>
+<x:System.String></x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="CatchPhrase" x:FactoryMethod="CatchPhrase">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Bs" x:FactoryMethod="Bs">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Column" x:FactoryMethod="Column">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Type" x:FactoryMethod="Type">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Collation" x:FactoryMethod="Collation">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Engine" x:FactoryMethod="Engine">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Past" x:FactoryMethod="Past">
+ <x:Arguments>
+<x:System.Int32>1</x:System.Int32>
+<x:DateTime></x:DateTime>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Soon" x:FactoryMethod="Soon">
+ <x:Arguments>
+<x:System.Int32>1</x:System.Int32>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Future" x:FactoryMethod="Future">
+ <x:Arguments>
+<x:System.Int32>1</x:System.Int32>
+<x:DateTime></x:DateTime>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Between" x:FactoryMethod="Between">
+ <x:Arguments>
+<x:System.DateTime></x:System.DateTime>
+<x:System.DateTime></x:System.DateTime>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Recent" x:FactoryMethod="Recent">
+ <x:Arguments>
+<x:System.Int32>1</x:System.Int32>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Timespan" x:FactoryMethod="Timespan">
+ <x:Arguments>
+<x:TimeSpan></x:TimeSpan>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Month" x:FactoryMethod="Month">
+ <x:Arguments>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Weekday" x:FactoryMethod="Weekday">
+ <x:Arguments>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Account" x:FactoryMethod="Account">
+ <x:Arguments>
+<x:System.Int32>8</x:System.Int32>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="AccountName" x:FactoryMethod="AccountName">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Amount" x:FactoryMethod="Amount">
+ <x:Arguments>
+<x:System.Decimal>0</x:System.Decimal>
+<x:System.Decimal>1000</x:System.Decimal>
+<x:System.Int32>2</x:System.Int32>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="TransactionType" x:FactoryMethod="TransactionType">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Currency" x:FactoryMethod="Currency">
+ <x:Arguments>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="CreditCardNumber" x:FactoryMethod="CreditCardNumber">
+ <x:Arguments>
+<x:Bogus.DataSets.CardType></x:Bogus.DataSets.CardType>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="CreditCardCvv" x:FactoryMethod="CreditCardCvv">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="BitcoinAddress" x:FactoryMethod="BitcoinAddress">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="EthereumAddress" x:FactoryMethod="EthereumAddress">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="RoutingNumber" x:FactoryMethod="RoutingNumber">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Bic" x:FactoryMethod="Bic">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Iban" x:FactoryMethod="Iban">
+ <x:Arguments>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Abbreviation" x:FactoryMethod="Abbreviation">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Adjective" x:FactoryMethod="Adjective">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Noun" x:FactoryMethod="Noun">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Verb" x:FactoryMethod="Verb">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="IngVerb" x:FactoryMethod="IngVerb">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Phrase" x:FactoryMethod="Phrase">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Image" x:FactoryMethod="Image">
+ <x:Arguments>
+<x:System.Int32>640</x:System.Int32>
+<x:System.Int32>480</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Abstract" x:FactoryMethod="Abstract">
+ <x:Arguments>
+<x:System.Int32>640</x:System.Int32>
+<x:System.Int32>480</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Animals" x:FactoryMethod="Animals">
+ <x:Arguments>
+<x:System.Int32>640</x:System.Int32>
+<x:System.Int32>480</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Business" x:FactoryMethod="Business">
+ <x:Arguments>
+<x:System.Int32>640</x:System.Int32>
+<x:System.Int32>480</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Cats" x:FactoryMethod="Cats">
+ <x:Arguments>
+<x:System.Int32>640</x:System.Int32>
+<x:System.Int32>480</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="City" x:FactoryMethod="City">
+ <x:Arguments>
+<x:System.Int32>640</x:System.Int32>
+<x:System.Int32>480</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Food" x:FactoryMethod="Food">
+ <x:Arguments>
+<x:System.Int32>640</x:System.Int32>
+<x:System.Int32>480</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Nightlife" x:FactoryMethod="Nightlife">
+ <x:Arguments>
+<x:System.Int32>640</x:System.Int32>
+<x:System.Int32>480</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Fashion" x:FactoryMethod="Fashion">
+ <x:Arguments>
+<x:System.Int32>640</x:System.Int32>
+<x:System.Int32>480</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="People" x:FactoryMethod="People">
+ <x:Arguments>
+<x:System.Int32>640</x:System.Int32>
+<x:System.Int32>480</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Nature" x:FactoryMethod="Nature">
+ <x:Arguments>
+<x:System.Int32>640</x:System.Int32>
+<x:System.Int32>480</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Sports" x:FactoryMethod="Sports">
+ <x:Arguments>
+<x:System.Int32>640</x:System.Int32>
+<x:System.Int32>480</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Technics" x:FactoryMethod="Technics">
+ <x:Arguments>
+<x:System.Int32>640</x:System.Int32>
+<x:System.Int32>480</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Transport" x:FactoryMethod="Transport">
+ <x:Arguments>
+<x:System.Int32>640</x:System.Int32>
+<x:System.Int32>480</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.Boolean>False</x:System.Boolean>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="DataUri" x:FactoryMethod="DataUri">
+ <x:Arguments>
+<x:System.Int32></x:System.Int32>
+<x:System.Int32></x:System.Int32>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Avatar" x:FactoryMethod="Avatar">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Email" x:FactoryMethod="Email">
+ <x:Arguments>
+<x:System.String></x:System.String>
+<x:System.String></x:System.String>
+<x:System.String></x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="ExampleEmail" x:FactoryMethod="ExampleEmail">
+ <x:Arguments>
+<x:System.String></x:System.String>
+<x:System.String></x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="UserName" x:FactoryMethod="UserName">
+ <x:Arguments>
+<x:System.String></x:System.String>
+<x:System.String></x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="DomainName" x:FactoryMethod="DomainName">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="DomainWord" x:FactoryMethod="DomainWord">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="DomainSuffix" x:FactoryMethod="DomainSuffix">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Ip" x:FactoryMethod="Ip">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Ipv6" x:FactoryMethod="Ipv6">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="UserAgent" x:FactoryMethod="UserAgent">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Mac" x:FactoryMethod="Mac">
+ <x:Arguments>
+<x:System.String>:</x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Password" x:FactoryMethod="Password">
+ <x:Arguments>
+<x:System.Int32>10</x:System.Int32>
+<x:System.Boolean>False</x:System.Boolean>
+<x:System.String>\w</x:System.String>
+<x:System.String></x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Color" x:FactoryMethod="Color">
+ <x:Arguments>
+<x:System.Byte>0</x:System.Byte>
+<x:System.Byte>0</x:System.Byte>
+<x:System.Byte>0</x:System.Byte>
+<x:System.Boolean>False</x:System.Boolean>
+<x:Bogus.DataSets.ColorFormat>Hex</x:Bogus.DataSets.ColorFormat>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Protocol" x:FactoryMethod="Protocol">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Url" x:FactoryMethod="Url">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="UrlWithPath" x:FactoryMethod="UrlWithPath">
+ <x:Arguments>
+<x:System.String></x:System.String>
+<x:System.String></x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Word" x:FactoryMethod="Word">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Words" x:FactoryMethod="Words">
+ <x:Arguments>
+<x:System.Int32>3</x:System.Int32>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Letter" x:FactoryMethod="Letter">
+ <x:Arguments>
+<x:System.Int32>1</x:System.Int32>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Sentence" x:FactoryMethod="Sentence">
+ <x:Arguments>
+<x:Int32></x:Int32>
+<x:Int32>0</x:Int32>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Sentences" x:FactoryMethod="Sentences">
+ <x:Arguments>
+<x:Int32></x:Int32>
+<x:System.String>
+</x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Paragraph" x:FactoryMethod="Paragraph">
+ <x:Arguments>
+<x:System.Int32>3</x:System.Int32>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Paragraphs" x:FactoryMethod="Paragraphs">
+ <x:Arguments>
+<x:System.Int32>3</x:System.Int32>
+<x:System.String>
+
+</x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Paragraphs" x:FactoryMethod="Paragraphs">
+ <x:Arguments>
+<x:System.Int32></x:System.Int32>
+<x:System.Int32></x:System.Int32>
+<x:System.String>
+
+</x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Text" x:FactoryMethod="Text">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Lines" x:FactoryMethod="Lines">
+ <x:Arguments>
+<x:Int32></x:Int32>
+<x:System.String>
+</x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Slug" x:FactoryMethod="Slug">
+ <x:Arguments>
+<x:System.Int32>3</x:System.Int32>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="FirstName" x:FactoryMethod="FirstName">
+ <x:Arguments>
+<x:Gender></x:Gender>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="LastName" x:FactoryMethod="LastName">
+ <x:Arguments>
+<x:Gender></x:Gender>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="FullName" x:FactoryMethod="FullName">
+ <x:Arguments>
+<x:Gender></x:Gender>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Prefix" x:FactoryMethod="Prefix">
+ <x:Arguments>
+<x:Gender></x:Gender>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Suffix" x:FactoryMethod="Suffix">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="FindName" x:FactoryMethod="FindName">
+ <x:Arguments>
+<x:System.String></x:System.String>
+<x:System.String></x:System.String>
+<x:Boolean></x:Boolean>
+<x:Boolean></x:Boolean>
+<x:Gender></x:Gender>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="JobTitle" x:FactoryMethod="JobTitle">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="JobDescriptor" x:FactoryMethod="JobDescriptor">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="JobArea" x:FactoryMethod="JobArea">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="JobType" x:FactoryMethod="JobType">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="PhoneNumber" x:FactoryMethod="PhoneNumber">
+ <x:Arguments>
+<x:System.String></x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="PhoneNumberFormat" x:FactoryMethod="PhoneNumberFormat">
+ <x:Arguments>
+<x:System.Int32>0</x:System.Int32>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Review" x:FactoryMethod="Review">
+ <x:Arguments>
+<x:System.String>product</x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Reviews" x:FactoryMethod="Reviews">
+ <x:Arguments>
+<x:System.String>product</x:System.String>
+<x:System.Int32>2</x:System.Int32>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="FileName" x:FactoryMethod="FileName">
+ <x:Arguments>
+<x:System.String></x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="DirectoryPath" x:FactoryMethod="DirectoryPath">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="FilePath" x:FactoryMethod="FilePath">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="CommonFileName" x:FactoryMethod="CommonFileName">
+ <x:Arguments>
+<x:System.String></x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="MimeType" x:FactoryMethod="MimeType">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="CommonFileType" x:FactoryMethod="CommonFileType">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="CommonFileExt" x:FactoryMethod="CommonFileExt">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="FileType" x:FactoryMethod="FileType">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="FileExt" x:FactoryMethod="FileExt">
+ <x:Arguments>
+<x:System.String></x:System.String>
+ </x:Arguments>
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Semver" x:FactoryMethod="Semver">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Version" x:FactoryMethod="Version">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="Exception" x:FactoryMethod="Exception">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="AndroidId" x:FactoryMethod="AndroidId">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="ApplePushToken" x:FactoryMethod="ApplePushToken">
+</local:BogusGenerator>
+<local:BogusGenerator x:Key="BlackBerryPin" x:FactoryMethod="BlackBerryPin">
+</local:BogusGenerator>
+</ResourceDictionary>

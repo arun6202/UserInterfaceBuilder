@@ -110,6 +110,7 @@
     <Compile Remove="UserInterfaceBuilderTests\obj\Debug\netstandard2.0\UserInterfaceBuilderTests.AssemblyInfo.cs" />
     <Compile Remove="UserInterfaceBuilderTests\Class1.cs" />
     <Compile Remove="UserInterfaceBuilderTests\LayoutBuilderTest.cs" />
+    <Compile Remove="Faker\Faker.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bogus" Version="22.0.8" />
@@ -132,7 +133,6 @@
     <Folder Include="Images\PNG\Patterns\" />
     <Folder Include="Images\SVG\Patterns\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="Faker\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Preserver\Preserve.xml" />
