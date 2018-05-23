@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using Bogus;
 using Bogus.DataSets;
 using static Bogus.DataSets.Name;
@@ -8,7 +9,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
 {
 	public static class BogusGenerator
 	{
-		private const string Locale = "en";
+		private static readonly  string Locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 		public static readonly DataSet DataSet = new DataSet(Locale);
 		public static readonly Faker Faker = new Faker(Locale);
 		public static readonly Person Person = new Person(Locale);
@@ -152,7 +153,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
 		public static string FullName(Gender gender) => Name.FullName(gender);
 		public static string Prefix(Gender gender) => Name.Prefix(gender);
 		public static string Suffix() => Name.Suffix();
-		public static string FindName(string firstName, string lastName, Boolean withPrefix, Boolean withSuffix, Gender gender) => Name.FindName(firstName, lastName, withPrefix, withSuffix, gender);
+		public static string FindName(string firstName, string lastName, Boolean withPrefix, Boolean withSuffix, string gender) => Name.FindName(firstName, lastName, withPrefix, withSuffix, Extensions.ParseEnum<Gender>(gender));
 		public static string JobTitle() => Name.JobTitle();
 		public static string JobDescriptor() => Name.JobDescriptor();
 		public static string JobArea() => Name.JobArea();
