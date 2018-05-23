@@ -8,6 +8,52 @@ namespace XAMLExtensions
 	public static class MethodInfoExtensions
 	{
 		/// <summary>
+        /// Return the method signature as a string.
+        /// </summary>
+        /// <param name="method">The Method</param>
+        /// <param name="callable">Return as an callable string(public void a(string b) would return a(b))</param>
+        /// <returns>Method signature</returns>
+        public static string GetSignatureWithoutType(this MethodInfo method, bool callable = false)
+        {
+            var firstParam = true;
+ 			var signBuilder = new StringBuilder();
+           
+            firstParam = true;
+
+            var secondParam = false;
+			signBuilder.Append("(");
+            foreach (var param in method.GetParameters())
+            {
+                if (firstParam)
+                {
+                    firstParam = false;
+                    if (method.IsDefined(typeof(ExtensionAttribute), false))
+                    {
+                        if (callable)
+                        {
+                            secondParam = true;
+                            continue;
+                        }
+						signBuilder.Append("this ");
+                    }
+                }
+                else if (secondParam == true)
+                    secondParam = false;
+                else
+					signBuilder.Append(", ");
+                if (param.ParameterType.IsByRef)
+					signBuilder.Append("ref ");
+                else if (param.IsOut)
+					signBuilder.Append("out ");
+                 
+				signBuilder.Append(param.Name);
+            }
+			signBuilder.Append(");");
+			return signBuilder.ToString();
+        }
+
+       
+		/// <summary>
 		/// Return the method signature as a string.
 		/// </summary>
 		/// <param name="method">The Method</param>
@@ -127,4 +173,7 @@ namespace XAMLExtensions
 		}
 
 	}
+
+
+
 }
