@@ -50,7 +50,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
 		public static string County() => Address.County();
 		public static string Country() => Address.Country();
 		public static string FullAddress() => Address.FullAddress();
-		public static string CountryCode(Iso3166Format format) => Address.CountryCode(format);
+		public static string CountryCode(string format) => Address.CountryCode(Extensions.ParseEnum<Iso3166Format>(format));
 		public static string State() => Address.State();
 		public static string StateAbbr() => Address.StateAbbr();
 		public static System.Double Latitude(System.Double min, System.Double max) => Address.Latitude(min, max);
@@ -88,7 +88,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
 		public static decimal Amount(decimal min, decimal max, int decimals) => Finance.Amount(min, max, decimals);
 		public static string TransactionType() => Finance.TransactionType();
 		public static Currency Currency(System.Boolean includeFundCodes) => Finance.Currency(includeFundCodes);
-		public static string CreditCardNumber(CardType provider) => Finance.CreditCardNumber(provider);
+		public static string CreditCardNumber(string provider) => Finance.CreditCardNumber(Extensions.ParseEnum<CardType>(provider));
 		public static string CreditCardCvv() => Finance.CreditCardCvv();
 		public static string BitcoinAddress() => Finance.BitcoinAddress();
 		public static string EthereumAddress() => Finance.EthereumAddress();
@@ -128,7 +128,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
 		public static string UserAgent() => Internet.UserAgent();
 		public static string Mac(string separator) => Internet.Mac(separator);
 		public static string Password(int length, System.Boolean memorable, string regexPattern, string prefix) => Internet.Password(length, memorable, regexPattern, prefix);
-		public static string Color(System.Byte baseRed, System.Byte baseGreen, System.Byte baseBlue, System.Boolean grayscale, Bogus.DataSets.ColorFormat format) => Internet.Color(baseRed, baseGreen, baseBlue, grayscale, format);
+		public static string Color(System.Byte baseRed, System.Byte baseGreen, System.Byte baseBlue, System.Boolean grayscale, string format) => Internet.Color(baseRed, baseGreen, baseBlue, grayscale,Extensions.ParseEnum<ColorFormat>(format) );
 		public static string Protocol() => Internet.Protocol();
 		public static string Url() => Internet.Url();
 		public static string UrlWithPath(string protocol, string domain) => Internet.UrlWithPath(protocol, domain);
@@ -143,6 +143,10 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
 		public static string Text() => Lorem.Text();
 		public static string Lines(Int32 lineCount, string seperator) => Lorem.Lines(lineCount, seperator);
 		public static string Slug(int wordcount) => Lorem.Slug(wordcount);
+		public static string FirstName(string gender) => Name.FirstName(Extensions.ParseEnum<Gender>(gender));
+		public static string LastName(string gender) => Name.LastName(Extensions.ParseEnum<Gender>(gender));
+		public static string FullName(string gender) => Name.FullName(Extensions.ParseEnum<Gender>(gender));
+		public static string Prefix(string gender) => Name.Prefix(Extensions.ParseEnum<Gender>(gender));
 		public static string FirstName(Gender gender) => Name.FirstName(gender);
 		public static string LastName(Gender gender) => Name.LastName(gender);
 		public static string FullName(Gender gender) => Name.FullName(gender);

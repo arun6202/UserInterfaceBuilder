@@ -11,6 +11,12 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
 		{
             return Color.FromRgba(color.R, color.G, color.B, color.Hue);
 		}
+
+		public static T ParseEnum<T>(string value)
+        {
+            return (T)Enum.Parse(typeof(T), value, true);
+        }
+
 	}
 }
     
