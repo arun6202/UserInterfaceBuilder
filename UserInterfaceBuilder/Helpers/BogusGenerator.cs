@@ -9,7 +9,12 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
 {
 	public static class BogusGenerator
 	{
-		private static readonly  string Locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+        static BogusGenerator()
+		{
+			Locale = "en";
+			//Locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+		}
+		private static readonly string Locale;
 		public static readonly DataSet DataSet = new DataSet(Locale);
 		public static readonly Faker Faker = new Faker(Locale);
 		public static readonly Person Person = new Person(Locale);
@@ -48,7 +53,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
 		public static string BuildingNumber() => Address.BuildingNumber();
 		public static string StreetSuffix() => Address.StreetSuffix();
 		public static string SecondaryAddress() => Address.SecondaryAddress();
-		public static string County() => Address.County();
+		public static string County() =>  Address.County();
 		public static string Country() => Address.Country();
 		public static string FullAddress() => Address.FullAddress();
 		public static string CountryCode(string format) => Address.CountryCode(Extensions.ParseEnum<Iso3166Format>(format));
