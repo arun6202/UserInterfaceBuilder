@@ -18,12 +18,20 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		public static void Init(ComponentBuilderOptions options)
 		{
 			ConfigureRepeater(options);
-
-
-			RestorePreserveUIAttributes(options);
             
+			RestorePreserveUIAttributes(options);
+
+			HookTapGestureRecognizer(options);
+
 			GenerateUIAttributes(options);
             LoadAllComponents(options);
+		}
+
+		private static void HookTapGestureRecognizer(ComponentBuilderOptions options)
+		{
+			ConfigureOptions(options, out Layout layout, out bool suppressLayout, out bool suppressImage, out bool suppressLoremText);
+
+			LayoutBuilder.HookTapGestureRecognizer(layout, options.Apply);	
 		}
 
 		private static void RestorePreserveUIAttributes(ComponentBuilderOptions options)

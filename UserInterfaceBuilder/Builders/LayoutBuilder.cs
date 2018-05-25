@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using Acr.UserDialogs;
+using SkiaSharp.Views.Forms;
 using Xamarin.Forms;
 using XamarinFormsStarterKit.UserInterfaceBuilder.Helpers;
 
@@ -60,6 +63,45 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				}
 			}
 		}
+		private static String GetColorName(Color color)
+		{
+			return "";
+		}
+		internal static void HookTapGestureRecognizer(Layout layout, bool apply)
+		{
+			if (!apply)
+			{
+				return;
+			}
+
+			foreach (var child in layout.Children)
+			{
+				if (child is Layout currentLayout)
+				{
+					EnableToast(child);
+					HookTapGestureRecognizer(currentLayout, apply);
+				}
+
+				EnableToast(child);
+			}
+		}
+
+		private static void EnableToast(Element child)
+		{
+			if (child is View view)
+			{
+
+				var tapGestureRecognizer = new TapGestureRecognizer();
+				tapGestureRecognizer.Tapped += (s, e) =>
+				{
+
+					UserDialogs.Instance.Toast($"Width:{view.WidthRequest},Height:{view.HeightRequest},Color:{view.BackgroundColor.ToSKColor()}", TimeSpan.FromSeconds(1.5));
+
+				};
+				view.GestureRecognizers.Add(tapGestureRecognizer);
+
+			}
+		}
 
 		public static void ColorizeLayout(Layout layout, bool apply = true, bool suppressBackGroundColor = true, bool preserveSession = false)
 		{
@@ -117,7 +159,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 				if (child is Layout currentLayoutHeadless)
 				{
-					CompressedLayout.SetIsHeadless(child, true);
+					CompressedLayout.SetIsHeadless(child, apply);
 
 				}
 
@@ -141,21 +183,21 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				ColorList.RemoveAt(randomIndex);
 				return color;
 			}
-            else
+			else
 			{
 				try
-                {
-                    if (ComponentBuilder.RestoredUIAttributes.Layout.Any())
-                    {
-                        var color = ComponentBuilder.RestoredUIAttributes.Layout[0];
-                        ComponentBuilder.RestoredUIAttributes.Layout.RemoveAt(0);
-                        return color.ToXamarinColor();
-                    }
-                }
-                finally
-                {
+				{
+					if (ComponentBuilder.RestoredUIAttributes.Layout.Any())
+					{
+						var color = ComponentBuilder.RestoredUIAttributes.Layout[0];
+						ComponentBuilder.RestoredUIAttributes.Layout.RemoveAt(0);
+						return color.ToXamarinColor();
+					}
+				}
+				finally
+				{
 
-                }
+				}
 			}
 
 			return GetColor(true);
