@@ -64,11 +64,6 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				}
 			}
 		}
-		private static String GetColorName(Color color)
-		{
-			return "";
-		}
-
 
 		internal static void HookTapGestureRecognizer(Layout layout, bool apply)
 		{
@@ -84,35 +79,79 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				}
 
 				EnableToast(child);
-			}
-		}
-
-		private static Rectangle ExtractRect(Element child)
-		{
-			if (child is View visualElement)
-			{
-				return visualElement.Bounds;
 
 			}
-			return new Rectangle();
 		}
-
 
 		private static void EnableToast(Element child)
 		{
-			if (child is View visualElement)
+			EnableSingleTapToast(child);
+			EnableDoubleTapToast(child);
+		}
+
+		private static void EnableDoubleTapToast(Element element)
+		{
+			if (element is VisualElement visualElement)
 			{
-
-				var tapGestureRecognizer = new TapGestureRecognizer();
-				visualElement.GestureRecognizers.Clear();
-				tapGestureRecognizer.Tapped += (s, e) =>
+				if (element is View view)
 				{
-					UserDialogs.Instance.Toast($"{ExtractRect(visualElement).ToSKRect().ToString()}", TimeSpan.FromSeconds(1.5));
+					var tapGestureRecognizer = new TapGestureRecognizer
+					{
+						NumberOfTapsRequired = 2
+					};
+					tapGestureRecognizer.Tapped += (s, e) =>
+					{
+						Rects.Clear();
+						ExtractRect = true;
+						ExtractCompleteRect(view);
 
-				};
-				visualElement.GestureRecognizers.Add(tapGestureRecognizer);
+						UserDialogs.Instance.Toast($"{Rects.ToString()}", TimeSpan.FromSeconds(12));
+
+					};
+					view.GestureRecognizers.Add(tapGestureRecognizer);
+				}
+			}
+
+		}
+
+		static StringBuilder Rects = new StringBuilder();
+
+		static bool ExtractRect = true;
+
+		private static void ExtractCompleteRect(Element element)
+		{
+			if (element is VisualElement visualElement)
+			{
+				Rects.AppendLine(visualElement.Bounds.ToSKRect().ToString());
 
 			}
+			ExtractRect = !(element.Parent is ContentPage);
+			while (ExtractRect )
+			{			
+				ExtractCompleteRect(element.Parent);
+			}
+
+		}
+
+
+		private static void EnableSingleTapToast(Element element)
+		{
+			if (element is VisualElement visualElement)
+			{
+				if (element is View view)
+				{
+					var tapGestureRecognizer = new TapGestureRecognizer();
+					view.GestureRecognizers.Clear();
+					tapGestureRecognizer.Tapped += (s, e) =>
+					{
+						UserDialogs.Instance.Toast($"{view.Bounds.ToSKRect().ToString()}", TimeSpan.FromSeconds(1.5));
+
+					};
+					view.GestureRecognizers.Add(tapGestureRecognizer);
+				}
+
+			}
+
 		}
 
 		public static void ColorizeLayout(Layout layout, bool apply = true, bool suppressBackGroundColor = true, bool preserveSession = false)
@@ -131,7 +170,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			else
 			{
 				layout.BackgroundColor = GetColor(preserveSession);
-                
+
 			}
 
 			foreach (var child in layout.Children)
