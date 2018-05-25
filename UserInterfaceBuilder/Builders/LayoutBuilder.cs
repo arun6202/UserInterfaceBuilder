@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using Acr.UserDialogs;
 using SkiaSharp.Views.Forms;
 using Xamarin.Forms;
@@ -67,18 +68,18 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		{
 			return "";
 		}
+
+
 		internal static void HookTapGestureRecognizer(Layout layout, bool apply)
 		{
 			if (!apply)
 			{
 				return;
 			}
-
 			foreach (var child in layout.Children)
 			{
 				if (child is Layout currentLayout)
 				{
-					EnableToast(child);
 					HookTapGestureRecognizer(currentLayout, apply);
 				}
 
@@ -86,19 +87,30 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			}
 		}
 
+		private static Rectangle ExtractRect(Element child)
+		{
+			if (child is View visualElement)
+			{
+				return visualElement.Bounds;
+
+			}
+			return new Rectangle();
+		}
+
+
 		private static void EnableToast(Element child)
 		{
-			if (child is View view)
+			if (child is View visualElement)
 			{
 
 				var tapGestureRecognizer = new TapGestureRecognizer();
+				visualElement.GestureRecognizers.Clear();
 				tapGestureRecognizer.Tapped += (s, e) =>
 				{
-
-					UserDialogs.Instance.Toast($"Width:{view.WidthRequest},Height:{view.HeightRequest},Color:{view.BackgroundColor.ToSKColor()}", TimeSpan.FromSeconds(1.5));
+					UserDialogs.Instance.Toast($"{ExtractRect(visualElement).ToSKRect().ToString()}", TimeSpan.FromSeconds(1.5));
 
 				};
-				view.GestureRecognizers.Add(tapGestureRecognizer);
+				visualElement.GestureRecognizers.Add(tapGestureRecognizer);
 
 			}
 		}
@@ -119,8 +131,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			else
 			{
 				layout.BackgroundColor = GetColor(preserveSession);
-
-
+                
 			}
 
 			foreach (var child in layout.Children)
