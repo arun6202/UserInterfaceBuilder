@@ -15,9 +15,12 @@ namespace XAMLExtensions
 			// new RunTests();
 			//BogusClassGenerator();
 			//ResourceDictionaryGenerator();
-			// BogusClassTestObjectsGenerator();
-			BogusClassTestLabelObjectsGenerator();
+			//  BogusClassTestObjectsGenerator();
+			  BogusClassTestLabelObjectsGenerator();
+             
+
 		}
+   
 
 		private static void BogusClassTestLabelObjectsGenerator()
 		{
@@ -40,9 +43,11 @@ namespace XAMLExtensions
 
 			foreach (MethodInfo methodInfo in allmethods)
 			{
-				if (!methodInfo.GetParameters().Any())
+				Console.WriteLine("<Label Text = \"{StaticResource Key=" + methodInfo.Name + "}\" ></Label>");
+
+				if ( methodInfo.GetParameters().Any())
 				{
-					Console.WriteLine("<Label Text = \"{StaticResource Key=" + methodInfo.Name + "}\" ></Label>");
+					//Console.WriteLine("<Label Text = \"{StaticResource Key=" + methodInfo.Name + "}\" ></Label>");
 
 				}
 
