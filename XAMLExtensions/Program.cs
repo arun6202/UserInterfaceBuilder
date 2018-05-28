@@ -12,8 +12,84 @@ namespace XAMLExtensions
 
 		static void Main(string[] args)
 		{
+			 new RunTests();
 			//BogusClassGenerator();
-			ResourceDictionaryGenerator();
+			//ResourceDictionaryGenerator();
+		    // BogusClassTestObjectsGenerator();
+		}
+
+		private static void BogusClassTestObjectsGenerator()
+		{
+			var allTypes = AppDomain.CurrentDomain.GetAssemblies()
+				.Where(a => a.FullName.Contains(BogusAssembly))
+				.SelectMany(s => s.GetTypes())
+				.Where(m => !m.IsAbstract)
+				.Where(typeof(IHasRandomizer).IsAssignableFrom);
+
+
+			var allmethods = allTypes
+				.SelectMany(m => m.GetMethods())
+				.Where(m => m.DeclaringType != typeof(object))
+				.Where(m => !m.IsGenericMethod)
+				.Where(m => !m.IsGenericMethodDefinition)
+				.Where(m => !m.IsConstructedGenericMethod)
+				.Where(m => m != typeof(IHasRandomizer))
+				.Where(mi => !mi.IsSpecialName);
+   
+
+			foreach (MethodInfo methodInfo in allmethods)
+			{
+				var varname = @"var ";
+                
+				Console.Write(varname);
+
+				var methodSignature = methodInfo.GetSignature();
+				var methodSignatureWithoutType = methodInfo.GetSignatureWithoutType();
+
+				if (!methodSignature.Contains(Static))
+				{
+					var methodcall = methodInfo.Name + " = BogusGenerator." + methodInfo.Name;
+					Console.Write(methodcall);
+
+
+
+					var argumentsStart = "(";
+					Console.Write(argumentsStart);
+
+					foreach (var parameter in methodInfo.GetParameters())
+					{
+						var isGenericType = parameter.ParameterType;
+						if (isGenericType.IsGenericType && isGenericType.GetGenericTypeDefinition() == typeof(Nullable<>))
+						{
+							var typeName = isGenericType.GetGenericArguments()[0].Name;
+							var parameterType = parameter.ParameterType;
+							var param = parameter.DefaultValue;
+							Console.Write(param);
+						}
+						else
+						{
+							var parameterType = parameter.ParameterType;
+							var param = parameter.DefaultValue;
+							Console.Write(param);
+						}
+
+
+					}
+
+					var argumentsEnd = ")";
+					Console.Write(argumentsEnd);
+					var varend = ";";
+					Console.Write(varend);
+                    Console.WriteLine("");
+                    				 
+					Console.WriteLine("Console.WriteLine(\"" + methodInfo.Name + ":\" +"+ methodInfo.Name +");");
+
+                     
+				}
+			}
+
+
+
 		}
 
 		private static void BogusClassGenerator()
@@ -115,17 +191,17 @@ namespace XAMLExtensions
 					{
 						var isGenericType = parameter.ParameterType;
 						if (isGenericType.IsGenericType && isGenericType.GetGenericTypeDefinition() == typeof(Nullable<>))
-                        {
+						{
 							var typeName = isGenericType.GetGenericArguments()[0].Name;
 							var parameterType = parameter.ParameterType;
 							var param = "<x:" + typeName + ">" + parameter.DefaultValue + "</x:" + typeName + ">";
-                            Console.WriteLine(param);
-                        }
-                        else
+							Console.WriteLine(param);
+						}
+						else
 						{
 							var parameterType = parameter.ParameterType;
-                            var param = "<x:" + parameterType + ">" + parameter.DefaultValue + "</x:" + parameterType + ">";
-                            Console.WriteLine(param);
+							var param = "<x:" + parameterType + ">" + parameter.DefaultValue + "</x:" + parameterType + ">";
+							Console.WriteLine(param);
 						}
 
 

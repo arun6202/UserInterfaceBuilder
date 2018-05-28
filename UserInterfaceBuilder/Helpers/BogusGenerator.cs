@@ -9,12 +9,8 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
 {
 	public static class BogusGenerator
 	{
-        static BogusGenerator()
-		{
-			Locale = "en";
-			//Locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-		}
-		private static readonly string Locale;
+         
+		private   const string Locale= "en";
 		public static readonly DataSet DataSet = new DataSet(Locale);
 		public static readonly Faker Faker = new Faker(Locale);
 		public static readonly Person Person = new Person(Locale);
@@ -32,7 +28,10 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
 		public static readonly PhoneNumbers PhoneNumbers = new PhoneNumbers(Locale);
 		public static readonly Rant Rant = new Rant();
 		public static readonly Bogus.DataSets.System System = new Bogus.DataSets.System(Locale);
+
+
 		public static string Parse(string str) => Faker.Parse(str);
+        
 		public static T PickRandom<T>(IEnumerable<T> items) => Faker.PickRandom(items);
 		public static T PickRandom<T>(IList<T> items) => Faker.PickRandom(items);
 		public static T PickRandom<T>(ICollection<T> items) => Faker.PickRandom(items);
@@ -44,7 +43,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
 		public static IList<T> Make<T>(int count, Func<int, T> action) => Faker.Make(count, action);
 		public static IEnumerable<T> MakeLazy<T>(int count, Func<T> action) => Faker.MakeLazy(count, action);
 		public static IEnumerable<T> MakeLazy<T>(int count, Func<int, T> action) => Faker.MakeLazy(count, action);
-		public static string ZipCode(string format) => Address.ZipCode(format);
+		public static string ZipCode(string format ="") => Address.ZipCode(format);
 		public static string City() => Address.City();
 		public static string StreetAddress(System.Boolean useFullAddress) => Address.StreetAddress(useFullAddress);
 		public static string CityPrefix() => Address.CityPrefix();
@@ -94,7 +93,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
 		public static decimal Amount(decimal min, decimal max, int decimals) => Finance.Amount(min, max, decimals);
 		public static string TransactionType() => Finance.TransactionType();
 		public static Currency Currency(System.Boolean includeFundCodes) => Finance.Currency(includeFundCodes);
-		public static string CreditCardNumber(string provider) => Finance.CreditCardNumber(Extensions.ParseEnum<CardType>(provider));
+		public static string CreditCardNumber() => Finance.CreditCardNumber(null);
 		public static string CreditCardCvv() => Finance.CreditCardCvv();
 		public static string BitcoinAddress() => Finance.BitcoinAddress();
 		public static string EthereumAddress() => Finance.EthereumAddress();

@@ -8,4 +8,10 @@
   <ItemGroup>
     <PackageReference Include="Bogus" Version="22.1.1" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="RunTests.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UserInterfaceBuilder\UserInterfaceBuilder.csproj" />
+  </ItemGroup>
 </Project>

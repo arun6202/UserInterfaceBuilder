@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Bogus;
 using Bogus.DataSets;
 using static Bogus.DataSets.Name;
-public static class BogusGenerator
+public static class BogusGeneratorLocal
 {
 	private const string Locale = "en";
 public static readonly DataSet DataSet = new DataSet(Locale);
@@ -35,7 +35,7 @@ public static readonly DataSet DataSet = new DataSet(Locale);
 	public static IList<T> Make<T>(int count, Func<int, T> action) => Faker.Make(count, action);
 	public static IEnumerable<T> MakeLazy<T>(int count, Func<T> action) => Faker.MakeLazy(count, action);
 	public static IEnumerable<T> MakeLazy<T>(int count, Func<int, T> action) => Faker.MakeLazy(count, action);
-	public static string ZipCode(string format) => Address.ZipCode(format);
+	public static string ZipCode(string format = null) => Address.ZipCode(format);
 	public static string City() => Address.City();
 	public static string StreetAddress(System.Boolean useFullAddress) => Address.StreetAddress(useFullAddress);
 	public static string CityPrefix() => Address.CityPrefix();
