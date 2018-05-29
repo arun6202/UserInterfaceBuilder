@@ -34,6 +34,11 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			}
 			foreach (var child in layout.Children)
 			{
+				if (child is BoxView boxView)
+                {
+					ComponentBuilder.PreserveUIAttributes.Layout.Add(new Preserver.Color(GetColor()));
+                }
+				
 				if (child is Layout currentLayout)
 				{
 					GenerateLayoutColors(currentLayout, suppressBackGroundColor);
@@ -53,6 +58,11 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 			foreach (var child in layout.Children)
 			{
+				if (child is BoxView boxView)
+                {
+					boxView.BackgroundColor = suppressBackGroundColor ? Color.Default : GetColor(preserveSession);
+                }
+				
 				if (child is Layout currentLayout)
 				{
 					ColorizeLayout(currentLayout, apply, suppressBackGroundColor, !preserveSession);

@@ -68,11 +68,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 					case SVGImage _:
 						{
 							var imageAttributtes = new Preserver.Image();
-
-							if (suppressBackGroundColor)
-							{
-							//	imageAttributtes.BackGroundColor = new Preserver.Color(Color.Default);
-							}
+       
 							FinalizeDimensions(child, out height, out width);
 
 							if (child is Image img)

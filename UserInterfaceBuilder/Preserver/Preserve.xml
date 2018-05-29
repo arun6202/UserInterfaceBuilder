@@ -2,22 +2,97 @@
 <Preserve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Layout>
     <Color>
-      <Hex>BC8F8F</Hex>
+      <Hex>7B68EE</Hex>
     </Color>
     <Color>
-      <Hex>7FFFD4</Hex>
+      <Hex>DB7093</Hex>
+    </Color>
+    <Color>
+      <Hex>9400D3</Hex>
     </Color>
     <Color>
       <Hex>FF4500</Hex>
     </Color>
     <Color>
-      <Hex>FF00FF</Hex>
+      <Hex>FFDEAD</Hex>
+    </Color>
+    <Color>
+      <Hex>5F9EA0</Hex>
+    </Color>
+    <Color>
+      <Hex>F0F8FF</Hex>
+    </Color>
+    <Color>
+      <Hex>FDF5E6</Hex>
+    </Color>
+    <Color>
+      <Hex>8B4513</Hex>
     </Color>
     <Color>
       <Hex>FFA07A</Hex>
     </Color>
     <Color>
-      <Hex>EE82EE</Hex>
+      <Hex>778899</Hex>
+    </Color>
+    <Color>
+      <Hex>556B2F</Hex>
+    </Color>
+    <Color>
+      <Hex>F0FFF0</Hex>
+    </Color>
+    <Color>
+      <Hex>FF00FF</Hex>
+    </Color>
+    <Color>
+      <Hex>191970</Hex>
+    </Color>
+    <Color>
+      <Hex>708090</Hex>
+    </Color>
+    <Color>
+      <Hex>66CDAA</Hex>
+    </Color>
+    <Color>
+      <Hex>98FB98</Hex>
+    </Color>
+    <Color>
+      <Hex>E9967A</Hex>
+    </Color>
+    <Color>
+      <Hex>ADD8E6</Hex>
+    </Color>
+    <Color>
+      <Hex>F5FFFA</Hex>
+    </Color>
+    <Color>
+      <Hex>FFFFFF</Hex>
+    </Color>
+    <Color>
+      <Hex>FF0000</Hex>
+    </Color>
+    <Color>
+      <Hex>B0C4DE</Hex>
+    </Color>
+    <Color>
+      <Hex>B0E0E6</Hex>
+    </Color>
+    <Color>
+      <Hex>87CEFA</Hex>
+    </Color>
+    <Color>
+      <Hex>ADFF2F</Hex>
+    </Color>
+    <Color>
+      <Hex>696969</Hex>
+    </Color>
+    <Color>
+      <Hex>DC143C</Hex>
+    </Color>
+    <Color>
+      <Hex>AFEEEE</Hex>
+    </Color>
+    <Color>
+      <Hex>008080</Hex>
     </Color>
   </Layout>
   <Text />
