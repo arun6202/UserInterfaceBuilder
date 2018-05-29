@@ -50,31 +50,31 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
             get;
             set;
         } = true;
-   
+
 
 		public bool SuppressAllBackGroundColor
 		{
 			get;
 			set;
-		}
+		} = false;
 
 		public bool SuppressLayoutBackGroundColor
 		{
 			get;
 			set;
-		}
+		}= false;
 
 		public bool SuppressImageBackGroundColor
 		{
 			get;
 			set;
-		}
+		}= false;
 
 		public bool SuppressLoremTextBackGroundColor
 		{
 			get;
 			set;
-		}
+		}= false;
 
 		public bool PreserveSession
 		{

@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using XamarinFormsStarterKit.UserInterfaceBuilder.Helpers;
 
 namespace XamarinFormsStarterKit.UserInterfaceBuilder.Preserver
 {
 	public class Color
 	{
+		private const string WhiteColor = "#ffffff";
+
 		public Color(Xamarin.Forms.Color color)
 		{
 			R = color.R;
@@ -13,7 +16,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Preserver
 			Hue = color.Hue;
 			Saturation = color.Saturation;
 			Luminosity = color.Luminosity;
-
+			Hex = color.ToHex();
 		}
 
 		public Color()
@@ -26,6 +29,13 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Preserver
 			set;
 
 		}
+
+		public string Hex
+		{
+			get;
+			set;
+
+		} = WhiteColor;
 
 		public double G
 		{
