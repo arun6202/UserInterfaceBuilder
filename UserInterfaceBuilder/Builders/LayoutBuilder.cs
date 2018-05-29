@@ -15,8 +15,6 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 		static readonly List<Color> ColorList = new List<Color>();
 
-
-
 		static LayoutBuilder()
 		{
 			foreach (var item in typeof(Color).GetFields())
@@ -29,38 +27,16 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 		public static void GenerateLayoutColors(Layout layout, bool suppressBackGroundColor = true)
 		{
-
-			var color = GetColor();
-
-			if (suppressBackGroundColor)
+			if (!suppressBackGroundColor)
 			{
-				//ComponentBuilder.PreserveUIAttributes.Layout.Add(new Preserver.Color(Color.Default));
+				ComponentBuilder.PreserveUIAttributes.Layout.Add(new Preserver.Color(GetColor()));
 
 			}
-			else
-			{
-				ComponentBuilder.PreserveUIAttributes.Layout.Add(new Preserver.Color(color));
-
-			}
-
 			foreach (var child in layout.Children)
 			{
 				if (child is Layout currentLayout)
 				{
 					GenerateLayoutColors(currentLayout, suppressBackGroundColor);
-				}
-				var currentControl = (VisualElement)child;
-				if (child is Layout)
-				{
-
-
-					ComponentBuilder.PreserveUIAttributes.Layout.Add(new Preserver.Color(GetColor()));
-
-				}
-				else
-				{
-					ComponentBuilder.PreserveUIAttributes.Layout.Add(new Preserver.Color(GetColor()));
-
 				}
 			}
 		}
@@ -105,7 +81,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 						ExtractRect = true;
 						ExtractCompleteRect(view);
 
-						UserDialogs.Instance.Toast($"{Rects.ToString()}", TimeSpan.FromSeconds(12));
+						UserDialogs.Instance.Toast($"{Rects.ToString()}", TimeSpan.FromSeconds(10));
 
 					};
 					view.GestureRecognizers.Add(tapGestureRecognizer);
@@ -126,8 +102,8 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 			}
 			ExtractRect = !(element.Parent is ContentPage);
-			while (ExtractRect )
-			{			
+			while (ExtractRect)
+			{
 				ExtractCompleteRect(element.Parent);
 			}
 
@@ -144,7 +120,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 					view.GestureRecognizers.Clear();
 					tapGestureRecognizer.Tapped += (s, e) =>
 					{
-						UserDialogs.Instance.Toast($"{view.Bounds.ToSKRect().ToString()}", TimeSpan.FromSeconds(1.5));
+						UserDialogs.Instance.Toast($"{view.Bounds.ToSKRect().ToString()}", TimeSpan.FromSeconds(5));
 
 					};
 					view.GestureRecognizers.Add(tapGestureRecognizer);
@@ -177,18 +153,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			{
 				if (child is Layout currentLayout)
 				{
-					ColorizeLayout(currentLayout, apply, suppressBackGroundColor);
-				}
-				var currentControl = (VisualElement)child;
-				if (child is Layout)
-				{
-					currentControl.BackgroundColor = GetColor(preserveSession);
-
-				}
-				else
-				{
-					currentControl.BackgroundColor = GetColor(preserveSession);
-
+					ColorizeLayout(currentLayout, apply, suppressBackGroundColor, !preserveSession);
 				}
 			}
 		}

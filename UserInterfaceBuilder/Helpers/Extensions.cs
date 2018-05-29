@@ -9,7 +9,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
 	{
 		public static Color ToXamarinColor(this Preserver.Color color)
 		{
-			return Color.FromRgb(color.R, color.G, color.B);
+			return Color.FromHex(color.Hex);
 		}
 
 		public static T ParseEnum<T>(string value)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 using XamarinFormsStarterKit.UserInterfaceBuilder.Helpers;
 
 namespace XamarinFormsStarterKit.UserInterfaceBuilder.Preserver
@@ -23,6 +24,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Preserver
 		{
 
 		}
+		[XmlIgnore]
 		public double R
 		{
 			get;
@@ -37,26 +39,31 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Preserver
 
 		} = WhiteColor;
 
+		[XmlIgnore]
 		public double G
 		{
 			get;
 			set;
 		}
+		[XmlIgnore]
 		public double B
 		{
 			get;
 			set;
 		}
+		[XmlIgnore]
 		public double Hue
 		{
 			get;
 			set;
 		}
+		[XmlIgnore]
 		public double Saturation
 		{
 			get;
 			set;
 		}
+		[XmlIgnore]
 		public double Luminosity
 		{
 			get;
