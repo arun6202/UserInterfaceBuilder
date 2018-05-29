@@ -1,46 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Preserve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <Layout>
-        <Color>
-            <Hex>9370DB</Hex>
-        </Color>
-        <Color>
-            <Hex>DDA0DD</Hex>
-        </Color>
-        <Color>
-            <Hex>FFFFE0</Hex>
-        </Color>
-        <Color>
-            <Hex>FFA500</Hex>
-        </Color>
-        <Color>
-            <Hex>B8860B</Hex>
-        </Color>
-        <Color>
-            <Hex>F08080</Hex>
-        </Color>
-        <Color>
-            <Hex>F5F5DC</Hex>
-        </Color>
-        <Color>
-            <Hex>E6E6FA</Hex>
-        </Color>
-        <Color>
-            <Hex>000000</Hex>
-        </Color>
-        <Color>
-            <Hex>FFFACD</Hex>
-        </Color>
-        <Color>
-            <Hex>CD5C5C</Hex>
-        </Color>
-        <Color>
-            <Hex>2E8B57</Hex>
-        </Color>
-        <Color>
-            <Hex>B0E0E6</Hex>
-        </Color>
-    </Layout>
-    <Text />
-    <Image />
+  <Layout>
+    <Color>
+      <Hex>DEB887</Hex>
+    </Color>
+    <Color>
+      <Hex>F5F5F5</Hex>
+    </Color>
+  </Layout>
+  <Text />
+  <Image />
 </Preserve>
