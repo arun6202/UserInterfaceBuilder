@@ -10,28 +10,53 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 {
 	public static class ComponentBuilder
 	{
- 
+
 		public static Preserve PreserveUIAttributes = new Preserve();
 		public static Preserve RestoredUIAttributes = new Preserve();
 
 
 		public static void Init(ComponentBuilderOptions options)
 		{
-			ConfigureRepeater(options);
+			if (options.EnableRepeater)
+			{
+				ConfigureRepeater(options);
+
+			}
+			if (options.EnableRestorationOfUIAttributes)
+			{
+				RestorePreserveUIAttributes(options);
+
+			}
+			if (options.EnableTapGestureRecognizers)
+			{
+				HookTapGestureRecognizer(options);
+
+			}
+			if (options.EnableUIAttributesGeneration)
+			{
+				GenerateUIAttributes(options);
+			}
+			if (options.CompressLayout)
+            {
+				CompressLayout(options);
+            }
             
-			RestorePreserveUIAttributes(options);
 
-			HookTapGestureRecognizer(options);
-
-			GenerateUIAttributes(options);
-            LoadAllComponents(options);
+			LoadAllComponents(options);
 		}
+
+		private static void CompressLayout(ComponentBuilderOptions options)
+		{
+			ConfigureOptions(options, out Layout layout, out bool suppressLayout, out bool suppressImage, out bool suppressLoremText);
+
+            LayoutBuilder.CompressLayoutAsHeadless(layout, options.Apply);
+ 		}
 
 		private static void HookTapGestureRecognizer(ComponentBuilderOptions options)
 		{
 			ConfigureOptions(options, out Layout layout, out bool suppressLayout, out bool suppressImage, out bool suppressLoremText);
 
-			LayoutBuilder.HookTapGestureRecognizer(layout, options.Apply);	
+			LayoutBuilder.HookTapGestureRecognizer(layout, options.Apply);
 		}
 
 		private static void RestorePreserveUIAttributes(ComponentBuilderOptions options)
@@ -41,17 +66,17 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				return;
 			}
 			XmlSerializer deserializer = new XmlSerializer(typeof(Preserve));
-            TextReader reader = new StreamReader(ResourceLoader.GetEmbeddedResourceStream("Preserve.xml"));
-            try
+			TextReader reader = new StreamReader(ResourceLoader.GetEmbeddedResourceStream("Preserve.xml"));
+			try
 			{
-			
 
-				RestoredUIAttributes = (Preserve) deserializer.Deserialize(reader);
+
+				RestoredUIAttributes = (Preserve)deserializer.Deserialize(reader);
 			}
 			finally
 			{
 				reader.Close();
- 			}
+			}
 
 
 		}

@@ -18,6 +18,16 @@ namespace UserInterfaceBuilderPreserver
 		static void Main(string[] args)
 		{
 			MockForms.Init();
+            
+            ComponentBuilder.Init(new ComponentBuilderOptions
+            {               
+                PreserveSession = true,
+                SuppressAllBackGroundColor = false,
+				EnableRepeater = true,
+				EnableRestorationOfUIAttributes = true,
+                EnableTapGestureRecognizers = true,
+				EnableUIAttributesGeneration = true
+            });
 
 			var playground = new Playground();
 			var preserveUIAttributes = ComponentBuilder.PreserveUIAttributes;

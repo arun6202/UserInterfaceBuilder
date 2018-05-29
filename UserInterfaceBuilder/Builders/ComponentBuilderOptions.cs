@@ -5,12 +5,6 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 {
 	public class ComponentBuilderOptions
 	{
-		public ComponentBuilderOptions()
-		{
-			Apply = true;
-			PreserveSession = false;
-
-		}
 
 		public View Content
 		{
@@ -22,7 +16,41 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		{
 			get;
 			set;
-		}
+		} = true;
+
+
+		public bool EnableRepeater
+		{
+			get;
+			set;
+		} = false;
+
+		public bool EnableRestorationOfUIAttributes
+		{
+			get;
+			set;
+		} = false;
+
+
+		public bool EnableTapGestureRecognizers
+		{
+			get;
+			set;
+		} = false;
+
+
+		public bool EnableUIAttributesGeneration
+		{
+			get;
+			set;
+		} = false;
+
+		public bool CompressLayout
+        {
+            get;
+            set;
+        } = true;
+   
 
 		public bool SuppressAllBackGroundColor
 		{
@@ -47,12 +75,12 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			get;
 			set;
 		}
-       
+
 		public bool PreserveSession
-        {
-            get;
-            set;
-        }
-       
+		{
+			get;
+			set;
+		} = false;
+
 	}
 }
