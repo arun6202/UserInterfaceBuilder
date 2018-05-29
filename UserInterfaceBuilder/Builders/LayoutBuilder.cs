@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -169,8 +170,14 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 					tapGestureRecognizer.Tapped += (s, e) =>
 					{
 						Rects.Clear();
+						RectsStack.Clear();
 						ExtractRect = true;
 						ExtractCompleteRect(view);
+
+						foreach (var item in RectsStack)
+						{
+							Rects.AppendLine(item.ToString());
+						}
 
 						UserDialogs.Instance.Toast($"{Rects.ToString()}", TimeSpan.FromSeconds(10));
 
@@ -182,6 +189,8 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		}
 
 		static StringBuilder Rects = new StringBuilder();
+		static Stack RectsStack = new Stack();
+
 
 		static bool ExtractRect = true;
 
@@ -189,7 +198,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		{
 			if (element is VisualElement visualElement)
 			{
-				Rects.AppendLine(visualElement.Bounds.ToSKRect().ToString());
+				RectsStack.Push(visualElement.Bounds.ToSKRect().ToString());
 
 			}
 			ExtractRect = !(element.Parent is ContentPage);
