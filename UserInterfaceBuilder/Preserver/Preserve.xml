@@ -2,10 +2,10 @@
 <Preserve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Layout>
     <Color>
-      <Hex>DEB887</Hex>
+      <Hex>C71585</Hex>
     </Color>
     <Color>
-      <Hex>F5F5F5</Hex>
+      <Hex>483D8B</Hex>
     </Color>
   </Layout>
   <Text />
