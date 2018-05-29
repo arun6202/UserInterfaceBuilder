@@ -17,6 +17,12 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 		public static void Init(ComponentBuilderOptions options)
 		{
+			if (!options.Apply)
+			{
+				return;
+			}
+
+
 			if (options.EnableRepeater)
 			{
 				ConfigureRepeater(options);
@@ -37,10 +43,10 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				GenerateUIAttributes(options);
 			}
 			if (options.CompressLayout)
-            {
+			{
 				CompressLayout(options);
-            }
-            
+			}
+
 
 			LoadAllComponents(options);
 		}
@@ -49,8 +55,8 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		{
 			ConfigureOptions(options, out Layout layout, out bool suppressLayout, out bool suppressImage, out bool suppressLoremText);
 
-            LayoutBuilder.CompressLayoutAsHeadless(layout, options.Apply);
- 		}
+			LayoutBuilder.CompressLayoutAsHeadless(layout, options.CompressLayout);
+		}
 
 		private static void HookTapGestureRecognizer(ComponentBuilderOptions options)
 		{
@@ -100,8 +106,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			ConfigureOptions(options, out Layout layout, out bool suppressLayout, out bool suppressImage, out bool suppressLoremText);
 
 			LayoutBuilder.ColorizeLayout(layout, options.Apply, suppressLayout, options.PreserveSession);
-			LayoutBuilder.CompressLayoutAsHeadless(layout, options.Apply);
-			ImageBuilder.LoadImage(layout, options.Apply, suppressImage, options.PreserveSession);
+ 			ImageBuilder.LoadImage(layout, options.Apply, suppressImage, options.PreserveSession);
 			TextBuilder.LoadLoremText(layout, options.Apply, suppressLoremText, options.PreserveSession);
 		}
 

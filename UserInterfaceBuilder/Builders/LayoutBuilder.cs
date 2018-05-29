@@ -49,17 +49,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				return;
 			}
 
-			if (suppressBackGroundColor)
-			{
-
-				layout.BackgroundColor = Color.Default;
-                
-			}
-			else
-			{
-				layout.BackgroundColor = GetColor(preserveSession);
-
-			}
+			layout.BackgroundColor = suppressBackGroundColor ? Color.Default : GetColor(preserveSession);
 
 			foreach (var child in layout.Children)
 			{
