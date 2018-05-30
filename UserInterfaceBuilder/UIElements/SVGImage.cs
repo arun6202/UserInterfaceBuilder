@@ -77,6 +77,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 
 			var imageSource = WebUtility.HtmlDecode(Source);
 
+			using (var reader = GenerateSVG(args.Info.Width, args.Info.Height).CreateReader())
 			using (MemoryStream stream = new MemoryStream(Encoding.ASCII.GetBytes(imageSource)))
 			{
                 var svg = new SKSvg();

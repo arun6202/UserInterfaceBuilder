@@ -2,46 +2,52 @@
 <Preserve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Layout>
     <Color>
-      <Hex>228B22</Hex>
+      <Hex>ADD8E6</Hex>
     </Color>
     <Color>
-      <Hex>DB7093</Hex>
+      <Hex>F0E68C</Hex>
     </Color>
     <Color>
-      <Hex>FFF8DC</Hex>
+      <Hex>B22222</Hex>
     </Color>
     <Color>
-      <Hex>ADFF2F</Hex>
+      <Hex>4169E1</Hex>
     </Color>
     <Color>
-      <Hex>DC143C</Hex>
+      <Hex>C0C0C0</Hex>
     </Color>
   </Layout>
   <Text>
     <Text>
-      <TextValue>quas distinctio rerum</TextValue>
+      <TextValue>velit alias hic</TextValue>
       <TextColor>
-        <Hex>ADD8E6</Hex>
+        <Hex>00BFFF</Hex>
       </TextColor>
     </Text>
   </Text>
   <Image>
     <Image>
-      <Height>140</Height>
-      <Width>140</Width>
+      <Height>220</Height>
+      <Width>220</Width>
       <Source>&amp;lt;svg xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot;&amp;gt;
-  &amp;lt;rect width=&amp;quot;140&amp;quot; height=&amp;quot;140&amp;quot; style=&amp;quot;stroke:black;stroke-width:1;opacity:0.5&amp;quot; fill=&amp;quot;#ffda70d6&amp;quot; xmlns=&amp;quot;&amp;quot; /&amp;gt;
-  &amp;lt;g fill=&amp;quot;#ffff6347&amp;quot; xmlns=&amp;quot;&amp;quot;&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;140&amp;quot; x=&amp;quot;6&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;140&amp;quot; x=&amp;quot;38&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;140&amp;quot; x=&amp;quot;70&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;140&amp;quot; x=&amp;quot;102&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;140&amp;quot; x=&amp;quot;134&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;140&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;6&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;140&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;38&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;140&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;70&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;140&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;102&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;140&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;134&amp;quot; /&amp;gt;
+  &amp;lt;rect width=&amp;quot;220&amp;quot; height=&amp;quot;220&amp;quot; style=&amp;quot;stroke:black;stroke-width:1;opacity:0.5&amp;quot; fill=&amp;quot;#ffb8860b&amp;quot; xmlns=&amp;quot;&amp;quot; /&amp;gt;
+  &amp;lt;g fill=&amp;quot;#ffe0ffff&amp;quot; xmlns=&amp;quot;&amp;quot;&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;220&amp;quot; x=&amp;quot;6&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;220&amp;quot; x=&amp;quot;33&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;220&amp;quot; x=&amp;quot;60&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;220&amp;quot; x=&amp;quot;87&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;220&amp;quot; x=&amp;quot;114&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;220&amp;quot; x=&amp;quot;141&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;220&amp;quot; x=&amp;quot;168&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;220&amp;quot; x=&amp;quot;195&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;220&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;6&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;220&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;33&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;220&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;60&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;220&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;87&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;220&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;114&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;220&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;141&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;220&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;168&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;220&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;195&amp;quot; /&amp;gt;
   &amp;lt;/g&amp;gt;
 &amp;lt;/svg&amp;gt;</Source>
     </Image>
