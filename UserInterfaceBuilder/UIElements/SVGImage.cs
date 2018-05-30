@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Net;
+using System.Text;
 using System.Xml.Linq;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
@@ -73,10 +75,12 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			if (string.IsNullOrEmpty(Source))
 				return;
 
-			using (var reader = GenerateSVG(args.Info.Width, args.Info.Height).CreateReader())
+			var imageSource = WebUtility.HtmlDecode(Source);
+
+			using (MemoryStream stream = new MemoryStream(Encoding.ASCII.GetBytes(imageSource)))
 			{
-				var svg = new SKSvg();
-				svg.Load(reader);
+                var svg = new SKSvg();
+				svg.Load(stream);
 
 				var surface = args.Surface;
 				var canvas = surface.Canvas;

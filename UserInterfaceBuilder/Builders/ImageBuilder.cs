@@ -126,7 +126,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 							if (child is Image img)
 							{
 
-								var pngImageAttributtes = GetPNGImage(preserveSession);
+								var pngImageAttributtes = GetPNGImage(!preserveSession);
 
 								img.Source = ImageSource.FromResource(pngImageAttributtes.Source);
 								img.Aspect = Aspect.Fill;
@@ -137,7 +137,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 							if (child is SVGImage svgImg)
 							{
-								var svgImageAttributtes = GetSVGImage(preserveSession);
+								var svgImageAttributtes = GetSVGImage(!preserveSession);
 								svgImg.Source = svgImageAttributtes.Source;
 								svgImg.HeightRequest = svgImageAttributtes.Height;
 								svgImg.WidthRequest = svgImageAttributtes.Width;

@@ -2,99 +2,48 @@
 <Preserve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Layout>
     <Color>
-      <Hex>7B68EE</Hex>
+      <Hex>228B22</Hex>
     </Color>
     <Color>
       <Hex>DB7093</Hex>
     </Color>
     <Color>
-      <Hex>9400D3</Hex>
-    </Color>
-    <Color>
-      <Hex>FF4500</Hex>
-    </Color>
-    <Color>
-      <Hex>FFDEAD</Hex>
-    </Color>
-    <Color>
-      <Hex>5F9EA0</Hex>
-    </Color>
-    <Color>
-      <Hex>F0F8FF</Hex>
-    </Color>
-    <Color>
-      <Hex>FDF5E6</Hex>
-    </Color>
-    <Color>
-      <Hex>8B4513</Hex>
-    </Color>
-    <Color>
-      <Hex>FFA07A</Hex>
-    </Color>
-    <Color>
-      <Hex>778899</Hex>
-    </Color>
-    <Color>
-      <Hex>556B2F</Hex>
-    </Color>
-    <Color>
-      <Hex>F0FFF0</Hex>
-    </Color>
-    <Color>
-      <Hex>FF00FF</Hex>
-    </Color>
-    <Color>
-      <Hex>191970</Hex>
-    </Color>
-    <Color>
-      <Hex>708090</Hex>
-    </Color>
-    <Color>
-      <Hex>66CDAA</Hex>
-    </Color>
-    <Color>
-      <Hex>98FB98</Hex>
-    </Color>
-    <Color>
-      <Hex>E9967A</Hex>
-    </Color>
-    <Color>
-      <Hex>ADD8E6</Hex>
-    </Color>
-    <Color>
-      <Hex>F5FFFA</Hex>
-    </Color>
-    <Color>
-      <Hex>FFFFFF</Hex>
-    </Color>
-    <Color>
-      <Hex>FF0000</Hex>
-    </Color>
-    <Color>
-      <Hex>B0C4DE</Hex>
-    </Color>
-    <Color>
-      <Hex>B0E0E6</Hex>
-    </Color>
-    <Color>
-      <Hex>87CEFA</Hex>
+      <Hex>FFF8DC</Hex>
     </Color>
     <Color>
       <Hex>ADFF2F</Hex>
     </Color>
     <Color>
-      <Hex>696969</Hex>
-    </Color>
-    <Color>
       <Hex>DC143C</Hex>
     </Color>
-    <Color>
-      <Hex>AFEEEE</Hex>
-    </Color>
-    <Color>
-      <Hex>008080</Hex>
-    </Color>
   </Layout>
-  <Text />
-  <Image />
+  <Text>
+    <Text>
+      <TextValue>quas distinctio rerum</TextValue>
+      <TextColor>
+        <Hex>ADD8E6</Hex>
+      </TextColor>
+    </Text>
+  </Text>
+  <Image>
+    <Image>
+      <Height>140</Height>
+      <Width>140</Width>
+      <Source>&amp;lt;svg xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot;&amp;gt;
+  &amp;lt;rect width=&amp;quot;140&amp;quot; height=&amp;quot;140&amp;quot; style=&amp;quot;stroke:black;stroke-width:1;opacity:0.5&amp;quot; fill=&amp;quot;#ffda70d6&amp;quot; xmlns=&amp;quot;&amp;quot; /&amp;gt;
+  &amp;lt;g fill=&amp;quot;#ffff6347&amp;quot; xmlns=&amp;quot;&amp;quot;&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;140&amp;quot; x=&amp;quot;6&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;140&amp;quot; x=&amp;quot;38&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;140&amp;quot; x=&amp;quot;70&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;140&amp;quot; x=&amp;quot;102&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;140&amp;quot; x=&amp;quot;134&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;140&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;6&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;140&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;38&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;140&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;70&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;140&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;102&amp;quot; /&amp;gt;
+    &amp;lt;rect width=&amp;quot;140&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;134&amp;quot; /&amp;gt;
+  &amp;lt;/g&amp;gt;
+&amp;lt;/svg&amp;gt;</Source>
+    </Image>
+  </Image>
 </Preserve>
