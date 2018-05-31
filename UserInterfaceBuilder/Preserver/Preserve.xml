@@ -2,77 +2,195 @@
 <Preserve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Layout>
     <Color>
-      <Hex>7CFC00</Hex>
+      <Hex>B22222</Hex>
+    </Color>
+    <Color>
+      <Hex>9370DB</Hex>
+    </Color>
+    <Color>
+      <Hex>808080</Hex>
+    </Color>
+    <Color>
+      <Hex>4B0082</Hex>
+    </Color>
+    <Color>
+      <Hex>F5DEB3</Hex>
+    </Color>
+    <Color>
+      <Hex>FFFFE0</Hex>
+    </Color>
+    <Color>
+      <Hex>FFFAFA</Hex>
+    </Color>
+    <Color>
+      <Hex>FFC0CB</Hex>
+    </Color>
+    <Color>
+      <Hex>FFE4B5</Hex>
+    </Color>
+    <Color>
+      <Hex>FFA07A</Hex>
+    </Color>
+    <Color>
+      <Hex>66CDAA</Hex>
+    </Color>
+    <Color>
+      <Hex>87CEFA</Hex>
+    </Color>
+    <Color>
+      <Hex>5F9EA0</Hex>
+    </Color>
+    <Color>
+      <Hex>FFFAF0</Hex>
+    </Color>
+    <Color>
+      <Hex>FFF8DC</Hex>
+    </Color>
+    <Color>
+      <Hex>E6E6FA</Hex>
+    </Color>
+    <Color>
+      <Hex>FF00FF</Hex>
+    </Color>
+    <Color>
+      <Hex>FFEFD5</Hex>
+    </Color>
+    <Color>
+      <Hex>BDB76B</Hex>
+    </Color>
+    <Color>
+      <Hex>FF00FF</Hex>
+    </Color>
+    <Color>
+      <Hex>D2691E</Hex>
+    </Color>
+    <Color>
+      <Hex>E9967A</Hex>
+    </Color>
+    <Color>
+      <Hex>808000</Hex>
+    </Color>
+    <Color>
+      <Hex>B8860B</Hex>
+    </Color>
+    <Color>
+      <Hex>FFB6C1</Hex>
+    </Color>
+    <Color>
+      <Hex>F08080</Hex>
+    </Color>
+    <Color>
+      <Hex>9932CC</Hex>
     </Color>
   </Layout>
   <Text>
     <Text>
-      <TextValue>quisquam repudiandae ipsa</TextValue>
+      <TextValue>ex dolor voluptatem deleniti eum</TextValue>
       <TextColor>
-        <Hex>FFFF00</Hex>
+        <Hex>C0C0C0</Hex>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>oas</TextValue>
+      <TextColor>
+        <Hex>6B8E23</Hex>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>vero sint eius suscipit et</TextValue>
+      <TextColor>
+        <Hex>7FFFD4</Hex>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>oas</TextValue>
+      <TextColor>
+        <Hex>D3D3D3</Hex>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>in perspiciatis nemo tempora vel</TextValue>
+      <TextColor>
+        <Hex>696969</Hex>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>oas</TextValue>
+      <TextColor>
+        <Hex>F4A460</Hex>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>rovident non aut eius iste</TextValue>
+      <TextColor>
+        <Hex>2F4F4F</Hex>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>oas</TextValue>
+      <TextColor>
+        <Hex>E9967A</Hex>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>debitis ut qui doloremque tempore</TextValue>
+      <TextColor>
+        <Hex>EE82EE</Hex>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>oas</TextValue>
+      <TextColor>
+        <Hex>AFEEEE</Hex>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>quae explicabo harum quidem voluptatem velit provident nobis possimus laborum et sunt eum omnis reiciendis voluptas possimus voluptas sed pariatur corporis eaque maxime sed explicabo dolor veritatis velit molestiae commodi iure sapiente quis aut suscipit voluptas rerum culpa amet sunt accusamus vero unde et est a eum quia labore quo quia rerum nihil dolor quis</TextValue>
+      <TextColor>
+        <Hex>B0E0E6</Hex>
+      </TextColor>
+    </Text>
+    <Text>
+      <TextValue>Ut molestiae perspiciatis.
+Ut sed aliquam qui modi.
+Veniam voluptatem nihil non tenetur quia qui doloremque.
+Dignissimos quos magni voluptatum dolores qui earum quia porro et.
+Aliquam odit iusto voluptas esse praesentium eaque illum.</TextValue>
+      <TextColor>
+        <Hex>BA55D3</Hex>
       </TextColor>
     </Text>
   </Text>
   <Image>
     <Image>
-      <Height>100</Height>
-      <Width>100</Width>
+      <Height>140</Height>
+      <Width>140</Width>
       <Source>SVGImage</Source>
       <OuterElementBackGroundColor>
-        <Hex>90EE90</Hex>
+        <Hex>008000</Hex>
       </OuterElementBackGroundColor>
       <FillElementBackGroundColor>
-        <Hex>000080</Hex>
+        <Hex>F5F5DC</Hex>
       </FillElementBackGroundColor>
-      <SeedX>35</SeedX>
-      <SeedY>35</SeedY>
-      <IncrementX>39</IncrementX>
-      <IncrementY>39</IncrementY>
+      <SeedX>7</SeedX>
+      <SeedY>25</SeedY>
+      <IncrementX>37</IncrementX>
+      <IncrementY>22</IncrementY>
     </Image>
     <Image>
       <Height>140</Height>
       <Width>140</Width>
       <Source>SVGImage</Source>
       <OuterElementBackGroundColor>
-        <Hex>EEE8AA</Hex>
+        <Hex>FFD700</Hex>
       </OuterElementBackGroundColor>
       <FillElementBackGroundColor>
-        <Hex>5F9EA0</Hex>
-      </FillElementBackGroundColor>
-      <SeedX>5</SeedX>
-      <SeedY>49</SeedY>
-      <IncrementX>24</IncrementX>
-      <IncrementY>14</IncrementY>
-    </Image>
-    <Image>
-      <Height>180</Height>
-      <Width>180</Width>
-      <Source>SVGImage</Source>
-      <OuterElementBackGroundColor>
-        <Hex>D8BFD8</Hex>
-      </OuterElementBackGroundColor>
-      <FillElementBackGroundColor>
-        <Hex>4169E1</Hex>
-      </FillElementBackGroundColor>
-      <SeedX>13</SeedX>
-      <SeedY>44</SeedY>
-      <IncrementX>24</IncrementX>
-      <IncrementY>7</IncrementY>
-    </Image>
-    <Image>
-      <Height>220</Height>
-      <Width>220</Width>
-      <Source>SVGImage</Source>
-      <OuterElementBackGroundColor>
-        <Hex>F0E68C</Hex>
-      </OuterElementBackGroundColor>
-      <FillElementBackGroundColor>
-        <Hex>FFFAFA</Hex>
+        <Hex>F0F8FF</Hex>
       </FillElementBackGroundColor>
       <SeedX>28</SeedX>
-      <SeedY>49</SeedY>
-      <IncrementX>29</IncrementX>
-      <IncrementY>26</IncrementY>
+      <SeedY>9</SeedY>
+      <IncrementX>25</IncrementX>
+      <IncrementY>13</IncrementY>
     </Image>
   </Image>
 </Preserve>
