@@ -2,26 +2,14 @@
 <Preserve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Layout>
     <Color>
-      <Hex>000080</Hex>
-    </Color>
-    <Color>
-      <Hex>FFFFE0</Hex>
-    </Color>
-    <Color>
-      <Hex>F0E68C</Hex>
-    </Color>
-    <Color>
-      <Hex>F5F5DC</Hex>
-    </Color>
-    <Color>
-      <Hex>B0C4DE</Hex>
+      <Hex>7CFC00</Hex>
     </Color>
   </Layout>
   <Text>
     <Text>
-      <TextValue>aliquid sint eveniet</TextValue>
+      <TextValue>quisquam repudiandae ipsa</TextValue>
       <TextColor>
-        <Hex>F0FFFF</Hex>
+        <Hex>FFFF00</Hex>
       </TextColor>
     </Text>
   </Text>
@@ -31,60 +19,60 @@
       <Width>100</Width>
       <Source>SVGImage</Source>
       <OuterElementBackGroundColor>
-        <Hex>FFEBCD</Hex>
+        <Hex>90EE90</Hex>
       </OuterElementBackGroundColor>
       <FillElementBackGroundColor>
-        <Hex>3CB371</Hex>
+        <Hex>000080</Hex>
       </FillElementBackGroundColor>
-      <SeedX>31</SeedX>
-      <SeedY>41</SeedY>
-      <IncrementX>15</IncrementX>
-      <IncrementY>29</IncrementY>
+      <SeedX>35</SeedX>
+      <SeedY>35</SeedY>
+      <IncrementX>39</IncrementX>
+      <IncrementY>39</IncrementY>
     </Image>
     <Image>
       <Height>140</Height>
       <Width>140</Width>
       <Source>SVGImage</Source>
       <OuterElementBackGroundColor>
-        <Hex>FF7F50</Hex>
+        <Hex>EEE8AA</Hex>
       </OuterElementBackGroundColor>
       <FillElementBackGroundColor>
-        <Hex>E9967A</Hex>
+        <Hex>5F9EA0</Hex>
       </FillElementBackGroundColor>
-      <SeedX>10</SeedX>
-      <SeedY>21</SeedY>
-      <IncrementX>38</IncrementX>
-      <IncrementY>13</IncrementY>
+      <SeedX>5</SeedX>
+      <SeedY>49</SeedY>
+      <IncrementX>24</IncrementX>
+      <IncrementY>14</IncrementY>
     </Image>
     <Image>
       <Height>180</Height>
       <Width>180</Width>
       <Source>SVGImage</Source>
       <OuterElementBackGroundColor>
-        <Hex>90EE90</Hex>
+        <Hex>D8BFD8</Hex>
       </OuterElementBackGroundColor>
       <FillElementBackGroundColor>
-        <Hex>FFD700</Hex>
+        <Hex>4169E1</Hex>
       </FillElementBackGroundColor>
-      <SeedX>41</SeedX>
-      <SeedY>25</SeedY>
-      <IncrementX>27</IncrementX>
-      <IncrementY>40</IncrementY>
+      <SeedX>13</SeedX>
+      <SeedY>44</SeedY>
+      <IncrementX>24</IncrementX>
+      <IncrementY>7</IncrementY>
     </Image>
     <Image>
       <Height>220</Height>
       <Width>220</Width>
       <Source>SVGImage</Source>
       <OuterElementBackGroundColor>
-        <Hex>DEB887</Hex>
+        <Hex>F0E68C</Hex>
       </OuterElementBackGroundColor>
       <FillElementBackGroundColor>
-        <Hex>FAF0E6</Hex>
+        <Hex>FFFAFA</Hex>
       </FillElementBackGroundColor>
-      <SeedX>6</SeedX>
-      <SeedY>6</SeedY>
-      <IncrementX>28</IncrementX>
-      <IncrementY>28</IncrementY>
+      <SeedX>28</SeedX>
+      <SeedY>49</SeedY>
+      <IncrementX>29</IncrementX>
+      <IncrementY>26</IncrementY>
     </Image>
   </Image>
 </Preserve>
