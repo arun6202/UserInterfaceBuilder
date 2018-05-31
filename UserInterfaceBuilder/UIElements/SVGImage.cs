@@ -50,6 +50,13 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 
 		}
 
+		public Preserver.Image Image
+		{
+			get;
+			set;
+		}
+
+
 		public static readonly BindableProperty ShapeProperty = BindableProperty.Create(
 			nameof(Shape), typeof(Shape), typeof(SVGImage), Shape.Square, propertyChanged: RedrawCanvas);
 
@@ -80,7 +87,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			using (var reader = GenerateSVG(args.Info.Width, args.Info.Height).CreateReader())
 			using (MemoryStream stream = new MemoryStream(Encoding.ASCII.GetBytes(imageSource)))
 			{
-                var svg = new SKSvg();
+				var svg = new SKSvg();
 				svg.Load(stream);
 
 				var surface = args.Surface;
@@ -96,9 +103,9 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 		public XDocument GenerateSVG(double width, double height)
 		{
 			XDocument xDocument = CreateSVGRoot();
-   
+
 			CreateOuterElement(width, height, xDocument, this.Shape);
- 
+
 			return CreateFillElement(width, height, xDocument, this.Shape);
 		}
 
@@ -108,7 +115,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 
 			var seed = new Random().Next(5, 50);
 			var increment = new Random().Next(5, 50);
-   
+
 			var svgShape = shape == Shape.Circle ? Circle : Rect;
 
 			var reset = seed;
@@ -213,9 +220,9 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 		private static void CreateCircle(double width, double height, XDocument xDocument)
 		{
 			xDocument.Root.Add(new XElement(Circle,
-								new XAttribute("r", width/2),
-			                                new XAttribute("cx",  width / 2),
-			                                new XAttribute("cy",   width / 2),
+								new XAttribute("r", width / 2),
+											new XAttribute("cx", width / 2),
+											new XAttribute("cy", width / 2),
 								new XAttribute("style", "stroke:black;stroke-width:1;opacity:0.5"),
 								new XAttribute("fill", RandomColor())));
 		}
@@ -244,9 +251,9 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			{
 
 				return Color.FromRgb(new Random().Next(255) / 255.0f,
-				                     new Random().Next(255) / 255.0f,
-				                     new Random().Next(255) / 255.0f).ToSKColor().ToString();
-                
+									 new Random().Next(255) / 255.0f,
+									 new Random().Next(255) / 255.0f).ToSKColor().ToString();
+
 			}
 
 			return color;

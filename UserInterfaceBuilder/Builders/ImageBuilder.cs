@@ -12,9 +12,8 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 	public static class ImageBuilder
 	{
 		private const string PNGImageType = ".PNG.Patterns.";
-		private const string SVGImageType = ".SVG.Patterns1.";
-		private const double DefaultWidth = 80;
-		private const double DefaultHeight = 88;
+ 		private const double DefaultWidth = 40;
+		private const double DefaultHeight = 40;
 		private const string Small = "s";
 		private const string Medium = "m";
 		private const string Large = "l";
@@ -28,14 +27,12 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		private const double DoubleExtraLargeSize = 260;
 		private const double TripleExtraLargeSize = 300;
 		static readonly List<string> PNGImageList = new List<string>();
-		static readonly List<string> SVGImageList = new List<string>();
-
+ 
 
 		static ImageBuilder()
 		{
 			PNGImageList.AddRange(LoadImagesResourcesList(PNGImageType));
-			SVGImageList.AddRange(LoadImagesResourcesList(SVGImageType));
-
+ 
 		}
 
 		private static string[] LoadImagesResourcesList(string type)
@@ -78,11 +75,8 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 							}
 							if (child is SVGImage svgImage)
 							{
-								imageAttributtes.Source = GetSVGImage(true).Source;
-								var xml = svgImage.GenerateSVG(height, width).ToString();
-
-								imageAttributtes.Source = SecurityElement.Escape(xml);
-
+								imageAttributtes = GetSVGImage();
+                                
 							}
 							imageAttributtes.Height = height;
 							imageAttributtes.Width = width;
@@ -97,7 +91,6 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 		public static void LoadImage(Layout layout, bool apply = true, bool suppressBackGroundColor = true, bool preserveSession = false)
 		{
-			preserveSession = !preserveSession;
 
 			if (!apply)
 			{
@@ -126,7 +119,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 							if (child is Image img)
 							{
 
-								var pngImageAttributtes = GetPNGImage(!preserveSession);
+								var pngImageAttributtes = GetPNGImage(preserveSession);
 
 								img.Source = ImageSource.FromResource(pngImageAttributtes.Source);
 								img.Aspect = Aspect.Fill;
@@ -137,7 +130,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 							if (child is SVGImage svgImg)
 							{
-								var svgImageAttributtes = GetSVGImage(!preserveSession);
+								var svgImageAttributtes = GetSVGImage(preserveSession);
 								svgImg.Source = svgImageAttributtes.Source;
 								svgImg.HeightRequest = svgImageAttributtes.Height;
 								svgImg.WidthRequest = svgImageAttributtes.Width;
@@ -307,18 +300,44 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			return GetPNGImage(true);
 		}
 
+		static Preserver.Image GeneratePseudoSVGImageAttributes()
+		{
+			var seed = new Random().Next(5, 50);
+            var increment = new Random().Next(5, 50);
+
+			var reset = seed;
+   			
+			var img = new Preserver.Image
+			{
+				OuterElementBackGroundColor = new Preserver.Color(LayoutBuilder.GetColor()),
+				FillElementBackGroundColor = new Preserver.Color(LayoutBuilder.GetColor()),
+				SeedX =seed,
+ 				IncrementX =increment
+ 
+			};
+
+            if (new Random().NextDouble() >= 0.5)
+            {
+                seed = reset;
+
+            }
+            else
+            {
+                seed = new Random().Next(5, 50);
+                increment = new Random().Next(5, 50);
+            }
+
+			img.SeedY = seed;
+			img.IncrementY = increment;
+
+			return img;
+		}
+
 		public static Preserver.Image GetSVGImage(bool isRandom = true)
 		{
 			if (isRandom)
 			{
-				if (SVGImageList.Count == 0)
-				{
-					SVGImageList.AddRange(LoadImagesResourcesList(SVGImageType));
-				}
-				var randomIndex = new Random().Next(SVGImageList.Count);
-				var img = SVGImageList[randomIndex];
-				SVGImageList.RemoveAt(randomIndex);
-				return new Preserver.Image { Source = img };
+				return GeneratePseudoSVGImageAttributes();
 			}
 			else
 			{
