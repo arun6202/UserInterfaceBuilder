@@ -14,6 +14,11 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 		public static Preserve PreserveUIAttributes = new Preserve();
 		public static Preserve RestoredUIAttributes = new Preserve();
 
+		public static ComponentBuilderOptions Options
+		{
+			get;
+			set;
+		}
 
 		public static void Init(ComponentBuilderOptions options)
 		{
@@ -22,6 +27,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				return;
 			}
 
+			Options = options;
 
 			if (options.EnableRepeater)
 			{

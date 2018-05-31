@@ -2,60 +2,89 @@
 <Preserve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Layout>
     <Color>
-      <Hex>BA55D3</Hex>
+      <Hex>000080</Hex>
     </Color>
     <Color>
-      <Hex>00FFFF</Hex>
+      <Hex>FFFFE0</Hex>
     </Color>
     <Color>
-      <Hex>BDB76B</Hex>
+      <Hex>F0E68C</Hex>
     </Color>
     <Color>
-      <Hex>F4A460</Hex>
+      <Hex>F5F5DC</Hex>
     </Color>
     <Color>
-      <Hex>32CD32</Hex>
+      <Hex>B0C4DE</Hex>
     </Color>
   </Layout>
   <Text>
     <Text>
-      <TextValue>qui voluptates consequatur</TextValue>
+      <TextValue>aliquid sint eveniet</TextValue>
       <TextColor>
-        <Hex>000080</Hex>
+        <Hex>F0FFFF</Hex>
       </TextColor>
     </Text>
   </Text>
   <Image>
     <Image>
-      <Height>260</Height>
-      <Width>260</Width>
-      <Source>&amp;lt;svg xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot;&amp;gt;
-  &amp;lt;rect width=&amp;quot;260&amp;quot; height=&amp;quot;260&amp;quot; style=&amp;quot;stroke:black;stroke-width:1;opacity:0.5&amp;quot; fill=&amp;quot;#ff778899&amp;quot; xmlns=&amp;quot;&amp;quot; /&amp;gt;
-  &amp;lt;g fill=&amp;quot;#ffb0c4de&amp;quot; xmlns=&amp;quot;&amp;quot;&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;260&amp;quot; x=&amp;quot;45&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;260&amp;quot; x=&amp;quot;66&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;260&amp;quot; x=&amp;quot;87&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;260&amp;quot; x=&amp;quot;108&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;260&amp;quot; x=&amp;quot;129&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;260&amp;quot; x=&amp;quot;150&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;260&amp;quot; x=&amp;quot;171&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;260&amp;quot; x=&amp;quot;192&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;260&amp;quot; x=&amp;quot;213&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;260&amp;quot; x=&amp;quot;234&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;1&amp;quot; height=&amp;quot;260&amp;quot; x=&amp;quot;255&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;260&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;45&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;260&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;66&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;260&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;87&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;260&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;108&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;260&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;129&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;260&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;150&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;260&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;171&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;260&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;192&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;260&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;213&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;260&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;234&amp;quot; /&amp;gt;
-    &amp;lt;rect width=&amp;quot;260&amp;quot; height=&amp;quot;1&amp;quot; y=&amp;quot;255&amp;quot; /&amp;gt;
-  &amp;lt;/g&amp;gt;
-&amp;lt;/svg&amp;gt;</Source>
+      <Height>100</Height>
+      <Width>100</Width>
+      <Source>SVGImage</Source>
+      <OuterElementBackGroundColor>
+        <Hex>FFEBCD</Hex>
+      </OuterElementBackGroundColor>
+      <FillElementBackGroundColor>
+        <Hex>3CB371</Hex>
+      </FillElementBackGroundColor>
+      <SeedX>31</SeedX>
+      <SeedY>41</SeedY>
+      <IncrementX>15</IncrementX>
+      <IncrementY>29</IncrementY>
+    </Image>
+    <Image>
+      <Height>140</Height>
+      <Width>140</Width>
+      <Source>SVGImage</Source>
+      <OuterElementBackGroundColor>
+        <Hex>FF7F50</Hex>
+      </OuterElementBackGroundColor>
+      <FillElementBackGroundColor>
+        <Hex>E9967A</Hex>
+      </FillElementBackGroundColor>
+      <SeedX>10</SeedX>
+      <SeedY>21</SeedY>
+      <IncrementX>38</IncrementX>
+      <IncrementY>13</IncrementY>
+    </Image>
+    <Image>
+      <Height>180</Height>
+      <Width>180</Width>
+      <Source>SVGImage</Source>
+      <OuterElementBackGroundColor>
+        <Hex>90EE90</Hex>
+      </OuterElementBackGroundColor>
+      <FillElementBackGroundColor>
+        <Hex>FFD700</Hex>
+      </FillElementBackGroundColor>
+      <SeedX>41</SeedX>
+      <SeedY>25</SeedY>
+      <IncrementX>27</IncrementX>
+      <IncrementY>40</IncrementY>
+    </Image>
+    <Image>
+      <Height>220</Height>
+      <Width>220</Width>
+      <Source>SVGImage</Source>
+      <OuterElementBackGroundColor>
+        <Hex>DEB887</Hex>
+      </OuterElementBackGroundColor>
+      <FillElementBackGroundColor>
+        <Hex>FAF0E6</Hex>
+      </FillElementBackGroundColor>
+      <SeedX>6</SeedX>
+      <SeedY>6</SeedY>
+      <IncrementX>28</IncrementX>
+      <IncrementY>28</IncrementY>
     </Image>
   </Image>
 </Preserve>

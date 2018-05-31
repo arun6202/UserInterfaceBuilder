@@ -130,11 +130,12 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 
 							if (child is SVGImage svgImg)
 							{
-								var svgImageAttributtes = GetSVGImage(preserveSession);
+								var svgImageAttributtes = GetSVGImage(preserveSession);                                 
 								svgImg.Source = svgImageAttributtes.Source;
+								svgImg.Image = svgImageAttributtes;
 								svgImg.HeightRequest = svgImageAttributtes.Height;
 								svgImg.WidthRequest = svgImageAttributtes.Width;
-
+                                
 							}
 							break;
 						}
@@ -312,7 +313,8 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				OuterElementBackGroundColor = new Preserver.Color(LayoutBuilder.GetColor()),
 				FillElementBackGroundColor = new Preserver.Color(LayoutBuilder.GetColor()),
 				SeedX =seed,
- 				IncrementX =increment
+ 				IncrementX =increment,
+				Source = nameof(SVGImage),
  
 			};
 

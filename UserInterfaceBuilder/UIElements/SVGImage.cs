@@ -56,7 +56,6 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			set;
 		}
 
-
 		public static readonly BindableProperty ShapeProperty = BindableProperty.Create(
 			nameof(Shape), typeof(Shape), typeof(SVGImage), Shape.Square, propertyChanged: RedrawCanvas);
 
@@ -81,14 +80,11 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 		{
 			if (string.IsNullOrEmpty(Source))
 				return;
-
-			var imageSource = WebUtility.HtmlDecode(Source);
-
+   
 			using (var reader = GenerateSVG(args.Info.Width, args.Info.Height).CreateReader())
-			using (MemoryStream stream = new MemoryStream(Encoding.ASCII.GetBytes(imageSource)))
 			{
 				var svg = new SKSvg();
-				svg.Load(stream);
+				svg.Load(reader);
 
 				var surface = args.Surface;
 				var canvas = surface.Canvas;
@@ -100,6 +96,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			}
 		}
 
+		// todo change to Skia sharp Generated image rather than manually formed XML
 		public XDocument GenerateSVG(double width, double height)
 		{
 			XDocument xDocument = CreateSVGRoot();
@@ -109,12 +106,20 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			return CreateFillElement(width, height, xDocument, this.Shape);
 		}
 
-		private static XDocument CreateFillElement(double width, double height, XDocument xDocument, Shape shape)
+		private XDocument CreateFillElement(double width, double height, XDocument xDocument, Shape shape)
 		{
-			var gElement = new XElement("g", new XAttribute("fill", RandomColor()));
+			string color = SetFillElementColor();
+
+			var gElement = new XElement("g", new XAttribute("fill", color));
 
 			var seed = new Random().Next(5, 50);
 			var increment = new Random().Next(5, 50);
+
+			if (ComponentBuilder.Options.PreserveSession)
+			{
+				seed = Image.SeedX;
+				increment = Image.IncrementX;
+			}
 
 			var svgShape = shape == Shape.Circle ? Circle : Rect;
 
@@ -140,6 +145,12 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 				increment = new Random().Next(5, 50);
 			}
 
+			if (ComponentBuilder.Options.PreserveSession)
+			{
+				seed = Image.SeedY;
+				increment = Image.IncrementY;
+			}
+
 			while (seed <= height)
 			{
 
@@ -157,9 +168,42 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			return xDocument;
 		}
 
-		private static void CreateOuterElement(double width, double height, XDocument xDocument, Shape shape)
+		private string SetFillElementColor()
 		{
+			var color = Color.Default.ToSKColor().ToString();
 
+			if (ComponentBuilder.Options.PreserveSession)
+			{
+				color = Image.FillElementBackGroundColor.ToXamarinColor().ToSKColor().ToString();
+			}
+			else
+			{
+				color = RandomColor();
+			}
+
+			return color;
+		}
+
+		private string SetOuterElementColor()
+		{
+			var color = Color.Default.ToSKColor().ToString();
+
+			if (ComponentBuilder.Options.PreserveSession)
+			{
+				color = Image.OuterElementBackGroundColor.ToXamarinColor().ToSKColor().ToString();
+			}
+			else
+			{
+				color = RandomColor();
+			}
+
+			return color;
+		}
+
+		private void CreateOuterElement(double width, double height, XDocument xDocument, Shape shape)
+		{
+			string color = SetOuterElementColor();
+            
 			switch (shape)
 			{
 				case Shape.Square:
@@ -168,37 +212,37 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 				case Shape.Rectangle30:
 				case Shape.Rectangle40:
 					{
-						CreaterRect(width, height, xDocument);
+						CreaterRect(width, height, xDocument, color);
 						break;
 					}
 				case Shape.RoundedRectangle10:
 					{
-						CreaterRoundRect(width, height, "10", "10", xDocument);
+						CreaterRoundRect(width, height, "10", "10", xDocument, color);
 						break;
 					}
 				case Shape.RoundedRectangle20:
 					{
-						CreaterRoundRect(width, height, "20", "20", xDocument);
+						CreaterRoundRect(width, height, "20", "20", xDocument, color);
 						break;
 					}
 				case Shape.RoundedRectangle30:
 					{
-						CreaterRoundRect(width, height, "30", "30", xDocument);
+						CreaterRoundRect(width, height, "30", "30", xDocument, color);
 						break;
 					}
 				case Shape.RoundedRectangle40:
 					{
-						CreaterRoundRect(width, height, "40", "40", xDocument);
+						CreaterRoundRect(width, height, "40", "40", xDocument, color);
 						break;
 					}
 				case Shape.Circle:
 					{
-						CreateCircle(width, height, xDocument);
+						CreateCircle(width, height, xDocument, color);
 						break;
 					}
 				default:
 					{
-						CreaterRect(width, height, xDocument);
+						CreaterRect(width, height, xDocument, color);
 						break;
 					}
 			}
@@ -206,7 +250,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 		}
 
 
-		private static void CreaterRoundRect(double width, double height, string rx, string ry, XDocument xDocument)
+		private void CreaterRoundRect(double width, double height, string rx, string ry, XDocument xDocument, string color)
 		{
 			xDocument.Root.Add(new XElement(Rect,
 								new XAttribute("width", width),
@@ -214,26 +258,26 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 								new XAttribute("rx", rx),
 								new XAttribute("ry", ry),
 								new XAttribute("style", "stroke:black;stroke-width:1;opacity:0.5"),
-								new XAttribute("fill", RandomColor())));
+											new XAttribute("fill", color)));
 		}
 
-		private static void CreateCircle(double width, double height, XDocument xDocument)
+		private void CreateCircle(double width, double height, XDocument xDocument, string color)
 		{
 			xDocument.Root.Add(new XElement(Circle,
 								new XAttribute("r", width / 2),
 											new XAttribute("cx", width / 2),
-											new XAttribute("cy", width / 2),
+											new XAttribute("cy", height / 2),
 								new XAttribute("style", "stroke:black;stroke-width:1;opacity:0.5"),
-								new XAttribute("fill", RandomColor())));
+											new XAttribute("fill", color)));
 		}
 
-		private static void CreaterRect(double width, double height, XDocument xDocument)
+		private void CreaterRect(double width, double height, XDocument xDocument, string color)
 		{
 			xDocument.Root.Add(new XElement(Rect,
 								new XAttribute("width", width),
 								new XAttribute("height", height),
 								new XAttribute("style", "stroke:black;stroke-width:1;opacity:0.5"),
-								new XAttribute("fill", RandomColor())));
+								new XAttribute("fill", color)));
 		}
 
 
@@ -259,7 +303,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.UIElements
 			return color;
 		}
 
-		private static XDocument CreateSVGRoot()
+		private XDocument CreateSVGRoot()
 		{
 			var svgXml = @"<?xml version='1.0' encoding='UTF-8' ?>
                                         <svg xmlns='http://www.w3.org/2000/svg' 
