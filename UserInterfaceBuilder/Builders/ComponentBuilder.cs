@@ -10,7 +10,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 {
 	public static class ComponentBuilder
 	{
-
+		private const string XamlPlaygroundAssembly = "XamlPlayground";
 		public static Preserve PreserveUIAttributes = new Preserve();
 		public static Preserve RestoredUIAttributes = new Preserve();
 
@@ -78,7 +78,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 				return;
 			}
 			XmlSerializer deserializer = new XmlSerializer(typeof(Preserve));
-			TextReader reader = new StreamReader(ResourceLoader.GetEmbeddedResourceStream("Preserve.xml"));
+			TextReader reader = new StreamReader(ResourceLoader.GetEmbeddedResourceStream("Preserve.xml", XamlPlaygroundAssembly));
 			try
 			{
 

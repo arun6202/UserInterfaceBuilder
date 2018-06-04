@@ -11,9 +11,22 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder.Helpers
     {
 
 
-        public static Stream GetEmbeddedResourceStream(string resourceFileName)
+        public static Stream GetEmbeddedResourceStream(string resourceFileName, string assembly = "" )
         {
-            return GetEmbeddedResourceStream(Assembly.GetCallingAssembly(), resourceFileName);
+			if (string.IsNullOrEmpty(assembly))
+			{
+				return GetEmbeddedResourceStream(Assembly.GetCallingAssembly(), resourceFileName);
+
+			}
+			else
+			{
+				var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+
+				var xamlPlayground =assemblies.Single(a => a.GetName().Name == assembly);
+
+				return GetEmbeddedResourceStream(xamlPlayground, resourceFileName);
+
+			}
         }
 
         /// <summary>

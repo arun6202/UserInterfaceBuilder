@@ -12,7 +12,7 @@ namespace UserInterfaceBuilderPreserver
 {
 	class Program
 	{
-		private const string PreserveXml = "UserInterfaceBuilder/UserInterfaceBuilder/Preserver/Preserve.xml";
+ 		private const string PreserveXml = "XamlPlayground/XamlPlayground/Preserve.xml";
 		private const string appLocation = @"../../../../../../";
 
 		static void Main(string[] args)
