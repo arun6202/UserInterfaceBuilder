@@ -119,6 +119,7 @@
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.550146" />
     <PackageReference Include="Bogus" Version="22.1.2" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.60.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Preserver\" />
