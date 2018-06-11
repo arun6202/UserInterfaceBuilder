@@ -82,5 +82,11 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			set;
 		} = false;
 
+		public string PreserveXml
+		{
+			get;
+			set;
+		}
+
 	}
 }

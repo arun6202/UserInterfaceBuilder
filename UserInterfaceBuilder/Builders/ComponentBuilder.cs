@@ -28,7 +28,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			}
 
 			Options = options;
-
+   
 			if (options.EnableRepeater)
 			{
 				ConfigureRepeater(options);
@@ -77,20 +77,32 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			{
 				return;
 			}
+
 			XmlSerializer deserializer = new XmlSerializer(typeof(Preserve));
-			TextReader reader = new StreamReader(ResourceLoader.GetEmbeddedResourceStream("Preserve.xml", XamlPlaygroundAssembly));
-			try
+
+
+			if (string.IsNullOrEmpty(options.PreserveXml))
 			{
-
-
-				RestoredUIAttributes = (Preserve)deserializer.Deserialize(reader);
+                TextReader reader = new StreamReader(ResourceLoader.GetEmbeddedResourceStream("Preserve.xml", XamlPlaygroundAssembly));
+                try
+                {
+                    
+                 RestoredUIAttributes = (Preserve)deserializer.Deserialize(reader);
+                }
+                finally
+                {
+                    reader.Close();
+                }
 			}
-			finally
+			else
 			{
-				reader.Close();
+				using (var stream = options.PreserveXml.GenerateStreamFromString())
+                {
+					RestoredUIAttributes = (Preserve)deserializer.Deserialize(stream);
+                }
+    
 			}
-
-
+            
 		}
 
 		private static void ConfigureRepeater(ComponentBuilderOptions options)

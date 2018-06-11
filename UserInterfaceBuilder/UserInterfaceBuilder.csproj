@@ -113,14 +113,12 @@
     <Compile Remove="Faker\Faker.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Bogus" Version="22.0.8" />
-    <PackageReference Include="Bogus.Locations" Version="22.0.8.2" />
-    <PackageReference Include="Bogus.Text" Version="22.0.8.2" />
-    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.60.0" />
     <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
     <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />
-    <PackageReference Include="Xamarin.Forms" Version="3.1.0.464382-nightly" />
     <PackageReference Include="Acr.UserDialogs" Version="7.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.550146" />
+    <PackageReference Include="Bogus" Version="22.1.2" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.60.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Preserver\" />
