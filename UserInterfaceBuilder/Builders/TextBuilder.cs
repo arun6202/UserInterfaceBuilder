@@ -124,7 +124,7 @@ namespace XamarinFormsStarterKit.UserInterfaceBuilder
 			return GetLoremText(text, true);
 		}
 
-		private static string GenerateLoremText(string text)
+		public static string GenerateLoremText(string text)
 		{         
 			text = text.ToLower();
 			if (text.StartsWith("w", StringComparison.CurrentCulture))

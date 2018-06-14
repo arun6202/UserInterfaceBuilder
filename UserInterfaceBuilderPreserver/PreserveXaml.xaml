@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" ios:Page.UseSafeArea="true" xmlns:elem="clr-namespace:XamarinFormsStarterKit.UserInterfaceBuilder.UIElements;assembly=UserInterfaceBuilder" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsStarterKit.UserInterfaceBuilder.XamlPlayground.Playground">
+  <ContentPage.Content>
+    <FlexLayout AlignItems="Stretch" Direction="Column" BackGroundColor="#8A2BE2">
+      <FlexLayout FlexLayout.Grow="1" Direction="Row" AlignContent="Start" BackGroundColor="#F5DEB3">
+        <BoxView Color="Red" Margin="15" FlexLayout.AlignSelf="Center" BackGroundColor="#FFB6C1" />
+      </FlexLayout>
+      <FlexLayout FlexLayout.Grow="2" Direction="Column" AlignContent="Stretch" BackGroundColor="#5F9EA0">
+        <BoxView Margin="15" FlexLayout.AlignSelf="Center" BackGroundColor="#32CD32" />
+      </FlexLayout>
+      <FlexLayout FlexLayout.Grow="1" Direction="Column" AlignContent="Stretch" BackGroundColor="#00FA9A">
+        <BoxView Margin="15" FlexLayout.AlignSelf="Center" BackGroundColor="#00FFFF" />
+      </FlexLayout>
+      <FlexLayout FlexLayout.Grow="1" Direction="Column" AlignContent="Stretch" BackGroundColor="#808000">
+        <BoxView Margin="15" FlexLayout.AlignSelf="Center" BackGroundColor="#DCDCDC" />
+        <Label TextColor="#9370DB" Text="fuga quia delectus" BackGroundColor="#7FFF00"></Label>
+      </FlexLayout>
+      <Grid FlexLayout.Grow="10" BackGroundColor="#8FBC8F">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <FlexLayout Grid.Row="0" Grid.Column="0" JustifyContent="SpaceEvenly" FlexLayout.Grow="1" Direction="Column" BackGroundColor="#F0FFFF">
+          <BoxView FlexLayout.AlignSelf="Center" BackGroundColor="#F08080" />
+          <BoxView FlexLayout.AlignSelf="Center" BackGroundColor="#9932CC" />
+          <BoxView FlexLayout.AlignSelf="Center" BackGroundColor="#E9967A" />
+        </FlexLayout>
+        <FlexLayout Grid.Row="0" Grid.Column="1" JustifyContent="SpaceEvenly" FlexLayout.Grow="1" Direction="Column" AlignContent="Stretch" BackGroundColor="#FFF5EE">
+          <BoxView FlexLayout.AlignSelf="Center" BackGroundColor="#800000" />
+          <BoxView FlexLayout.AlignSelf="Center" BackGroundColor="#0000CD" />
+          <BoxView FlexLayout.AlignSelf="Center" BackGroundColor="#AFEEEE" />
+        </FlexLayout>
+        <FlexLayout Grid.Row="1" Grid.Column="0" JustifyContent="SpaceEvenly" FlexLayout.Grow="1" Direction="Column" AlignContent="Stretch" BackGroundColor="#FAF0E6">
+          <BoxView FlexLayout.AlignSelf="Center" BackGroundColor="#FFFFFF" />
+          <BoxView FlexLayout.AlignSelf="Center" BackGroundColor="#A0522D" />
+          <BoxView FlexLayout.AlignSelf="Center" BackGroundColor="#F0F8FF" />
+        </FlexLayout>
+        <FlexLayout Grid.Row="1" Grid.Column="1" JustifyContent="SpaceEvenly" FlexLayout.Grow="1" Direction="Column" AlignContent="Stretch" BackGroundColor="#FFFFFF">
+          <BoxView FlexLayout.AlignSelf="Center" BackGroundColor="#FFEFD5" />
+          <BoxView FlexLayout.AlignSelf="Center" BackGroundColor="#800000" />
+          <BoxView FlexLayout.AlignSelf="Center" BackGroundColor="#EEE8AA" />
+        </FlexLayout>
+      </Grid>
+    </FlexLayout>
+  </ContentPage.Content>
+</ContentPage>
